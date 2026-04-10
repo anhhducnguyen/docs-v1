@@ -1,38 +1,62 @@
-name: Deploy VitePress
+name: Deploy VitePress site to Pages
 
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
-  contents: write # 👈 bắt buộc để push gh-pages
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 18
+          node-version: 24
+          cache: pnpm
 
-      # ✅ Enable pnpm (fix lỗi pnpm not found)
-      - name: Enable Corepack (pnpm)
-        run: corepack enable
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
 
-      - name: Build VitePress
-        run: pnpm docs:build
+      - name: Build VitePress site
+        run: pnpm docs:build && pnpm docs:lunaria:build
 
-      # ✅ Deploy lên gh-pages
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .vitepress/dist
+          path: docs/.vitepress/dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -10,10 +10,16 @@ import {
 } from 'vitepress-plugin-group-icons'
 import llmstxt from 'vitepress-plugin-llms'
 
-const prod = !!process.env.NETLIFY
-const siteUrl = 'https://vitepress.dev'
+const repoUrl = 'https://github.com/anhhducnguyen/docs-v1'
+const base = '/docs-v1/'
+const siteUrl = 'https://anhhducnguyen.github.io/docs-v1/'
+const isGitHubPages = !!process.env.GITHUB_ACTIONS
+const isProductionBuild =
+  process.env.NODE_ENV === 'production' ||
+  !!process.env.NETLIFY ||
+  isGitHubPages
 
-const ogImage = new URL('/vitepress-og.jpg', siteUrl).href
+const ogImage = new URL('vitepress-og.jpg', siteUrl).href
 
 const localeToOgLocaleMap: Record<string, string> = {
   root: 'en_US',
@@ -28,13 +34,14 @@ const localeToOgLocaleMap: Record<string, string> = {
 
 export default defineConfig({
   title: 'VitePress',
+  base,
 
   rewrites: {
     'en/:rest*': ':rest*'
   },
 
   lastUpdated: true,
-  cleanUrls: true,
+  cleanUrls: !isGitHubPages,
   metaChunk: true,
 
   markdown: {
@@ -102,9 +109,7 @@ export default defineConfig({
   themeConfig: {
     logo: { src: '/vitepress-logo-mini.svg', width: 24, height: 24 },
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ],
+    socialLinks: [{ icon: 'github', link: repoUrl }],
 
     search: {
       provider: 'algolia',
@@ -144,7 +149,7 @@ export default defineConfig({
           firebase: 'logos:firebase'
         }
       }),
-      prod && llmstxt({ workDir: 'en', ignoreFiles: ['index.md'] })
+      isProductionBuild && llmstxt({ workDir: 'en', ignoreFiles: ['index.md'] })
     ],
     experimental: {
       enableNativePlugin: true
@@ -152,7 +157,7 @@ export default defineConfig({
   },
 
   // prettier-ignore
-  transformPageData: prod ? (pageData, ctx) => {
+  transformPageData: isProductionBuild ? (pageData, ctx) => {
     const url = new URL(pageData.relativePath.replace(/(?:(^|\/)index)?\.md$/, '$1'), siteUrl).href
     const site = resolveSiteDataByRoute(ctx.siteConfig.site, pageData.relativePath)
     const title = pageData.title ? `${pageData.title} | VitePress` : site.title
