@@ -4,11 +4,11 @@ layout: home
 title: Phenikaa
 
 hero:
-  name: VitePress
+  name: 
   text: Vite & Vue Powered Static Site Generator
   image:
     src: /vitepress-logo.svg
-    alt: VitePress
+    alt: pka
 
   actions:
     - theme: brand
