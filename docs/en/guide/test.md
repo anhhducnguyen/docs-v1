@@ -1,12 +1,12 @@
 ![An image](/test.png)
 
-Bước 1: Tạo script thực thi ở mọi nơi
+# 1. Tạo script thực thi ở mọi nơi
 
 ```
 sudo nano /usr/local/bin/setupterminal
 ```
 
-Bước 2: Thêm nội dung
+# 2. Thêm nội dung
 
 ```
 #!/bin/bash
@@ -32,20 +32,20 @@ sed -i 's/^plugins=(.*/plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 echo "🎨 Done! Restart terminal or run: source ~/.zshrc"
 ```
 
-Bước 3: Cho phép thực thi
+# 3. Cho phép thực thi
 
 ```
 sudo chmod +x /usr/local/bin/setupterminal
 setupterminal
 ```
 
-Bước 4: Vào file
+# 4. Vào file
 
 ```
 code ~/.zshrc
 ```
 
-Bước 5: Thêm nội dung
+# 5. Thêm nội dung
 
 ```
 # If you come from bash you might have to change your $PATH.
@@ -167,13 +167,13 @@ DISABLE_UPDATE_PROMPT=true
 alias ls='lsd --group-dirs=first --long --icon=never'
 ```
 
-Bước 6:
+# 6. Dùng lệnh
 
 ```
 zsh
 ```
 
-Bước 7:
+# 7. Thực thi
 
 ```
 echo 'if [ -t 1 ]; then exec zsh; fi' >> ~/.bashrc
