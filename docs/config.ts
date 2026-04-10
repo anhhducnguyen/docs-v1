@@ -66,7 +66,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       collapsed: false,
       items: [
         { text: 'PeerDB Setup Guide', link: 'peer-db' },
-        { text: 'Getting Started', link: 'test' },
+        { text: 'Codespaces', link: 'test' },
         { text: 'Routing', link: 'routing' },
         { text: 'Deploy', link: 'deploy' }
       ]
