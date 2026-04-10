@@ -1,10 +1,10 @@
 ---
-description: Referencia de las APIs en tiempo de ejecución de VitePress, incluyendo composables, funciones auxiliares y componentes integrados.
+description: Referencia de las APIs en tiempo de ejecución de , incluyendo composables, funciones auxiliares y componentes integrados.
 ---
 
 # API en Tiempo de Ejecución {#runtime-api}
 
-VitePress ofrece varias API integradas para permitir el acceso a los datos de la aplicación. VitePress también viene con algunos componentes integrados que se pueden utilizar globalmente.
+ ofrece varias API integradas para permitir el acceso a los datos de la aplicación.  también viene con algunos componentes integrados que se pueden utilizar globalmente.
 
 Los métodos auxiliares son importaciones globales de `vitepress` y se utilizan a menudo en componentes Vue de temas personalizados. Sin embargo, también se pueden utilizar dentro de páginas `.md` porque los archivos de rebajas se compilan en [Componentes de Archivo Único Vue (SFC)](https://vuejs.org/guide/scaling-up/sfc.html).
 
@@ -15,7 +15,7 @@ Métodos que comienzan con `use*` indican que es una función de [API de Composi
 Retorna datos específicos de la página. El objeto devuelto tiene el siguiente tipo:
 
 ```ts
-interface VitePressData<T = any> {
+interface Data<T = any> {
   /**
    * Metadátos a nivel del sitio
    */
@@ -86,7 +86,7 @@ interface Route {
 
 ## `useRouter` <Badge type="info" text="composable" />
 
-Devuelve la instancia del enrutador VitePress para que pueda navegar mediante programación a otra página.
+Devuelve la instancia del enrutador  para que pueda navegar mediante programación a otra página.
 
 ```ts
 interface Router {
@@ -135,7 +135,7 @@ El componente `<Content />` muestra el contenido de markdown renderizado. Útil 
 
 El componente `<ClientOnly />` muestra tu _slot_ solo del lado del cliente.
 
-Debido a que las aplicaciones VitePress se interpretan en el lado del servidor en Node.js cuando generan compilaciones estáticas, cualquier uso de Vue debe seguir los requisitos del código universal. En resumen, asegúrese de acceder solo a las API del navegador/DOM en ganchos `beforeMount` o `mounted`.
+Debido a que las aplicaciones  se interpretan en el lado del servidor en Node.js cuando generan compilaciones estáticas, cualquier uso de Vue debe seguir los requisitos del código universal. En resumen, asegúrese de acceder solo a las API del navegador/DOM en ganchos `beforeMount` o `mounted`.
 
 Si está utilizando o demostrando componentes que no son compatibles con SSR (por ejemplo, contienen directivas personalizadas), puede incluirlos dentro del componente. `ClientOnly`.
 

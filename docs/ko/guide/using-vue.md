@@ -1,12 +1,12 @@
 ---
-description: VitePress의 마크다운 파일 내에서 직접 Vue 컴포넌트와 동적 템플릿 기능을 사용하세요.
+description: 의 마크다운 파일 내에서 직접 Vue 컴포넌트와 동적 템플릿 기능을 사용하세요.
 ---
 
 # 마크다운에서 Vue 사용하기 {#using-vue-in-markdown}
 
-VitePress에서는 각 마크다운 파일이 HTML로 컴파일된 후 [Vue 단일 파일 컴포넌트](https://vuejs.org/guide/scaling-up/sfc.html)로 처리됩니다. 이는 마크다운 내에서 Vue 컴포넌트를 사용하거나 동적 템플릿을 사용하거나 `<script>` 태그를 추가하여 임의의 페이지 내 Vue 컴포넌트 로직을 사용할 수 있다는 것을 의미합니다.
+에서는 각 마크다운 파일이 HTML로 컴파일된 후 [Vue 단일 파일 컴포넌트](https://vuejs.org/guide/scaling-up/sfc.html)로 처리됩니다. 이는 마크다운 내에서 Vue 컴포넌트를 사용하거나 동적 템플릿을 사용하거나 `<script>` 태그를 추가하여 임의의 페이지 내 Vue 컴포넌트 로직을 사용할 수 있다는 것을 의미합니다.
 
-VitePress는 Vue의 컴파일러를 활용하여 마크다운 콘텐츠의 순수 정적 부분을 자동으로 감지하고 최적화합니다. 정적 콘텐츠는 단일 플레이스홀더 노드로 최적화되어 초기 방문 시 페이지의 JavaScript 페이로드에서 제거됩니다. 또한 클라이언트 측 하이드레이션 중에도 건너뜁니다. 요약하자면 특정 페이지에서는 동적 부분에 대해서만 비용을 지불하면 됩니다.
+는 Vue의 컴파일러를 활용하여 마크다운 콘텐츠의 순수 정적 부분을 자동으로 감지하고 최적화합니다. 정적 콘텐츠는 단일 플레이스홀더 노드로 최적화되어 초기 방문 시 페이지의 JavaScript 페이로드에서 제거됩니다. 또한 클라이언트 측 하이드레이션 중에도 건너뜁니다. 요약하자면 특정 페이지에서는 동적 부분에 대해서만 비용을 지불하면 됩니다.
 
 ::: tip SSR 호환성
 모든 Vue 사용은 SSR과 호환되어야 합니다. 자세한 내용 및 일반적인 해결 방법은 [SSR 호환성](./ssr-compat)을 참고하세요.
@@ -75,7 +75,7 @@ const count = ref(0)
 마크다운에서 `<style scoped>`를 사용할 때는 현재 페이지의 모든 엘리먼트에 특수한 어트리뷰트를 추가해야 하므로 페이지 크기를 크게 부풀릴 수 있습니다. 페이지에서 로컬 범위의 스타일링이 필요한 경우 `<style module>`을 사용하는 것이 좋습니다.
 :::
 
-또한 현재 페이지의 메타데이터에 접근할 수 있는 [`useData` 헬퍼](../reference/runtime-api#usedata)와 같은 VitePress의 런타임 API에도 접근할 수 있습니다:
+또한 현재 페이지의 메타데이터에 접근할 수 있는 [`useData` 헬퍼](../reference/runtime-api#usedata)와 같은 의 런타임 API에도 접근할 수 있습니다:
 
 **입력**
 
@@ -144,7 +144,7 @@ import CustomComponent from '../components/CustomComponent.vue'
 `<code>`로 감싼 HTML은 있는 그대로 표시되며, **감싸지 않은** HTML만 Vue에 의해 파싱됩니다.
 
 ::: tip
-출력된 HTML은 [Markdown-it](https://github.com/Markdown-it/Markdown-it)에 의해 생성되며, 파싱된 헤더는 VitePress에 의해 처리됩니다(사이드바와 문서 제목 모두에 사용됩니다).
+출력된 HTML은 [Markdown-it](https://github.com/Markdown-it/Markdown-it)에 의해 생성되며, 파싱된 헤더는 에 의해 처리됩니다(사이드바와 문서 제목 모두에 사용됩니다).
 :::
 
 
@@ -204,7 +204,7 @@ Vue 보간 문법을 회피하려면, `<span>` 또는 다른 엘리먼트에 `v-
 
 ## CSS 전처리기 사용하기 {#using-css-pre-processors}
 
-VitePress는 CSS 전처리기인 `.scss`, `.sass`, `.less`, `.styl`, `.stylus` 파일에 대해 [기본 지원](https://vitejs.dev/guide/features.html#css-pre-processors)을 제공합니다. 이를 위해 Vite 전용 플러그인을 설치할 필요는 없지만, 해당 전처리기 자체는 설치해야 합니다:
+는 CSS 전처리기인 `.scss`, `.sass`, `.less`, `.styl`, `.stylus` 파일에 대해 [기본 지원](https://vitejs.dev/guide/features.html#css-pre-processors)을 제공합니다. 이를 위해 Vite 전용 플러그인을 설치할 필요는 없지만, 해당 전처리기 자체는 설치해야 합니다:
 
 ```
 # .scss 및 .sass
@@ -228,7 +228,7 @@ npm install -D stylus
 
 ## 텔레포트 사용하기 {#using-teleports}
 
-VitePress는 현재 body로 텔레포트를 사용하는 SSG만 지원합니다. 다른 대상에 대해 텔레포트를 사용하려면 내장된 `<ClientOnly>` 컴포넌트로 감싸거나 [`postRender` 훅](../reference/site-config#postrender)을 통해 최종 페이지 HTML의 올바른 위치에 텔레포트 마크업을 삽입할 수 있습니다.
+는 현재 body로 텔레포트를 사용하는 SSG만 지원합니다. 다른 대상에 대해 텔레포트를 사용하려면 내장된 `<ClientOnly>` 컴포넌트로 감싸거나 [`postRender` 훅](../reference/site-config#postrender)을 통해 최종 페이지 HTML의 올바른 위치에 텔레포트 마크업을 삽입할 수 있습니다.
 
 <ModalDemo />
 

@@ -1,10 +1,10 @@
 ---
-description: VitePress 运行时 API 参考，包括组合式函数、辅助方法和内置组件。
+description:  运行时 API 参考，包括组合式函数、辅助方法和内置组件。
 ---
 
 # 运行时 API {#runtime-api}
 
-VitePress 提供了几个内置的 API 来让你访问应用程序数据。VitePress 还附带了一些可以在全局范围内使用的内置组件。
+ 提供了几个内置的 API 来让你访问应用程序数据。 还附带了一些可以在全局范围内使用的内置组件。
 
 辅助函数可从 `vitepress` 全局导入，通常用于自定义主题 Vue 组件。但是，它们也可以在 `.md` 页面内使用，因为 markdown 文件被编译成 Vue [单文件组件](https://cn.vuejs.org/guide/scaling-up/sfc.html)。
 
@@ -15,7 +15,7 @@ VitePress 提供了几个内置的 API 来让你访问应用程序数据。ViteP
 返回特定页面的数据。返回的对象具有以下类型：
 
 ```ts
-interface VitePressData<T = any> {
+interface Data<T = any> {
   /**
    * 站点级元数据
    */
@@ -86,7 +86,7 @@ interface Route {
 
 ## `useRouter` <Badge type="info" text="composable" />
 
-返回 VitePress 路由实例，以便可以以编程方式导航到另一个页面。
+返回  路由实例，以便可以以编程方式导航到另一个页面。
 
 ```ts
 interface Router {
@@ -138,7 +138,7 @@ interface Router {
 
 `<ClientOnly />` 组件仅在客户端渲染其插槽。
 
-由于 VitePress 应用程序在生成静态构建时是在 Node.js 中服务器渲染的，因此任何 Vue 使用都必须符合通用代码要求。简而言之，确保仅在 beforeMount 或 mounted 钩子中访问 Browser/DOM API。
+由于  应用程序在生成静态构建时是在 Node.js 中服务器渲染的，因此任何 Vue 使用都必须符合通用代码要求。简而言之，确保仅在 beforeMount 或 mounted 钩子中访问 Browser/DOM API。
 
 如果正在使用或演示对 SSR 不友好的组件 (例如，包含自定义指令)，可以将它们包装在 `ClientOnly` 组件中。
 

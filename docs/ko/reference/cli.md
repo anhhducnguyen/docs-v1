@@ -1,12 +1,12 @@
 ---
-description: dev, build, preview 및 init을 포함한 VitePress CLI 명령어 레퍼런스입니다.
+description: dev, build, preview 및 init을 포함한  CLI 명령어 레퍼런스입니다.
 ---
 
 # 명령 줄 인터페이스 {#command-line-interface}
 
 ## `vitepress dev`
 
-지정된 디렉터리를 루트로 하여 VitePress 개발 서버를 시작합니다. 기본값은 현재 디렉터리입니다. 현재 디렉터리에서 실행할 때 `dev` 명령은 생략할 수 있습니다.
+지정된 디렉터리를 루트로 하여  개발 서버를 시작합니다. 기본값은 현재 디렉터리입니다. 현재 디렉터리에서 실행할 때 `dev` 명령은 생략할 수 있습니다.
 
 ### 사용법 {#usage}
 
@@ -31,7 +31,7 @@ vitepress dev [root]
 
 ## `vitepress build`
 
-VitePress 사이트를 프로덕션 빌드합니다.
+ 사이트를 프로덕션 빌드합니다.
 
 ### 사용법 {#usage-1}
 

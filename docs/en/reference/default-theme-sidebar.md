@@ -1,5 +1,5 @@
 ---
-description: Configure the sidebar navigation in the VitePress default theme with groups, collapsible sections, and multiple sidebars.
+description: Configure the sidebar navigation in the  default theme with groups, collapsible sections, and multiple sidebars.
 ---
 
 # Sidebar

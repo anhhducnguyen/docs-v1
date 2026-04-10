@@ -60,11 +60,11 @@ export interface UserConfig<
   }
 
   appearance?:
-    | boolean
-    | 'dark'
-    | 'force-dark'
-    | 'force-auto'
-    | (Omit<UseDarkOptions, 'initialValue'> & { initialValue?: 'dark' })
+  | boolean
+  | 'dark'
+  | 'force-dark'
+  | 'force-auto'
+  | (Omit<UseDarkOptions, 'initialValue'> & { initialValue?: 'dark' })
   lastUpdated?: boolean
   contentProps?: Record<string, any>
 
@@ -85,15 +85,15 @@ export interface UserConfig<
    * Configure the scroll offset when the theme has a sticky header.
    * Can be a number or a selector element to get the offset from.
    * Can also be an array of selectors in case some elements will be
-   * invisible due to responsive layout. VitePress will fallback to the next
+   * invisible due to responsive layout.  will fallback to the next
    * selector if a selector fails to match, or the matched element is not
    * currently visible in viewport.
    */
   scrollOffset?:
-    | number
-    | string
-    | string[]
-    | { selector: string | string[]; padding: number }
+  | number
+  | string
+  | string[]
+  | { selector: string | string[]; padding: number }
 
   /**
    * Enable MPA / zero-JS mode.
@@ -113,9 +113,9 @@ export interface UserConfig<
    * @default false
    */
   ignoreDeadLinks?:
-    | boolean
-    | 'localhostLinks'
-    | (string | RegExp | ((link: string, source: string) => boolean))[]
+  | boolean
+  | 'localhostLinks'
+  | (string | RegExp | ((link: string, source: string) => boolean))[]
 
   /**
    * Don't force `.html` on URLs.
@@ -204,8 +204,8 @@ export interface UserConfig<
    * @experimental
    */
   additionalConfig?:
-    | AdditionalConfigDict<ThemeConfig>
-    | AdditionalConfigLoader<ThemeConfig>
+  | AdditionalConfigDict<ThemeConfig>
+  | AdditionalConfigLoader<ThemeConfig>
 }
 
 export interface SiteConfig<ThemeConfig = any> extends Pick<

@@ -1,5 +1,5 @@
 ---
-description: Learn how to reference and handle static assets such as images, media, and fonts in VitePress.
+description: Learn how to reference and handle static assets such as images, media, and fonts in .
 ---
 
 # Asset Handling
@@ -52,7 +52,7 @@ However, if you are authoring a theme component that links to assets dynamically
 <img :src="theme.logoPath" />
 ```
 
-In this case it is recommended to wrap the path with the [`withBase` helper](../reference/runtime-api#withbase) provided by VitePress:
+In this case it is recommended to wrap the path with the [`withBase` helper](../reference/runtime-api#withbase) provided by :
 
 ```vue
 <script setup>

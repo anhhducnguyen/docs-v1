@@ -1,5 +1,5 @@
 ---
-description: Personaliza los enlaces de página anterior y siguiente que se muestran en la parte inferior de las páginas de documentación en VitePress.
+description: Personaliza los enlaces de página anterior y siguiente que se muestran en la parte inferior de las páginas de documentación en .
 ---
 
 # Links Anterior y Próximo {#prev-next-links}

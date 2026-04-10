@@ -75,7 +75,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
     //   text: 'Introduction',
     //   collapsed: false,
     //   items: [
-    //     { text: 'What is VitePress?', link: 'what-is-vitepress' },
+    //     { text: 'What is ?', link: 'what-is-vitepress' },
     //     { text: 'Getting Started', link: 'getting-started' },
     //     { text: 'Routing', link: 'routing' },
     //     { text: 'Deploy', link: 'deploy' }

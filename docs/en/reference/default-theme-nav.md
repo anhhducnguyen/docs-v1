@@ -1,5 +1,5 @@
 ---
-description: Configure the navigation bar in the VitePress default theme including site title, logo, and menu links.
+description: Configure the navigation bar in the  default theme including site title, logo, and menu links.
 ---
 
 # Nav
@@ -146,7 +146,7 @@ export default {
 
 ### Customize link's "target" and "rel" attributes
 
-By default, VitePress automatically determines `target` and `rel` attributes based on whether the link is an external link. But if you want, you can customize them too.
+By default,  automatically determines `target` and `rel` attributes based on whether the link is an external link. But if you want, you can customize them too.
 
 ```js
 export default {
@@ -213,7 +213,7 @@ export default {
 }
 ```
 
-Your component will be rendered in the navigation bar. VitePress will provide the following additional props to the component:
+Your component will be rendered in the navigation bar.  will provide the following additional props to the component:
 
 - `screenMenu`: an optional boolean indicating whether the component is inside mobile navigation menu
 

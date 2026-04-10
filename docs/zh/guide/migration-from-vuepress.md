@@ -10,7 +10,7 @@
 
 ### 图片 {#images}
 
-与 VuePress 不同，在使用静态图片时，VitePress 会根据配置自动处理这些 [`base`](./asset-handling#base-url)。
+与 VuePress 不同，在使用静态图片时， 会根据配置自动处理这些 [`base`](./asset-handling#base-url)。
 
 因此，现在可以在没有 `img` 标签的情况下渲染图像。
 

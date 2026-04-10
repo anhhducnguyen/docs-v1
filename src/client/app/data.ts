@@ -20,9 +20,9 @@ import {
 } from '../shared'
 import type { Route } from './router'
 
-export const dataSymbol: InjectionKey<VitePressData> = Symbol()
+export const dataSymbol: InjectionKey<Data> = Symbol()
 
-export interface VitePressData<T = any> {
+export interface Data<T = any> {
   /**
    * Site-level metadata
    */
@@ -61,7 +61,7 @@ export const siteDataRef: Ref<SiteData> = shallowRef(
 )
 
 // per-app data
-export function initData(route: Route): VitePressData {
+export function initData(route: Route): Data {
   const site = computed(() =>
     resolveSiteDataByRoute(siteDataRef.value, route.data.relativePath)
   )
@@ -74,10 +74,10 @@ export function initData(route: Route): VitePressData {
         ? usePreferredDark()
         : appearance
           ? useDark({
-              storageKey: APPEARANCE_KEY,
-              initialValue: () => (appearance === 'dark' ? 'dark' : 'auto'),
-              ...(typeof appearance === 'object' ? appearance : {})
-            })
+            storageKey: APPEARANCE_KEY,
+            initialValue: () => (appearance === 'dark' ? 'dark' : 'auto'),
+            ...(typeof appearance === 'object' ? appearance : {})
+          })
           : ref(false)
 
   const hashRef = ref(inBrowser ? location.hash : '')
@@ -113,7 +113,7 @@ export function initData(route: Route): VitePressData {
   }
 }
 
-export function useData<T = any>(): VitePressData<T> {
+export function useData<T = any>(): Data<T> {
   const data = inject(dataSymbol)
   if (!data) {
     throw new Error('vitepress data not properly injected in app')

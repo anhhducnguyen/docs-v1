@@ -1,10 +1,10 @@
 ---
-description: VitePress 内置的 Markdown 扩展，包括自定义容器、代码块语法高亮、行高亮、代码组等功能。
+description:  内置的 Markdown 扩展，包括自定义容器、代码块语法高亮、行高亮、代码组等功能。
 ---
 
 # Markdown 扩展 {#markdown-extensions}
 
-VitePress 带有内置的 Markdown 扩展。
+ 带有内置的 Markdown 扩展。
 
 ## 标题锚点 {#header-anchors}
 
@@ -63,7 +63,7 @@ VitePress 带有内置的 Markdown 扩展。
 外部链接带有 `target="_blank" rel="noreferrer"`：
 
 - [vuejs.org](https://cn.vuejs.org)
-- [VitePress on GitHub](https://github.com/vuejs/vitepress)
+- [ on GitHub](https://github.com/vuejs/vitepress)
 
 ## frontmatter {#frontmatter}
 
@@ -193,7 +193,7 @@ This is a details block.
 
 ::: details 点我查看代码
 ```js
-console.log('Hello, VitePress!')
+console.log('Hello, !')
 ```
 :::
 ````
@@ -206,7 +206,7 @@ console.log('Hello, VitePress!')
 
 ::: details 点我查看代码
 ```js
-console.log('Hello, VitePress!')
+console.log('Hello, !')
 ```
 :::
 
@@ -231,7 +231,7 @@ export default defineConfig({
 
 ### `raw`
 
-这是一个特殊的容器，可以用来防止与 VitePress 的样式和路由冲突。这在记录组件库时特别有用。可能还想查看 [whyframe](https://whyframe.dev/docs/integrations/vitepress) 以获得更好的隔离。
+这是一个特殊的容器，可以用来防止与  的样式和路由冲突。这在记录组件库时特别有用。可能还想查看 [whyframe](https://whyframe.dev/docs/integrations/vitepress) 以获得更好的隔离。
 
 **语法**
 
@@ -269,7 +269,7 @@ Wraps in a `<div class="vp-raw">`
 
 ## GitHub 风格的警报 {#github-flavored-alerts}
 
-VitePress 同样支持以标注的方式渲染 [GitHub 风格的警报](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts)。它们和[自定义容器](#custom-containers)的渲染方式相同。
+ 同样支持以标注的方式渲染 [GitHub 风格的警报](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts)。它们和[自定义容器](#custom-containers)的渲染方式相同。
 
 ```md
 > [!NOTE]
@@ -305,7 +305,7 @@ VitePress 同样支持以标注的方式渲染 [GitHub 风格的警报](https://
 
 ## 代码块中的语法高亮 {#syntax-highlighting-in-code-blocks}
 
-VitePress 使用 [Shiki](https://github.com/shikijs/shiki) 在 Markdown 代码块中使用彩色文本实现语法高亮。Shiki 支持多种编程语言。需要做的就是将有效的语言别名附加到代码块的开头：
+ 使用 [Shiki](https://github.com/shikijs/shiki) 在 Markdown 代码块中使用彩色文本实现语法高亮。Shiki 支持多种编程语言。需要做的就是将有效的语言别名附加到代码块的开头：
 
 **输入**
 
@@ -393,7 +393,7 @@ export default { // Highlighted
       msg: `Highlighted!
       This line isn't highlighted,
       but this and the next 2 are.`,
-      motd: 'VitePress is awesome',
+      motd: ' is awesome',
       lorem: 'ipsum'
     }
   }
@@ -410,7 +410,7 @@ export default { // Highlighted
       msg: `Highlighted!
       This line isn't highlighted,
       but this and the next 2 are.`,
-      motd: 'VitePress is awesome',
+      motd: ' is awesome',
       lorem: 'ipsum',
     }
   }
@@ -630,7 +630,7 @@ const line4 = 'This is line 4'
 <<< @/snippets/snippet.js{2}
 
 ::: tip
-`@` 的值对应于源代码根目录，默认情况下是 VitePress 项目根目录，除非配置了 `srcDir`。或者也可以从相对路径导入：
+`@` 的值对应于源代码根目录，默认情况下是  项目根目录，除非配置了 `srcDir`。或者也可以从相对路径导入：
 
 ```md
 <<< ../snippets/snippet.js
@@ -763,7 +763,7 @@ export default config
 可以像这样在一个 markdown 文件中包含另一个 markdown 文件，甚至是内嵌的。
 
 ::: tip
-也可以使用 `@`，它的值对应于源代码根目录，默认情况下是 VitePress 项目根目录，除非配置了 `srcDir`。
+也可以使用 `@`，它的值对应于源代码根目录，默认情况下是  项目根目录，除非配置了 `srcDir`。
 :::
 
 例如，可以这样用相对路径包含 Markdown 文件：
@@ -903,7 +903,7 @@ export default {
 
 ## 高级配置 {#advanced-configuration}
 
-VitePress 使用 [markdown-it](https://github.com/markdown-it/markdown-it) 作为 Markdown 渲染器。上面提到的很多扩展功能都是通过自定义插件实现的。可以使用 `.vitepress/config.js` 中的 `markdown` 选项来进一步自定义 `markdown-it` 实例。
+ 使用 [markdown-it](https://github.com/markdown-it/markdown-it) 作为 Markdown 渲染器。上面提到的很多扩展功能都是通过自定义插件实现的。可以使用 `.vitepress/config.js` 中的 `markdown` 选项来进一步自定义 `markdown-it` 实例。
 
 ```js
 import { defineConfig } from 'vitepress'

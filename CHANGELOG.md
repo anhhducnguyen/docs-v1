@@ -189,7 +189,7 @@ Users who intentionally reference non-existent files or want to document include
 ### BREAKING CHANGES
 
 - Only `cwd`, `ignore`, `dot` and `debug` are supported in `globOptions` of `createContentLoader`. If you want to pass other options, you still can but you might need to suppress type errors.
-- Uses vite 7. See [vite migration guide](https://vite.dev/guide/migration.html) for more info. For most of the users no change is required. VitePress should work same as earlier, except for maybe some type mismatches if you're using third-party plugins. You can suppress them using `@ts-expect-error` or `as any` and report the issues at respective repositories.
+- Uses vite 7. See [vite migration guide](https://vite.dev/guide/migration.html) for more info. For most of the users no change is required. should work same as earlier, except for maybe some type mismatches if you're using third-party plugins. You can suppress them using `@ts-expect-error` or `as any` and report the issues at respective repositories.
 
 ## [2.0.0-alpha.6](https://github.com/vuejs/vitepress/compare/v2.0.0-alpha.5...v2.0.0-alpha.6) (2025-06-12)
 
@@ -735,7 +735,7 @@ Users who intentionally reference non-existent files or want to document include
 
 ### BREAKING CHANGES
 
-- VitePress now uses shikiji instead of shiki for syntax highlighting. If you're using features like adding extra languages or custom aliases, please refer [shikiji docs](https://github.com/antfu/shikiji) for migration guide or comment on [#3237](https://github.com/vuejs/vitepress/pull/3237) if you need help.
+- now uses shikiji instead of shiki for syntax highlighting. If you're using features like adding extra languages or custom aliases, please refer [shikiji docs](https://github.com/antfu/shikiji) for migration guide or comment on [#3237](https://github.com/vuejs/vitepress/pull/3237) if you need help.
 
 # [1.0.0-rc.29](https://github.com/vuejs/vitepress/compare/v1.0.0-rc.28...v1.0.0-rc.29) (2023-11-19)
 
@@ -776,7 +776,7 @@ Users who intentionally reference non-existent files or want to document include
 
 ### BREAKING CHANGES
 
-- VitePress now runs on Vite 5. Please refer https://vitejs.dev/guide/migration for breaking changes and migration guide if you're relying on some Vite-specific things.
+- now runs on Vite 5. Please refer https://vitejs.dev/guide/migration for breaking changes and migration guide if you're relying on some Vite-specific things.
 
 # [1.0.0-rc.25](https://github.com/vuejs/vitepress/compare/v1.0.0-rc.24...v1.0.0-rc.25) (2023-11-05)
 
@@ -1021,8 +1021,8 @@ Users who intentionally reference non-existent files or want to document include
 
 ### BREAKING CHANGES
 
-- Node v18+ is now required to run VitePress.
-- VitePress now only provides ESM API. Refer [#2703](https://github.com/vuejs/vitepress/issues/2703) for details.
+- Node v18+ is now required to run .
+- now only provides ESM API. Refer [#2703](https://github.com/vuejs/vitepress/issues/2703) for details.
 
 # [1.0.0-beta.7](https://github.com/vuejs/vitepress/compare/v1.0.0-beta.6...v1.0.0-beta.7) (2023-07-29)
 
@@ -1211,7 +1211,7 @@ Users who intentionally reference non-existent files or want to document include
 
 ### BREAKING CHANGES
 
-- **theme:** Styling for code blocks might break, especially if you were earlier overriding it for light theme. Those workarounds are no longer required. VitePress will now show code blocks and groups in light mode too if a light shiki theme is specified.
+- **theme:** Styling for code blocks might break, especially if you were earlier overriding it for light theme. Those workarounds are no longer required. will now show code blocks and groups in light mode too if a light shiki theme is specified.
 
 # [1.0.0-alpha.74](https://github.com/vuejs/vitepress/compare/v1.0.0-alpha.73...v1.0.0-alpha.74) (2023-04-24)
 
@@ -2480,7 +2480,7 @@ This version uses Vue 3.2.0.
   All destructured values are computed refs injected from app root
   so they are created only once globally.
 
-- All global mixin properties (e.g. `$site`) except `$frontmatter` are removed. Always use `useData()` to retrieve VitePress data in Vue components.
+- All global mixin properties (e.g. `$site`) except `$frontmatter` are removed. Always use `useData()` to retrieve data in Vue components.
 
 ## [0.14.1](https://github.com/vuejs/vitepress/compare/v0.14.0...v0.14.1) (2021-06-08)
 

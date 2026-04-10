@@ -1,6 +1,6 @@
 ---
 outline: deep
-description: Referência de todas as opções de configuração frontmatter disponíveis para páginas Markdown do VitePress.
+description: Referência de todas as opções de configuração frontmatter disponíveis para páginas Markdown do .
 ---
 
 # Configuração Frontmatter {#frontmatter-config}
@@ -11,7 +11,7 @@ Exemplo de uso:
 
 ```md
 ---
-title: Documentação com VitePress
+title: Documentação com 
 editLink: true
 ---
 ```
@@ -30,7 +30,7 @@ Título para a página. É o mesmo que [config.title](./site-config#title), e so
 
 ```yaml
 ---
-title: VitePress
+title: 
 ---
 ```
 
@@ -42,7 +42,7 @@ O sufixo para o título. É o mesmo que [config.titleTemplate](./site-config#tit
 
 ```yaml
 ---
-title: VitePress
+title: 
 titleTemplate: Gerador de site estático com Vite & Vue
 ---
 ```
@@ -55,7 +55,7 @@ Descrição para a página. É o mesmo que [config.description](./site-config#de
 
 ```yaml
 ---
-description: VitePress
+description: 
 ---
 ```
 

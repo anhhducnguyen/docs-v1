@@ -1,5 +1,5 @@
 ---
-description: 使用 Badge 组件为 VitePress 文档的标题添加状态标签。
+description: 使用 Badge 组件为  文档的标题添加状态标签。
 ---
 
 # 徽标 {#badge}

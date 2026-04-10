@@ -35,8 +35,8 @@ function resolveThemeExtends(theme: typeof RawTheme): typeof RawTheme {
 
 const Theme = resolveThemeExtends(RawTheme)
 
-const VitePressApp = defineComponent({
-  name: 'VitePressApp',
+const App = defineComponent({
+  name: 'App',
   setup() {
     const { site, lang, dir } = useData()
 
@@ -64,7 +64,7 @@ const VitePressApp = defineComponent({
 })
 
 export async function createApp() {
-  ;(globalThis as any).__VITEPRESS__ = true
+  ; (globalThis as any).__VITEPRESS__ = true
 
   const router = newRouter()
 
@@ -113,8 +113,8 @@ export async function createApp() {
 
 function newApp(): App {
   return import.meta.env.PROD
-    ? createSSRApp(VitePressApp)
-    : createClientApp(VitePressApp)
+    ? createSSRApp(App)
+    : createClientApp(App)
 }
 
 function newRouter(): Router {

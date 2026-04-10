@@ -1,10 +1,10 @@
 ---
-description: 配置 VitePress 页面底部显示的全局页脚。
+description: 配置  页面底部显示的全局页脚。
 ---
 
 # 页脚 {#footer}
 
-配置好 `themeConfig.footer`，VitePress 将在全局页面底部显示页脚。
+配置好 `themeConfig.footer`， 将在全局页面底部显示页脚。
 
 ```ts
 export default {

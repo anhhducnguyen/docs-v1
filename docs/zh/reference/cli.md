@@ -1,12 +1,12 @@
 ---
-description: VitePress CLI 命令参考，包括 dev、build、preview 和 init 命令。
+description:  CLI 命令参考，包括 dev、build、preview 和 init 命令。
 ---
 
 # 命令行接口 {#command-line-interface}
 
 ## `vitepress dev`
 
-使用指定目录作为根目录来启动 VitePress 开发服务器。默认为当前目录。在当前目录下运行时也可以省略 `dev` 命令。
+使用指定目录作为根目录来启动  开发服务器。默认为当前目录。在当前目录下运行时也可以省略 `dev` 命令。
 
 ### 用法
 
@@ -31,7 +31,7 @@ vitepress dev [root]
 
 ## `vitepress build`
 
-构建用于生产环境的 VitePress 站点。
+构建用于生产环境的  站点。
 
 ### 用法
 

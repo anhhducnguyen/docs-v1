@@ -1,13 +1,13 @@
 ---
 outline: deep
-description: Entenda o roteamento baseado em arquivos do VitePress, rotas dinâmicas, URLs limpas e reescritas de caminho.
+description: Entenda o roteamento baseado em arquivos do , rotas dinâmicas, URLs limpas e reescritas de caminho.
 ---
 
 # Roteamento {#routing}
 
 ## Roteamento baseado em Arquivos {#file-based-routing}
 
-VitePress utiliza roteamento baseado em arquivos, isso significa que as páginas HTML geradas são mapeadas da estrutura de diretórios dos arquivos fonte Markdown. Por exemplo, dada a seguinte estrutura de diretório:
+ utiliza roteamento baseado em arquivos, isso significa que as páginas HTML geradas são mapeadas da estrutura de diretórios dos arquivos fonte Markdown. Por exemplo, dada a seguinte estrutura de diretório:
 
 ```
 .
@@ -31,13 +31,13 @@ O HTML resultante pode ser hospedado em qualquer servidor web que possa servir a
 
 ## Diretório Raiz e Fonte {#root-and-source-directory}
 
-Existem dois conceitos importantes na estrutura de arquivos de um projeto VitePress: o **diretório raiz** e o **diretório fonte**.
+Existem dois conceitos importantes na estrutura de arquivos de um projeto : o **diretório raiz** e o **diretório fonte**.
 
 ### Diretório Raiz {#project-root}
 
-O diretório raiz é onde o VitePress procura pelo diretório especial `.vitepress`. O diretório `.vitepress` é um local reservado para o arquivo de configuração do VitePress, o cache do servidor de desenvolvimento, o resultado da compilação e o código de personalização de tema opcional.
+O diretório raiz é onde o  procura pelo diretório especial `.vitepress`. O diretório `.vitepress` é um local reservado para o arquivo de configuração do , o cache do servidor de desenvolvimento, o resultado da compilação e o código de personalização de tema opcional.
 
-Ao executar `vitepress dev` ou `vitepress build` no terminal, VitePress usará o diretório atual como diretório raiz do projeto. Para especificar um subdiretório como raiz, é necessário passar o caminho relativo para o comando. Por exemplo, se o projeto VitePress estiver localizado em `./docs`, deve-se executar `vitepress dev docs`:
+Ao executar `vitepress dev` ou `vitepress build` no terminal,  usará o diretório atual como diretório raiz do projeto. Para especificar um subdiretório como raiz, é necessário passar o caminho relativo para o comando. Por exemplo, se o projeto  estiver localizado em `./docs`, deve-se executar `vitepress dev docs`:
 
 ```
 .
@@ -82,7 +82,7 @@ src/getting-started.md  -->  /getting-started.html
 
 ## Links Entre Páginas {#linking-between-pages}
 
-Você pode usar tanto caminhos absolutos quanto relativos ao vincular páginas. Note que, embora ambas as extensões `.md` e `.html` funcionem, a prática recomendada é omitir as extensões de arquivo para que o VitePress possa gerar as URLs finais com base na sua configuração.
+Você pode usar tanto caminhos absolutos quanto relativos ao vincular páginas. Note que, embora ambas as extensões `.md` e `.html` funcionem, a prática recomendada é omitir as extensões de arquivo para que o  possa gerar as URLs finais com base na sua configuração.
 
 ```md
 <!-- Fazer -->
@@ -96,9 +96,9 @@ Você pode usar tanto caminhos absolutos quanto relativos ao vincular páginas. 
 
 Saiba mais sobre a vinculação de ativos, como imagens, em [Manipulação de Ativos](./asset-handling).
 
-### Vinculação a Páginas Não VitePress {#linking-to-non-vitepress-pages}
+### Vinculação a Páginas Não  {#linking-to-non-vitepress-pages}
 
-Se você deseja vincular a uma página em seu site que não é gerada pelo VitePress, será necessário usar a URL completa (abre em uma nova guia) ou especificar explicitamente o destino:
+Se você deseja vincular a uma página em seu site que não é gerada pelo , será necessário usar a URL completa (abre em uma nova guia) ou especificar explicitamente o destino:
 
 **Entrada**
 
@@ -125,17 +125,17 @@ Alternativamente, pode-se usar diretamente a sintaxe da tag âncora:
 ## Geração de URLs Limpas {#generating-clean-urls}
 
 ::: warning Suporte do Servidor Necessário
-Para servir URLs limpas com VitePress, é necessário suporte no lado do servidor.
+Para servir URLs limpas com , é necessário suporte no lado do servidor.
 :::
 
-Por padrão, VitePress resolve links de entrada para URLs que terminam com `.html`. No entanto, alguns usuários podem preferir "URLs limpas" sem a extensão `.html`, por exemplo, `example.com/caminho` em vez de `example.com/caminho.html`.
+Por padrão,  resolve links de entrada para URLs que terminam com `.html`. No entanto, alguns usuários podem preferir "URLs limpas" sem a extensão `.html`, por exemplo, `example.com/caminho` em vez de `example.com/caminho.html`.
 
 Alguns servidores ou plataformas de hospedagem (por exemplo, Netlify, Vercel, GitHub Pages) fornecem a habilidade de mapear uma URL como `/foo` para `/foo.html` se ela existir, sem redirecionamento:
 
 - Netlify e GitHub Pages suportam isso por padrão.
 - Vercel requer a ativação da opção [`cleanUrls` no `vercel.json`](https://vercel.com/docs/concepts/projects/project-configuration#cleanurls).
 
-Se essa funcionalidade estiver disponível para você, também se pode ativar a própria opção de configuração [`cleanUrls`](../reference/site-config#cleanurls) de VitePress para que:
+Se essa funcionalidade estiver disponível para você, também se pode ativar a própria opção de configuração [`cleanUrls`](../reference/site-config#cleanurls) de  para que:
 
 - Links de entrada entre páginas sejam gerados sem a extensão `.html`.
 - Se o caminho atual terminar com `.html`, o roteador realizará um redirecionamento no lado do cliente para o caminho sem extensão.
@@ -167,7 +167,7 @@ Você pode personalizar o mapeamento entre a estrutura de diretórios fonte e as
 │         └─ pkg-b-docs.md
 ```
 
-E você deseja que as páginas VitePress sejam geradas assim:
+E você deseja que as páginas  sejam geradas assim:
 
 ```
 packages/pkg-a/src/pkg-a-docs.md  -->  /pkg-a/index.html
@@ -212,7 +212,7 @@ Você pode gerar muitas páginas usando um único arquivo Markdown e dados dinâ
 
 ### Arquivo de Carregamento de Caminhos {#paths-loader-file}
 
-Como VitePress é um gerador de site estático, os caminhos possíveis das páginas devem ser determinados no momento da compilação. Portanto, uma página de rota dinâmica **deve** ser acompanhada por um **arquivo de carregamento de caminhos**. Para `packages/[pkg].md`, precisaremos de `packages/[pkg].paths.js` (`.ts` também é suportado):
+Como  é um gerador de site estático, os caminhos possíveis das páginas devem ser determinados no momento da compilação. Portanto, uma página de rota dinâmica **deve** ser acompanhada por um **arquivo de carregamento de caminhos**. Para `packages/[pkg].md`, precisaremos de `packages/[pkg].paths.js` (`.ts` também é suportado):
 
 ```
 .

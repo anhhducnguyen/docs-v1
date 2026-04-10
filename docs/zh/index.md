@@ -1,14 +1,14 @@
 ---
-description: VitePress 是一个由 Vite 和 Vue 驱动的静态站点生成器，可以用 Markdown 快速创建精美的文档站点。
+description:  是一个由 Vite 和 Vue 驱动的静态站点生成器，可以用 Markdown 快速创建精美的文档站点。
 layout: home
 
 hero:
-  name: VitePress
+  name: 
   text: 由 Vite 和 Vue 驱动的静态站点生成器
   tagline: 将 Markdown 变成优雅的文档，只需几分钟
   actions:
     - theme: brand
-      text: 什么是 VitePress?
+      text: 什么是 ?
       link: ./guide/what-is-vitepress
     - theme: alt
       text: 快速开始
@@ -18,7 +18,7 @@ hero:
       link: https://github.com/vuejs/vitepress
   image:
       src: /vitepress-logo-large.svg
-      alt: VitePress
+      alt: 
 
 features:
   - icon: 📝

@@ -1,21 +1,21 @@
 import { setupDevToolsPlugin } from '@vue/devtools-api'
 import type { App } from 'vue'
-import type { VitePressData } from './data'
+import type { Data } from './data'
 import type { Router } from './router'
 
-const COMPONENT_STATE_TYPE = 'VitePress'
+const COMPONENT_STATE_TYPE = ''
 
 export const setupDevtools = (
   app: App,
   router: Router,
-  data: VitePressData
+  data: Data
 ): void => {
   setupDevToolsPlugin(
     {
       // fix recursive reference
       app: app as any,
       id: 'org.vuejs.vitepress',
-      label: 'VitePress',
+      label: '',
       packageName: 'vitepress',
       homepage: 'https://vitepress.dev',
       componentStateTypes: [COMPONENT_STATE_TYPE]

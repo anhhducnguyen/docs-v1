@@ -1,10 +1,10 @@
 ---
-description: Reference of VitePress runtime APIs including composables, helper functions, and built-in components.
+description: Reference of  runtime APIs including composables, helper functions, and built-in components.
 ---
 
 # Runtime API
 
-VitePress offers several built-in APIs to let you access app data. VitePress also comes with a few built-in components that can be used globally.
+ offers several built-in APIs to let you access app data.  also comes with a few built-in components that can be used globally.
 
 The helper methods are globally importable from `vitepress` and are typically used in custom theme Vue components. However, they are also usable inside `.md` pages because markdown files are compiled into Vue [Single-File Components](https://vuejs.org/guide/scaling-up/sfc.html).
 
@@ -15,7 +15,7 @@ Methods that start with `use*` indicates that it is a [Vue 3 Composition API](ht
 Returns page-specific data. The returned object has the following type:
 
 ```ts
-interface VitePressData<T = any> {
+interface Data<T = any> {
   /**
    * Site-level metadata
    */
@@ -90,7 +90,7 @@ interface Route {
 
 ## `useRouter` <Badge type="info" text="composable" />
 
-Returns the VitePress router instance so you can programmatically navigate to another page.
+Returns the  router instance so you can programmatically navigate to another page.
 
 ```ts
 interface Router {
@@ -143,7 +143,7 @@ The `<Content />` component displays the rendered markdown contents. Useful [whe
 
 The `<ClientOnly />` component renders its slot only at client side.
 
-Because VitePress applications are server-rendered in Node.js when generating static builds, any Vue usage must conform to the universal code requirements. In short, make sure to only access Browser / DOM APIs in beforeMount or mounted hooks.
+Because  applications are server-rendered in Node.js when generating static builds, any Vue usage must conform to the universal code requirements. In short, make sure to only access Browser / DOM APIs in beforeMount or mounted hooks.
 
 If you are using or demoing components that are not SSR-friendly (for example, contain custom directives), you can wrap them inside the `ClientOnly` component.
 

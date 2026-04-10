@@ -23,14 +23,14 @@ features:
     details: SVG on features section
     icon:
       src: /vitepress.svg
-      alt: VitePress Logo
+      alt:  Logo
   - title: PNG
     details: PNG on features section
     icon:
       src: /vitepress.png
       width: 48
       height: 48
-      alt: VitePress Logo
+      alt:  Logo
   - title: Dark/Light SVG
     details: Dark/Light SVG on features section
     icon:

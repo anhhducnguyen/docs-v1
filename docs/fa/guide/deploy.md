@@ -279,7 +279,7 @@ Cache-Control: max-age=31536000,immutable
 
 ### Hostinger
 
-می‌توانید پروژه ویت‌پرس خود را با [Hostinger](https://www.hostinger.com/web-apps-hosting) با دنبال کردن این [دستورالعمل‌ها](https://www.hostinger.com/support/how-to-deploy-a-nodejs-website-in-hostinger/) منتشر کنید. هنگام پیکربندی تنظیمات ساخت، VitePress را به عنوان فریم‌ورک انتخاب کنید و ریشه دایرکتوری را به `./docs` تنظیم کنید.
+می‌توانید پروژه ویت‌پرس خود را با [Hostinger](https://www.hostinger.com/web-apps-hosting) با دنبال کردن این [دستورالعمل‌ها](https://www.hostinger.com/support/how-to-deploy-a-nodejs-website-in-hostinger/) منتشر کنید. هنگام پیکربندی تنظیمات ساخت،  را به عنوان فریم‌ورک انتخاب کنید و ریشه دایرکتوری را به `./docs` تنظیم کنید.
 
 ### Kinsta
 

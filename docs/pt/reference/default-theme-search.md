@@ -1,13 +1,13 @@
 ---
 outline: deep
-description: Configure a pesquisa local ou com Algolia para seu site VitePress.
+description: Configure a pesquisa local ou com Algolia para seu site .
 ---
 
 # Pesquisa {#search}
 
 ## Pesquisa Local {#local-search}
 
-VitePress oferece suporte à pesquisa de texto completa usando um índice no navegador graças ao [minisearch](https://github.com/lucaong/minisearch/). Para habilitar esse recurso, basta definir a opção `themeConfig.search.provider` como `'local'` no arquivo `.vitepress/config.ts`:
+ oferece suporte à pesquisa de texto completa usando um índice no navegador graças ao [minisearch](https://github.com/lucaong/minisearch/). Para habilitar esse recurso, basta definir a opção `themeConfig.search.provider` como `'local'` no arquivo `.vitepress/config.ts`:
 
 ```ts
 import { defineConfig } from 'vitepress'
@@ -186,7 +186,7 @@ export default defineConfig({
 
 ## Pesquisa Algolia {#algolia-search}
 
-VitePress oferece suporte à pesquisa em seu site de documentação usando [Algolia DocSearch](https://docsearch.algolia.com/docs/what-is-docsearch). Consulte o guia de início deles. Em seu arquivo `.vitepress/config.ts`, você precisará fornecer pelo menos o seguinte para que funcione:
+ oferece suporte à pesquisa em seu site de documentação usando [Algolia DocSearch](https://docsearch.algolia.com/docs/what-is-docsearch). Consulte o guia de início deles. Em seu arquivo `.vitepress/config.ts`, você precisará fornecer pelo menos o seguinte para que funcione:
 
 ```ts
 import { defineConfig } from 'vitepress'
@@ -316,7 +316,7 @@ export default defineConfig({
 
 #### Modo (auto / sidePanel / hybrid / modal) {#ask-ai-mode}
 
-Você pode controlar opcionalmente como o VitePress integra a pesquisa por palavra-chave e o Ask AI:
+Você pode controlar opcionalmente como o  integra a pesquisa por palavra-chave e o Ask AI:
 
 - `mode: 'auto'` (padrão): infere `hybrid` quando a pesquisa por palavra-chave está configurada, caso contrário `sidePanel` quando o painel lateral do Ask AI está configurado.
 - `mode: 'sidePanel'`: força apenas o painel lateral (oculta o botão de pesquisa por palavra-chave).

@@ -1,16 +1,16 @@
 ---
-description: VitePressのMarkdownファイルでYAMLフロントマターを使い、ページ単位のメタデータや動作を制御する方法。
+description: のMarkdownファイルでYAMLフロントマターを使い、ページ単位のメタデータや動作を制御する方法。
 ---
 
 # フロントマター {#frontmatter}
 
 ## 使い方 {#usage}
 
-VitePress はすべての Markdown ファイルで YAML フロントマターをサポートしており、[gray-matter](https://github.com/jonschlinkert/gray-matter) で解析します。フロントマターは Markdown ファイルの先頭（`<script>` タグを含むあらゆる要素より前）に配置し、三本のハイフンで囲まれた **有効な YAML** 形式で記述します。例:
+ はすべての Markdown ファイルで YAML フロントマターをサポートしており、[gray-matter](https://github.com/jonschlinkert/gray-matter) で解析します。フロントマターは Markdown ファイルの先頭（`<script>` タグを含むあらゆる要素より前）に配置し、三本のハイフンで囲まれた **有効な YAML** 形式で記述します。例:
 
 ```md
 ---
-title: Docs with VitePress
+title: Docs with 
 editLink: true
 ---
 ```
@@ -27,7 +27,7 @@ Markdown ファイル内での使用例:
 
 ```md
 ---
-title: Docs with VitePress
+title: Docs with 
 editLink: true
 ---
 
@@ -40,7 +40,7 @@ Guide content
 
 ## 代替フロントマター形式 {#alternative-frontmatter-formats}
 
-VitePress は JSON フロントマター構文もサポートしています。中括弧で開始・終了する形式です。
+ は JSON フロントマター構文もサポートしています。中括弧で開始・終了する形式です。
 
 ```md
 ---

@@ -1,5 +1,5 @@
 ---
-description: Crie páginas de equipe com perfis de membros usando os componentes integrados de equipe do VitePress.
+description: Crie páginas de equipe com perfis de membros usando os componentes integrados de equipe do .
 ---
 
 <script setup>
@@ -107,7 +107,7 @@ const members = [
       Nosso time
     </template>
     <template #lead>
-     O desenvolvimento do VitePress é orientado por uma equipe internacional,
+     O desenvolvimento do  é orientado por uma equipe internacional,
      alguns dos membros escolheram ser apresentados abaixo.
     </template>
   </VPTeamPageTitle>
@@ -235,7 +235,7 @@ Adiciona a seção "título" da página. Melhor usar logo no início sob `<VPTea
       Nosso time
     </template>
     <template #lead>
-      O desenvolvimento do VitePress é orientado por uma equipe internacional,
+      O desenvolvimento do  é orientado por uma equipe internacional,
       alguns dos membros escolheram ser apresentados abaixo.
     </template>
   </VPTeamPageTitle>

@@ -1,5 +1,5 @@
 ---
-description: Configura la navegación de la barra lateral en el tema predeterminado de VitePress con grupos, secciones colapsables y múltiples barras laterales.
+description: Configura la navegación de la barra lateral en el tema predeterminado de  con grupos, secciones colapsables y múltiples barras laterales.
 ---
 
 # Barra Lateral {#sidebar}

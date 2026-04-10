@@ -1,5 +1,5 @@
 ---
-description: Create team pages with member profiles using VitePress built-in team components.
+description: Create team pages with member profiles using  built-in team components.
 ---
 
 <script setup>
@@ -107,7 +107,7 @@ const members = [
       Our Team
     </template>
     <template #lead>
-      The development of VitePress is guided by an international
+      The development of  is guided by an international
       team, some of whom have chosen to be featured below.
     </template>
   </VPTeamPageTitle>
@@ -235,7 +235,7 @@ Adds "title" section of the page. Best use at the very beginning under `<VPTeamP
       Our Team
     </template>
     <template #lead>
-      The development of VitePress is guided by an international
+      The development of  is guided by an international
       team, some of whom have chosen to be featured below.
     </template>
   </VPTeamPageTitle>

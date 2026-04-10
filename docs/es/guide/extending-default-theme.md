@@ -1,11 +1,11 @@
 ---
-description: Personaliza y extiende el tema predeterminado de VitePress con CSS personalizado, componentes, layouts y slots.
+description: Personaliza y extiende el tema predeterminado de  con CSS personalizado, componentes, layouts y slots.
 outline: deep
 ---
 
 # Extendiendo el Tema por defecto {#extending-the-default-theme}
 
-El tema por defecto de VitePress es optimizado para documentación y puede ser personalizado. Consulte la [Visión General de Configuración del Tema por Defecto](../reference/default-theme-config) para una lista completa de opciones.
+El tema por defecto de  es optimizado para documentación y puede ser personalizado. Consulte la [Visión General de Configuración del Tema por Defecto](../reference/default-theme-config) para una lista completa de opciones.
 
 Sin embargo, hay casos en que apenas la configuración no será suficiente. Por ejemplo:
 
@@ -42,7 +42,7 @@ Vea las [variables CSS del tema por defecto](https://github.com/vuejs/vitepress/
 
 ## Usando Fuentes Diferentes {#using-different-fonts}
 
-VitePress usa [Inter](https://rsms.me/inter/) como fuente por defecto e incluirá las fuentes en la salida de compilación. La fuente también es pre-cargada automaticamente en producción. Sin embargo, eso puede no ser deseable se quiere usar una fuente principal diferente.
+ usa [Inter](https://rsms.me/inter/) como fuente por defecto e incluirá las fuentes en la salida de compilación. La fuente también es pre-cargada automaticamente en producción. Sin embargo, eso puede no ser deseable se quiere usar una fuente principal diferente.
 
 Para evitar la inclusión de Inter en la salida de compilación, importe el tema de `vitepress/theme-without-fonts`:
 

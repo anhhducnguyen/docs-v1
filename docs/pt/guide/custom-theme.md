@@ -1,5 +1,5 @@
 ---
-description: Crie e use um tema personalizado no VitePress para controlar totalmente a aparência do seu site.
+description: Crie e use um tema personalizado no  para controlar totalmente a aparência do seu site.
 ---
 
 # Usando um Tema Personalizado {#using-a-custom-theme}
@@ -19,11 +19,11 @@ Você pode habilitar um tema personalizado criando um arquivo `.vitepress/theme/
 └─ package.json
 ```
 
-VitePress sempre usará o tema personalizado em vez do tema padrão quando detectar a presença de um arquivo de entrada do tema. No entanto, você pode [estender o tema padrão](./extending-default-theme) para realizar personalizações avançadas sobre ele.
+ sempre usará o tema personalizado em vez do tema padrão quando detectar a presença de um arquivo de entrada do tema. No entanto, você pode [estender o tema padrão](./extending-default-theme) para realizar personalizações avançadas sobre ele.
 
 ## Interface do Tema {#theme-interface}
 
-Um tema personalizado do VitePress é definido como um objeto com a seguinte interface:
+Um tema personalizado do  é definido como um objeto com a seguinte interface:
 
 ```ts
 interface Theme {
@@ -46,7 +46,7 @@ interface Theme {
 
 interface EnhanceAppContext {
   app: App // instância da aplicação Vue
-  router: Router // instância do roteador VitePress
+  router: Router // instância do roteador 
   siteData: Ref<SiteData> // Metadados do nível do site
 }
 ```
@@ -56,7 +56,7 @@ O arquivo de entrada do tema deve exportar o tema como sua exportação padrão:
 ```js [.vitepress/theme/index.js]
 
 // Você pode importar arquivos Vue diretamente no arquivo de entrada do tema
-// VitePress já está pré-configurado com @vitejs/plugin-vue.
+//  já está pré-configurado com @vitejs/plugin-vue.
 import Layout from './Layout.vue'
 
 export default {
@@ -67,7 +67,7 @@ export default {
 }
 ```
 
-A exportação padrão é o único contrato para um tema personalizado, e apenas a propriedade `Layout` é exigida. Tecnicamente, um tema do VitePress pode ser tão simples quanto um único componente Vue.
+A exportação padrão é o único contrato para um tema personalizado, e apenas a propriedade `Layout` é exigida. Tecnicamente, um tema do  pode ser tão simples quanto um único componente Vue.
 
 Dentro do seu componente de layout, ele funciona como uma aplicação Vite + Vue 3 normal. Note que o tema também precisa ser [compatível com SSR](./ssr-compat).
 
@@ -164,7 +164,7 @@ Se você deseja distribuir seu tema como um pacote npm, siga estas etapas:
 
 2. Se aplicável, exporte a definição de configuração de tipo do tema como `ThemeConfig`.
 
-3. Se seu tema exigir ajustes na configuração VitePress, exporte essa configuração em um subdiretório do pacote (por exemplo, `meu-tema/config`) para que o usuário possa estendê-la.
+3. Se seu tema exigir ajustes na configuração , exporte essa configuração em um subdiretório do pacote (por exemplo, `meu-tema/config`) para que o usuário possa estendê-la.
 
 4. Documente as opções de configuração do tema (tanto via arquivo de configuração quanto em frontmatter).
 
@@ -193,7 +193,7 @@ export default {
 }
 ```
 
-Se o tema exigir uma configuração especial do VitePress, você também precisará estendê-lo em sua própria configuração:
+Se o tema exigir uma configuração especial do , você também precisará estendê-lo em sua própria configuração:
 
 ```ts
 // .vitepress/theme/config.ts

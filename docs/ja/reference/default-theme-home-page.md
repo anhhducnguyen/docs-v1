@@ -1,10 +1,10 @@
 ---
-description: VitePressデフォルトテーマのホームページレイアウトをヒーローセクション、フィーチャー、カスタムコンテンツで設定する方法。
+description: デフォルトテーマのホームページレイアウトをヒーローセクション、フィーチャー、カスタムコンテンツで設定する方法。
 ---
 
 # ホームページ {#home-page}
 
-VitePress のデフォルトテーマにはホームページ用レイアウトが用意されています（[このサイトのトップページ](../) でも使われています）。[フロントマター](./frontmatter-config) に `layout: home` を指定すれば、任意のページで利用できます。
+ のデフォルトテーマにはホームページ用レイアウトが用意されています（[このサイトのトップページ](../) でも使われています）。[フロントマター](./frontmatter-config) に `layout: home` を指定すれば、任意のページで利用できます。
 
 ```yaml
 ---
@@ -23,12 +23,12 @@ layout: home
 layout: home
 
 hero:
-  name: VitePress
+  name: 
   text: Vite & Vue powered static site generator.
   tagline: 概要テキスト...
   image:
     src: /logo.png
-    alt: VitePress
+    alt: 
   actions:
     - theme: brand
       text: はじめる
@@ -178,13 +178,13 @@ type FeatureIcon =
 layout: home
 
 hero:
-  name: VitePress
+  name: 
   text: Vite & Vue powered static site generator.
 ---
 
 ## はじめに
 
-`npx` を使えば、すぐに VitePress を始められます！
+`npx` を使えば、すぐに  を始められます！
 
 ```sh
 npm init

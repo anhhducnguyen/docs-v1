@@ -1,15 +1,15 @@
 ---
 outline: deep
-description: Implante seu site VitePress em plataformas populares como Netlify, Vercel, GitHub Pages e mais.
+description: Implante seu site  em plataformas populares como Netlify, Vercel, GitHub Pages e mais.
 ---
 
-# Implante seu Site VitePress {#deploy-your-vitepress-site}
+# Implante seu Site  {#deploy-your-vitepress-site}
 
 Os guias a seguir são baseados em alguns pressupostos:
 
-- O site VitePress está dentro do diretório `docs` do seu projeto.
+- O site  está dentro do diretório `docs` do seu projeto.
 - Você está usando o diretório de saída de compilação padrão (`.vitepress/dist`).
-- VitePress está instalado como uma dependência local em seu projeto, e você configurou os seguintes scripts em seu `package.json`:
+-  está instalado como uma dependência local em seu projeto, e você configurou os seguintes scripts em seu `package.json`:
 
   ```json [package.json]
   {
@@ -50,7 +50,7 @@ Os guias a seguir são baseados em alguns pressupostos:
 
 ## Configurando um Caminho Base Público {#setting-a-public-base-path}
 
-Por padrão, assumimos que o site será implantado no caminho raiz de um domínio (`/`). Se seu site for servido em um subcaminho, por exemplo, `https://meusite.com/blog/`, você precisa então configurar a opção [`base`](../reference/site-config#base) para `'/blog/'` na configuração VitePress.
+Por padrão, assumimos que o site será implantado no caminho raiz de um domínio (`/`). Se seu site for servido em um subcaminho, por exemplo, `https://meusite.com/blog/`, você precisa então configurar a opção [`base`](../reference/site-config#base) para `'/blog/'` na configuração .
 
 **Exemplo:** Ao usar GitHub Pages (ou GitLab Pages) e implantar em `user.github.io/repo/`, defina seu `base` como `/repo/`.
 
@@ -123,9 +123,9 @@ Não ative opções como _Auto Minify_ para código HTML. Isso removerá coment�
 1. Crie um arquivo chamado `deploy.yml` dentro do diretório `.github/workflows` do seu projeto com algum conteúdo como este:
 
    ```yaml [.github/workflows/deploy.yml]
-   # Exemplo de fluxo de trabalho para compilar e implantar um site VitePress no GitHub Pages
+   # Exemplo de fluxo de trabalho para compilar e implantar um site  no GitHub Pages
    #
-   name: Implante o site VitePress no Pages
+   name: Implante o site  no Pages
 
    on:
      # Executa em pushes direcionados à branch `main`.
@@ -170,7 +170,7 @@ Não ative opções como _Auto Minify_ para código HTML. Isso removerá coment�
            uses: actions/configure-pages@v4
          - name: Install dependencies
            run: npm ci # ou pnpm install / yarn install / bun install
-        - name: Build with VitePress
+        - name: Build with 
           run: npm run docs:build # ou pnpm docs:build / yarn docs:build / bun run docs:build
          - name: Upload artifact
            uses: actions/upload-pages-artifact@v3
@@ -192,7 +192,7 @@ Não ative opções como _Auto Minify_ para código HTML. Isso removerá coment�
    ```
 
    ::: warning
-   Certifique-se de que a opção `base` em seu VitePress esteja configurada corretamente. Veja [Configurando um Caminho Base Público](#setting-a-public-base-path) para mais detalhes.
+   Certifique-se de que a opção `base` em seu  esteja configurada corretamente. Veja [Configurando um Caminho Base Público](#setting-a-public-base-path) para mais detalhes.
    :::
 
 2. Nas configurações do seu repositório sob o item do menu "Pages", selecione "GitHub Actions" em "Build and deployment > Source".
@@ -201,7 +201,7 @@ Não ative opções como _Auto Minify_ para código HTML. Isso removerá coment�
 
 ### GitLab Pages
 
-1. Defina `outDir` na configuração VitePress como `../public`. Configure a opção `base` para `'/<repository>/'` se você deseja implantar em `https://<username>.gitlab.io/<repository>/`. Você não precisa de `base` se estiver implantando em um domínio personalizado, páginas de usuário ou grupo, ou se a configuração "Use unique domain" estiver habilitada no GitLab.
+1. Defina `outDir` na configuração  como `../public`. Configure a opção `base` para `'/<repository>/'` se você deseja implantar em `https://<username>.gitlab.io/<repository>/`. Você não precisa de `base` se estiver implantando em um domínio personalizado, páginas de usuário ou grupo, ou se a configuração "Use unique domain" estiver habilitada no GitLab.
 
 2. Crie um arquivo chamado `.gitlab-ci.yml` na raiz do seu projeto com o conteúdo abaixo. Isso construirá e implantará seu site sempre que você fizer alterações no conteúdo:
 
@@ -234,7 +234,7 @@ Não ative opções como _Auto Minify_ para código HTML. Isso removerá coment�
 
 ### CloudRay
 
-Você pode implantar seu projeto VitePress com a [CloudRay](https://cloudray.io/) seguindo estas [instruções](https://cloudray.io/articles/how-to-deploy-vitepress-site).
+Você pode implantar seu projeto  com a [CloudRay](https://cloudray.io/) seguindo estas [instruções](https://cloudray.io/articles/how-to-deploy-vitepress-site).
 
 ### Firebase
 
@@ -281,15 +281,15 @@ Você pode implantar seu projeto VitePress com a [CloudRay](https://cloudray.io/
 
 ### Hostinger
 
-Você pode implantar seu projeto VitePress com a [Hostinger](https://www.hostinger.com/web-apps-hosting) seguindo estas [instruções](https://www.hostinger.com/support/how-to-deploy-a-nodejs-website-in-hostinger/). Ao configurar as opções de build, escolha VitePress como framework e ajuste o diretório raiz para `./docs`.
+Você pode implantar seu projeto  com a [Hostinger](https://www.hostinger.com/web-apps-hosting) seguindo estas [instruções](https://www.hostinger.com/support/how-to-deploy-a-nodejs-website-in-hostinger/). Ao configurar as opções de build, escolha  como framework e ajuste o diretório raiz para `./docs`.
 
 ### Kinsta
 
-Você pode implantar seu site VitePress em [Kinsta](https://kinsta.com/static-site-hosting/) seguindo estas [instruções](https://kinsta.com/docs/vitepress-static-site-example/).
+Você pode implantar seu site  em [Kinsta](https://kinsta.com/static-site-hosting/) seguindo estas [instruções](https://kinsta.com/docs/vitepress-static-site-example/).
 
 ### Stormkit
 
-Você pode implantar seu projeto VitePress na [Stormkit](https://www.stormkit.io) seguindo estas [instruções](https://stormkit.io/blog/how-to-deploy-vitepress).
+Você pode implantar seu projeto  na [Stormkit](https://www.stormkit.io) seguindo estas [instruções](https://stormkit.io/blog/how-to-deploy-vitepress).
 
 ### Surge
 
@@ -301,7 +301,7 @@ Você pode implantar seu projeto VitePress na [Stormkit](https://www.stormkit.io
 
 ### Nginx
 
-Aqui está um exemplo de configuração de bloco de servidor Nginx. Essa configuração inclui compressão gzip para ativos comuns baseados em texto, regras para servir os arquivos estáticos do seu site VitePress com cabeçalhos de cache apropriados, assim como lidar com `cleanUrls: true`.
+Aqui está um exemplo de configuração de bloco de servidor Nginx. Essa configuração inclui compressão gzip para ativos comuns baseados em texto, regras para servir os arquivos estáticos do seu site  com cabeçalhos de cache apropriados, assim como lidar com `cleanUrls: true`.
 
 ```nginx
 server {
@@ -335,7 +335,7 @@ server {
 }
 ```
 
-Essa configuração presume que o site VitePress compilado está localizado no diretório `/app` no seu servidor. Ajuste a diretiva `root` de acordo caso os arquivos do site estejam em outro lugar.
+Essa configuração presume que o site  compilado está localizado no diretório `/app` no seu servidor. Ajuste a diretiva `root` de acordo caso os arquivos do site estejam em outro lugar.
 
 ::: warning Não use index.html por padrão
 A resolução de try_files não deve padronizar para index.html como em outras aplicações Vue. Isso resultará em um estado de página inválido.

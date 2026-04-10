@@ -1,5 +1,5 @@
 ---
-description: Muestra la marca de tiempo de la última actualización en las páginas de VitePress basada en el historial de commits de Git.
+description: Muestra la marca de tiempo de la última actualización en las páginas de  basada en el historial de commits de Git.
 ---
 
 # Última Actualización {#last-updated}

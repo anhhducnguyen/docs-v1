@@ -81,14 +81,14 @@ export async function renderPage(
       ? []
       : result && appChunk
         ? [
-            ...new Set([
-              // resolve imports for index.js + page.md.js and inject script tags
-              // for them as well so we fetch everything as early as possible
-              // without having to wait for entry chunks to parse
-              ...resolvePageImports(config, page, result, appChunk),
-              pageClientJsFileName
-            ])
-          ]
+          ...new Set([
+            // resolve imports for index.js + page.md.js and inject script tags
+            // for them as well so we fetch everything as early as possible
+            // without having to wait for entry chunks to parse
+            ...resolvePageImports(config, page, result, appChunk),
+            pageClientJsFileName
+          ])
+        ]
         : []
 
   let prefetchLinks: string[] = []
@@ -160,25 +160,22 @@ export async function renderPage(
 <html lang="${siteData.lang}" dir="${dir}">
   <head>
     <meta charset="utf-8">
-    ${
-      isMetaViewportOverridden(head)
-        ? ''
-        : '<meta name="viewport" content="width=device-width,initial-scale=1">'
+    ${isMetaViewportOverridden(head)
+      ? ''
+      : '<meta name="viewport" content="width=device-width,initial-scale=1">'
     }
     <title>${escapeHtml(title)}</title>
-    ${
-      isDescriptionOverridden(head)
-        ? ''
-        : `<meta name="description" content="${escapeHtml(description)}">`
+    ${isDescriptionOverridden(head)
+      ? ''
+      : `<meta name="description" content="${escapeHtml(description)}">`
     }
-    <meta name="generator" content="VitePress v${version}">
+    <meta name="generator" content=" v${version}">
     ${stylesheetLink}
     <link rel="preload stylesheet" href="${siteData.base}vp-icons.css" as="style">
     ${metadataScript.inHead ? metadataScript.html : ''}
-    ${
-      appChunk
-        ? `<script type="module" src="${siteData.base}${appChunk.fileName}"></script>`
-        : ''
+    ${appChunk
+      ? `<script type="module" src="${siteData.base}${appChunk.fileName}"></script>`
+      : ''
     }
     ${await renderHead(head)}
   </head>

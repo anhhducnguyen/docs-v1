@@ -1,12 +1,12 @@
 ---
-description: 在 VitePress 的 Markdown 文件中直接使用 Vue 组件和动态模板功能。
+description: 在  的 Markdown 文件中直接使用 Vue 组件和动态模板功能。
 ---
 
 # 在 Markdown 使用 Vue {#using-vue-in-markdown}
 
-在 VitePress 中，每个 Markdown 文件都被编译成 HTML，而且将其作为 [Vue 单文件组件](https://cn.vuejs.org/guide/scaling-up/sfc.html)处理。这意味着可以在 Markdown 中使用任何 Vue 功能，包括动态模板、使用 Vue 组件或通过添加 `<script>` 标签为页面的 Vue 组件添加逻辑。
+在  中，每个 Markdown 文件都被编译成 HTML，而且将其作为 [Vue 单文件组件](https://cn.vuejs.org/guide/scaling-up/sfc.html)处理。这意味着可以在 Markdown 中使用任何 Vue 功能，包括动态模板、使用 Vue 组件或通过添加 `<script>` 标签为页面的 Vue 组件添加逻辑。
 
-值得注意的是，VitePress 利用 Vue 的编译器自动检测和优化 Markdown 内容的纯静态部分。静态内容被优化为单个占位符节点，并从页面的 JavaScript 负载中删除以供初始访问。在客户端激活期间也会跳过它们。简而言之，只需注意任何给定页面上的动态部分。
+值得注意的是， 利用 Vue 的编译器自动检测和优化 Markdown 内容的纯静态部分。静态内容被优化为单个占位符节点，并从页面的 JavaScript 负载中删除以供初始访问。在客户端激活期间也会跳过它们。简而言之，只需注意任何给定页面上的动态部分。
 
 ::: tip SSR 兼容性
 所有的 Vue 用法都需要兼容 SSR。参见 [SSR 兼容性](./ssr-compat)获得更多信息和常见的解决方案。
@@ -75,7 +75,7 @@ The count is: {{ count }}
 在 Markdown 中使用时，`<style scoped>` 需要为当前页面的每个元素添加特殊属性，这将显著增加页面的大小。当我们需要局部范围的样式时 `<style module>` 是首选。
 :::
 
-还可以访问 VitePress 的运行时 API，例如 [`useData` 辅助函数](../reference/runtime-api#usedata)，它提供了当前页面的元数据：
+还可以访问  的运行时 API，例如 [`useData` 辅助函数](../reference/runtime-api#usedata)，它提供了当前页面的元数据：
 
 **输入**
 
@@ -144,7 +144,7 @@ This is a .md using a custom component
 被 `<code>` 包裹的 HTML 将按原样显示，只有未包裹的 HTML 才会被 Vue 解析。
 
 ::: tip
-输出 HTML 由 [Markdown-it](https://github.com/Markdown-it/Markdown-it) 完成，而解析的标题由 VitePress 处理 (并用于侧边栏和文档标题)。
+输出 HTML 由 [Markdown-it](https://github.com/Markdown-it/Markdown-it) 完成，而解析的标题由  处理 (并用于侧边栏和文档标题)。
 :::
 
 
@@ -204,7 +204,7 @@ Hello {{ 1 + 1 }}
 
 ## 使用 CSS 预处理器 {#using-css-pre-processors}
 
-VitePress [内置支持](https://cn.vitejs.dev/guide/features.html#css-pre-processors) CSS 预处理器：`.scss`、`.sass`、.`less`、`.styl` 和 `.stylus` 文件。无需为它们安装 Vite 专用插件，但必须安装相应的预处理器：
+ [内置支持](https://cn.vitejs.dev/guide/features.html#css-pre-processors) CSS 预处理器：`.scss`、`.sass`、.`less`、`.styl` 和 `.stylus` 文件。无需为它们安装 Vite 专用插件，但必须安装相应的预处理器：
 
 ```
 # .scss and .sass
@@ -228,7 +228,7 @@ npm install -D stylus
 
 ## 使用 teleport 传递组件内容 {#using-teleports}
 
-VitePress 目前只有使用 teleport 传送到 body 的 SSG 支持。对于其他地方，可以将它们包裹在内置的 `<ClientOnly>` 组件中，或者通过 [postRender 钩子](../reference/site-config#postrender)将 teleport 标签注入到最终页面 HTML 中的正确位置。
+ 目前只有使用 teleport 传送到 body 的 SSG 支持。对于其他地方，可以将它们包裹在内置的 `<ClientOnly>` 组件中，或者通过 [postRender 钩子](../reference/site-config#postrender)将 teleport 标签注入到最终页面 HTML 中的正确位置。
 
 <ModalDemo />
 

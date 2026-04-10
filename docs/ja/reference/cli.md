@@ -1,12 +1,12 @@
 ---
-description: VitePress CLIコマンドのリファレンス。dev、build、preview、initコマンドの使い方。
+description:  CLIコマンドのリファレンス。dev、build、preview、initコマンドの使い方。
 ---
 
 # コマンドラインインターフェイス {#command-line-interface}
 
 ## `vitepress dev`
 
-指定したディレクトリをルートとして VitePress の開発サーバーを起動します。既定はカレントディレクトリです。カレントディレクトリで実行する場合、`dev` コマンドは省略できます。
+指定したディレクトリをルートとして  の開発サーバーを起動します。既定はカレントディレクトリです。カレントディレクトリで実行する場合、`dev` コマンドは省略できます。
 
 ### 使い方 {#usage}
 
@@ -31,7 +31,7 @@ vitepress dev [root]
 
 ## `vitepress build`
 
-本番用に VitePress サイトをビルドします。
+本番用に  サイトをビルドします。
 
 ### 使い方 {#usage-1}
 

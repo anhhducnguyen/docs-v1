@@ -97,7 +97,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       collapsed: false,
       items: [
         {
-          text: 'VitePress란 무엇인가?',
+          text: '란 무엇인가?',
           link: 'what-is-vitepress'
         },
         {

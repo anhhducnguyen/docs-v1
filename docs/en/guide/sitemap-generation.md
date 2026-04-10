@@ -1,10 +1,10 @@
 ---
-description: Generate a sitemap.xml file for your VitePress site to improve search engine discoverability.
+description: Generate a sitemap.xml file for your  site to improve search engine discoverability.
 ---
 
 # Sitemap Generation
 
-VitePress comes with out-of-the-box support for generating a `sitemap.xml` file for your site. To enable it, add the following to your `.vitepress/config.js`:
+ comes with out-of-the-box support for generating a `sitemap.xml` file for your site. To enable it, add the following to your `.vitepress/config.js`:
 
 ```ts
 export default {

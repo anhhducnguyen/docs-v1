@@ -1,5 +1,5 @@
 ---
-description: Aprenda a referenciar e manipular ativos estáticos como imagens, mídia e fontes no VitePress.
+description: Aprenda a referenciar e manipular ativos estáticos como imagens, mídia e fontes no .
 ---
 
 # Manipulação de Ativos {#asset-handling}
@@ -48,7 +48,7 @@ No entanto, se você estiver criando um componente de tema que vincula ativos di
 <img :src="theme.logoPath" />
 ```
 
-Nesse caso, é recomendável envolver o caminho com o [`auxiliar withBase`](../reference/runtime-api#withbase) fornecido por VitePress:
+Nesse caso, é recomendável envolver o caminho com o [`auxiliar withBase`](../reference/runtime-api#withbase) fornecido por :
 
 ```vue
 <script setup>

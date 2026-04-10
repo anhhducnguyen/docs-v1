@@ -1,10 +1,10 @@
 ---
-description: Configure the VitePress default theme home page layout with hero sections, features, and custom content.
+description: Configure the  default theme home page layout with hero sections, features, and custom content.
 ---
 
 # Home Page
 
-VitePress default theme provides a homepage layout, which you can also see used on [the homepage of this site](../). You may use it on any of your pages by specifying `layout: home` in the [frontmatter](./frontmatter-config).
+ default theme provides a homepage layout, which you can also see used on [the homepage of this site](../). You may use it on any of your pages by specifying `layout: home` in the [frontmatter](./frontmatter-config).
 
 ```yaml
 ---
@@ -23,12 +23,12 @@ The Hero section comes at the top of the homepage. Here's how you can configure 
 layout: home
 
 hero:
-  name: VitePress
+  name: 
   text: Vite & Vue powered static site generator.
   tagline: Lorem ipsum...
   image:
     src: /logo.png
-    alt: VitePress
+    alt: 
   actions:
     - theme: brand
       text: Get Started
@@ -84,7 +84,7 @@ interface HeroAction {
 
 ### Customizing the name color
 
-VitePress uses the brand color (`--vp-c-brand-1`) for the `name`. However, you may customize this color by overriding `--vp-home-hero-name-color` variable.
+ uses the brand color (`--vp-c-brand-1`) for the `name`. However, you may customize this color by overriding `--vp-home-hero-name-color` variable.
 
 ```css
 :root {
@@ -180,13 +180,13 @@ You can add additional content to your site's homepage just by adding Markdown b
 layout: home
 
 hero:
-  name: VitePress
+  name: 
   text: Vite & Vue powered static site generator.
 ---
 
 ## Getting Started
 
-You can get started using VitePress right away using `npx`!
+You can get started using  right away using `npx`!
 
 ```sh
 npm init
@@ -195,5 +195,5 @@ npx vitepress init
 ````
 
 ::: info
-VitePress didn't always auto-style the extra content of the `layout: home` page. To revert to older behavior, you can add `markdownStyles: false` to the frontmatter.
+ didn't always auto-style the extra content of the `layout: home` page. To revert to older behavior, you can add `markdownStyles: false` to the frontmatter.
 :::

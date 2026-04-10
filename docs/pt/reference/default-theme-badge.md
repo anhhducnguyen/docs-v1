@@ -1,5 +1,5 @@
 ---
-description: Use o componente Badge para adicionar rótulos de status aos cabeçalhos na documentação VitePress.
+description: Use o componente Badge para adicionar rótulos de status aos cabeçalhos na documentação .
 ---
 
 # Emblema {#badge}

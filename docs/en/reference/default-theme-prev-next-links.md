@@ -1,5 +1,5 @@
 ---
-description: Customize the previous and next page links displayed at the bottom of doc pages in VitePress.
+description: Customize the previous and next page links displayed at the bottom of doc pages in .
 ---
 
 # Prev Next Links

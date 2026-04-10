@@ -1,17 +1,17 @@
 ---
-description: Referencia completa de las opciones de configuración del sitio VitePress, incluyendo ajustes a nivel de aplicación, temas y opciones de compilación.
+description: Referencia completa de las opciones de configuración del sitio , incluyendo ajustes a nivel de aplicación, temas y opciones de compilación.
 outline: deep
 ---
 
 # Configuración de site {#site-config}
 
-La configuración del site es donde puede configurar los ajustes globales del site. Las opciones de configuración de la aplicación definen las configuraciones que se aplican a todos los sites de VitePress, independientemente del tema que estén utilizando. Por ejemplo, el directorio base o el título del site.
+La configuración del site es donde puede configurar los ajustes globales del site. Las opciones de configuración de la aplicación definen las configuraciones que se aplican a todos los sites de , independientemente del tema que estén utilizando. Por ejemplo, el directorio base o el título del site.
 
 ## Vista general {#overview}
 
 ### Resolución de configuración {#config-resolution}
 
-El archivo de configuración siempre se resuelve desde `<root>/.vitepress/config.[ext]`, donde `<root>` es la [raiz del proyecto](../guide/routing#root-and-source-directory) VitePress y `[ext]` es una de las extensiones de archivo compatibles. TypeScript es compatible desde el primer momento. Las extensiones compatibles incluyen `.js`, `.ts`, `.mjs` y `.mts`.
+El archivo de configuración siempre se resuelve desde `<root>/.vitepress/config.[ext]`, donde `<root>` es la [raiz del proyecto](../guide/routing#root-and-source-directory)  y `[ext]` es una de las extensiones de archivo compatibles. TypeScript es compatible desde el primer momento. Las extensiones compatibles incluyen `.js`, `.ts`, `.mjs` y `.mts`.
 
 Recuerde usar la sintaxis de módulos ES en los archivos de configuración. El archivo de configuración debe exportar por defecto un objeto:
 
@@ -19,7 +19,7 @@ Recuerde usar la sintaxis de módulos ES en los archivos de configuración. El a
 export default {
   // opciones de configuración a nivel de aplicación
   lang: 'pt-BR',
-  title: 'VitePress',
+  title: '',
   description: 'Generador de site estático Vite & Vue.',
   ...
 }
@@ -38,7 +38,7 @@ export default async () => {
   return defineConfig({
   // opciones de configuración a nivel de aplicación
     lang: 'pt-BR',
-    title: 'VitePress',
+    title: '',
     description: 'Generador de site estático Vite & Vue.',
 
     // opciones de configuración a nivel de tema
@@ -64,7 +64,7 @@ const posts = await (await fetch('https://my-cms.com/blog-posts')).json()
 export default defineConfig({
   // opciones de configuración a nivel de aplicación
     lang: 'pt-BR',
-    title: 'VitePress',
+    title: '',
     description: 'Generador de site estático Vite & Vue.',
 
   // opciones de configuración a nivel de tema
@@ -124,22 +124,22 @@ export default defineConfigWithTheme<ThemeConfig>({
 
 - **Vite**
 
-  Puede configurar la instancia de Vite subyacente usando la opción [vite](#vite) en su configuración de VitePress. No es necesario crear un archivo de configuración de Vite por separado.
+  Puede configurar la instancia de Vite subyacente usando la opción [vite](#vite) en su configuración de . No es necesario crear un archivo de configuración de Vite por separado.
 
 - **Vue**
 
-  VitePress ya incluye el plugin oficial de Vue para Vite ([@vitejs/plugin-vue](https://github.com/vitejs/vite-plugin-vue)). Puede configurar sus opciones usando la opción [vue](#vue) en su configuración VitePress.
+   ya incluye el plugin oficial de Vue para Vite ([@vitejs/plugin-vue](https://github.com/vitejs/vite-plugin-vue)). Puede configurar sus opciones usando la opción [vue](#vue) en su configuración .
 
 - **Markdown**
 
-  Puede configurar la instancia subyacente de [Markdown-It](https://github.com/markdown-it/markdown-it) usando la opción [markdown](#markdown) en su configuración VitePress.
+  Puede configurar la instancia subyacente de [Markdown-It](https://github.com/markdown-it/markdown-it) usando la opción [markdown](#markdown) en su configuración .
 
 ## Metadatos de Site {#site-metadata}
 
 ### title
 
 - Tipo: `string`
-- Predeterminado: `VitePress`
+- Predeterminado: ``
 - Puede ser reemplazado por página a través de [frontmatter](./frontmatter-config#title)
 
 Título de site. Al usar el tema por defecto, este será mostrado en la barra de navegación.
@@ -193,14 +193,14 @@ Una opción puede ser definida como `false` para desactivar sufijos del título.
 ### description
 
 - Tipo: `string`
-- Predeterminado: `Um site VitePress`
+- Predeterminado: `Um site `
 - Puede ser sustituído por página a través de [frontmatter](./frontmatter-config#descrição)
 
 Descripción del sitio web. Esto se presentará como una etiqueta. `<meta>` en la página HTML.
 
 ```ts
 export default {
-  descripción: 'Un site VitePress'
+  descripción: 'Un site '
 }
 ```
 
@@ -210,7 +210,7 @@ export default {
 - Predeterminado: `[]`
 - Se puede agregar por página a través de [frontmatter](./frontmatter-config#head)
 
-Elementos adicionales para agregar a la etiqueta `<head>` de la página HTML. Las etiquetas agregadas por los usuarios son mostradas antes de la etiqueta `head` de cierre, despues de las etiquetas VitePress.
+Elementos adicionales para agregar a la etiqueta `<head>` de la página HTML. Las etiquetas agregadas por los usuarios son mostradas antes de la etiqueta `head` de cierre, despues de las etiquetas .
 
 ```ts
 type HeadConfig =
@@ -351,7 +351,7 @@ export default {
 - Tipo: `boolean`
 - Predeterminado: `false`
 
-Cuando se establece en `true`, VitePress eliminará el `.html` al final de las URLs. Consulte también [Generación de URLs Limpias](../guide/routing#generating-clean-urls).
+Cuando se establece en `true`,  eliminará el `.html` al final de las URLs. Consulte también [Generación de URLs Limpias](../guide/routing#generating-clean-urls).
 
 ::: warning Soporte de Servidor Requerido
 Habilitar esto puede requerir configurar adicional en su plataforma de alojamiento. Para funcionar, su servidor debe poder servir `/foo.html` cuando visite `/foo` **sin redirección**.
@@ -443,7 +443,7 @@ export default {
 - Tipo: `boolean | 'localhostLinks' | (string | RegExp | ((link: string, source: string) => boolean))[]`
 - Predeterminado: `false`
 
-Cuando se establece en `true`, VitePress no dejará de compilarse debido a links rotos.
+Cuando se establece en `true`,  no dejará de compilarse debido a links rotos.
 
 Cuando se establece en `'localhostLinks'`, la compilación fallará en links rotos, per no verificará los links `localhost`.
 
@@ -511,7 +511,7 @@ Cuando se utiliza el tema predeterminado, al habilitar esta opción se mostrará
 
 - Tipo: `MarkdownOption`
 
-Configure las opciones de procesador Markdown. VitePress usa [Markdown-it](https://github.com/markdown-it/markdown-it) como procesador y [Shiki](https://github.com/shikijs/shiki) para resaltar la sintaxis del idioma. Dentro de esta opción, puede pasar varias opciones de Markdown relacionadas para satisfacer sus necesidades.
+Configure las opciones de procesador Markdown.  usa [Markdown-it](https://github.com/markdown-it/markdown-it) como procesador y [Shiki](https://github.com/shikijs/shiki) para resaltar la sintaxis del idioma. Dentro de esta opción, puede pasar varias opciones de Markdown relacionadas para satisfacer sus necesidades.
 
 ```js
 export default {
@@ -551,7 +551,7 @@ export default {
 
 ## Construir Ganchos {#build-hooks}
 
-Los enlaces de compilación VitePress permiten agregar nuevas funciones al su sitio web:
+Los enlaces de compilación  permiten agregar nuevas funciones al su sitio web:
 
 - Sitemap
 - Indexación de busqueda
@@ -560,7 +560,7 @@ Los enlaces de compilación VitePress permiten agregar nuevas funciones al su si
 
 ## buildEnd
 - Tipo: `(siteConfig: SiteConfig) => Awaitable<void>`
-`buildEnd` es un enlace de compilación CLI (Interfaz de línea de comando), se ejecutará después de que se complete la compilación (SSG) pero antes de que finalice el proceso CLI de VitePress.
+`buildEnd` es un enlace de compilación CLI (Interfaz de línea de comando), se ejecutará después de que se complete la compilación (SSG) pero antes de que finalice el proceso CLI de .
 
 ```ts
 export default {
@@ -593,7 +593,7 @@ export default {
 ## transformHead
 - Tipo: `(context: TransformContext) => Awaitable<HeadConfig[]>`
 
-`transformHead` es un enlace de compilación para transformar el encabezado antes de generar cada página. Esto le permite agregar entradas de encabezado que no se pueden agregar estáticamente a la configuración de VitePress. Sólo necesita devolver entradas adicionales, que se fusionarán automáticamente con las existentes.
+`transformHead` es un enlace de compilación para transformar el encabezado antes de generar cada página. Esto le permite agregar entradas de encabezado que no se pueden agregar estáticamente a la configuración de . Sólo necesita devolver entradas adicionales, que se fusionarán automáticamente con las existentes.
 
 ::: warning
 No mutes ningún elemento dentro `context`.
@@ -633,8 +633,8 @@ Tenga en cuenta que este enlace solo se llama cuando se genera el sitio de forma
           name: 'og:title',
           content:
             pageData.frontmatter.layout === 'home'
-              ? `VitePress`
-              : `${pageData.title} | VitePress`
+              ? ``
+              : `${pageData.title} | `
         }
       ])
     }

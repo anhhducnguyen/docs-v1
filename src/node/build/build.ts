@@ -36,8 +36,8 @@ export async function build(
     } catch {
       throw new Error(
         '`oxc-minify` is not installed.' +
-          ' vitepress requires `oxc-minify` to be installed when rolldown-vite is used.' +
-          ' Please run `npm install oxc-minify`.'
+        ' vitepress requires `oxc-minify` to be installed when rolldown-vite is used.' +
+        ' Please run `npm install oxc-minify`.'
       )
     }
   }
@@ -197,7 +197,7 @@ function linkVue() {
   const root = packageDirectorySync()
   if (root) {
     const dest = path.resolve(root, 'node_modules/vue')
-    // if user did not install vue by themselves, link VitePress' version
+    // if user did not install vue by themselves, link ' version
     if (!fs.existsSync(dest)) {
       const src = path.dirname(createRequire(import.meta.url).resolve('vue'))
       fs.ensureSymlinkSync(src, dest, 'junction')
@@ -206,7 +206,7 @@ function linkVue() {
       }
     }
   }
-  return () => {}
+  return () => { }
 }
 
 function generateMetadataScript(
@@ -226,11 +226,10 @@ function generateMetadataScript(
     JSON.stringify(serializeFunctions({ ...config.site, head: [] }))
   )
 
-  const metadataContent = `window.__VP_HASH_MAP__=JSON.parse(${hashMapString});${
-    siteDataString.includes('_vp-fn_')
+  const metadataContent = `window.__VP_HASH_MAP__=JSON.parse(${hashMapString});${siteDataString.includes('_vp-fn_')
       ? `${deserializeFunctions};window.__VP_SITE_DATA__=deserializeFunctions(JSON.parse(${siteDataString}));`
       : `window.__VP_SITE_DATA__=JSON.parse(${siteDataString});`
-  }`
+    }`
 
   if (!config.metaChunk) {
     return { html: `<script>${metadataContent}</script>`, inHead: false }

@@ -1,12 +1,12 @@
 ---
-description: Referencia de los comandos CLI de VitePress, incluyendo dev, build, preview e init.
+description: Referencia de los comandos CLI de , incluyendo dev, build, preview e init.
 ---
 
 # Intefaz de Linea de Comando {#command-line-interface}
 
 ## `vitepress dev`
 
- Inicia el servidor de desarrollo VitePress con el directorio designado como raíz. Por defecto, utiliza el director actual. el comando `dev` también se puede omitir cuando se ejecuta el directorio actual.
+ Inicia el servidor de desarrollo  con el directorio designado como raíz. Por defecto, utiliza el director actual. el comando `dev` también se puede omitir cuando se ejecuta el directorio actual.
 
 ### Uso
 
@@ -31,7 +31,7 @@ vitepress dev [root]
 
 ## `vitepress build`
 
-Compilar el sitio web de VitePress para producción.
+Compilar el sitio web de  para producción.
 
 ### Uso
 

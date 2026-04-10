@@ -1,5 +1,5 @@
 ---
-description: VitePress 문서 페이지 하단에 표시되는 이전 및 다음 페이지 링크를 커스터마이징하세요.
+description:  문서 페이지 하단에 표시되는 이전 및 다음 페이지 링크를 커스터마이징하세요.
 ---
 
 # 이전/다음 링크 {#prev-next-links}

@@ -1,5 +1,5 @@
 ---
-description: Show the last updated timestamp on VitePress pages based on Git commit history.
+description: Show the last updated timestamp on  pages based on Git commit history.
 ---
 
 # Last Updated
@@ -7,9 +7,9 @@ description: Show the last updated timestamp on VitePress pages based on Git com
 The update time of the last content will be displayed in the lower right corner of the page. To enable it, add `lastUpdated` options to your config.
 
 ::: info
-VitePress displays the "last updated" time using the timestamp of the most recent Git commit for each file. To enable this, the Markdown file must be committed to Git.
+ displays the "last updated" time using the timestamp of the most recent Git commit for each file. To enable this, the Markdown file must be committed to Git.
 
-Internally, VitePress runs `git log -1 --pretty="%ai"` on each file to retrieve its timestamp. If all pages show the same update time, it's likely due to shallow cloning (common in CI environments), which limits Git history.
+Internally,  runs `git log -1 --pretty="%ai"` on each file to retrieve its timestamp. If all pages show the same update time, it's likely due to shallow cloning (common in CI environments), which limits Git history.
 
 To fix this in **GitHub Actions**, use the following in your workflow:
 

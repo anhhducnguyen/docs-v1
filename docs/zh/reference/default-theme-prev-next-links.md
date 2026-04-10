@@ -1,5 +1,5 @@
 ---
-description: 自定义 VitePress 文档页面底部显示的上一页和下一页链接。
+description: 自定义  文档页面底部显示的上一页和下一页链接。
 ---
 
 # 上下页链接 {#prev-next-links}

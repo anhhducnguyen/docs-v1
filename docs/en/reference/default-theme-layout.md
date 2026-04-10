@@ -1,5 +1,5 @@
 ---
-description: Choose between doc, page, and home layouts in the VitePress default theme.
+description: Choose between doc, page, and home layouts in the  default theme.
 ---
 
 # Layout
@@ -29,7 +29,7 @@ It also provides documentation specific features listed below. These features ar
 
 Option `page` is treated as "blank page". The Markdown will still be parsed, and all of the [Markdown Extensions](../guide/markdown) work as same as `doc` layout, but it wouldn't get any default stylings.
 
-The page layout will let you style everything by you without VitePress theme affecting the markup. This is useful when you want to create your own custom page.
+The page layout will let you style everything by you without  theme affecting the markup. This is useful when you want to create your own custom page.
 
 Note that even in this layout, sidebar will still show up if the page has a matching sidebar config.
 

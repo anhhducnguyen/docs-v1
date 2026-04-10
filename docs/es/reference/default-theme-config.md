@@ -1,5 +1,5 @@
 ---
-description: Referencia de todas las opciones de configuración disponibles para el tema predeterminado de VitePress.
+description: Referencia de todas las opciones de configuración disponibles para el tema predeterminado de .
 ---
 
 # Configuración del Tema Predeterminado {#default-theme-config}
@@ -9,7 +9,7 @@ La configuración del tema te permite personalizar tu tema. puedes definir la co
 ```ts
 export default {
   lang: 'pt-BR',
-  title: 'VitePress',
+  title: '',
   description: 'Generador de site estático Vite & Vue.',
 
   // Configuraciones relacionadas con el tema.

@@ -219,7 +219,7 @@ async function gatherAdditionalConfig(
       )
 
       if (mode === 'development') {
-        ;(configExports.config as any)[VP_SOURCE_KEY] = '/' + slash(file)
+        ; (configExports.config as any)[VP_SOURCE_KEY] = '/' + slash(file)
       }
 
       return [id, configExports.config as AdditionalConfig] as const
@@ -324,9 +324,9 @@ export async function resolveSiteData(
   return {
     lang: userConfig.lang || 'en-US',
     dir: userConfig.dir || 'ltr',
-    title: userConfig.title || 'VitePress',
+    title: userConfig.title || '',
     titleTemplate: userConfig.titleTemplate,
-    description: userConfig.description || 'A VitePress site',
+    description: userConfig.description || 'A  site',
     base: userConfig.base ? userConfig.base.replace(/([^/])$/, '$1/') : '/',
     head: resolveSiteDataHead(userConfig),
     router: {

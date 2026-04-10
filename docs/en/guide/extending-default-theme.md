@@ -1,11 +1,11 @@
 ---
 outline: deep
-description: Customize and extend the VitePress default theme with custom CSS, components, layouts, and slots.
+description: Customize and extend the  default theme with custom CSS, components, layouts, and slots.
 ---
 
 # Extending the Default Theme
 
-VitePress' default theme is optimized for documentation, and can be customized. Consult the [Default Theme Config Overview](../reference/default-theme-config) for a comprehensive list of options.
+' default theme is optimized for documentation, and can be customized. Consult the [Default Theme Config Overview](../reference/default-theme-config) for a comprehensive list of options.
 
 However, there are a number of cases where configuration alone won't be enough. For example:
 
@@ -42,7 +42,7 @@ See [default theme CSS variables](https://github.com/vuejs/vitepress/blob/main/s
 
 ## Using Different Fonts
 
-VitePress uses [Inter](https://rsms.me/inter/) as the default font, and will include the fonts in the build output. The font is also auto preloaded in production. However, this may not be desirable if you want to use a different main font.
+ uses [Inter](https://rsms.me/inter/) as the default font, and will include the fonts in the build output. The font is also auto preloaded in production. However, this may not be desirable if you want to use a different main font.
 
 To avoid including Inter in the build output, import the theme from `vitepress/theme-without-fonts` instead:
 

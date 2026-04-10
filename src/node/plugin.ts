@@ -65,7 +65,7 @@ const isPageChunk = (
 
 const cleanUrl = (url: string): string => url.replace(/[?#].*$/s, '')
 
-export async function createVitePressPlugin(
+export async function createPlugin(
   siteConfig: SiteConfig,
   ssr = false,
   pageToHashMap?: Record<string, string>,
@@ -97,9 +97,9 @@ export async function createVitePressPlugin(
   const processClientJS = (code: string, id: string) => {
     return scriptClientRE.test(code)
       ? code.replace(scriptClientRE, (_, content) => {
-          if (ssr && clientJSMap) clientJSMap[id] = content
-          return `\n`.repeat(_.split('\n').length - 1)
-        })
+        if (ssr && clientJSMap) clientJSMap[id] = content
+        return `\n`.repeat(_.split('\n').length - 1)
+      })
       : code
   }
 
@@ -212,7 +212,7 @@ export async function createVitePressPlugin(
         allDeadLinks.push(...deadLinks)
         if (includes.length) {
           includes.forEach((i) => {
-            ;(importerMap[slash(i)] ??= new Set()).add(relativePath)
+            ; (importerMap[slash(i)] ??= new Set()).add(relativePath)
             this.addWatchFile(i)
           })
         }

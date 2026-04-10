@@ -1,10 +1,10 @@
 ---
-description: Integrate Carbon Ads into your VitePress site using the default theme's built-in support.
+description: Integrate Carbon Ads into your  site using the default theme's built-in support.
 ---
 
 # Carbon Ads
 
-VitePress has built in native support for [Carbon Ads](https://www.carbonads.net/). By defining the Carbon Ads credentials in config, VitePress will display ads on the page.
+ has built in native support for [Carbon Ads](https://www.carbonads.net/). By defining the Carbon Ads credentials in config,  will display ads on the page.
 
 ```js
 export default {

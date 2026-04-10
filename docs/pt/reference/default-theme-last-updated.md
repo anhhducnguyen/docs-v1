@@ -1,5 +1,5 @@
 ---
-description: Exiba o timestamp da última atualização nas páginas do VitePress com base no histórico de commits do Git.
+description: Exiba o timestamp da última atualização nas páginas do  com base no histórico de commits do Git.
 ---
 
 # Última Atualização {#last-updated}

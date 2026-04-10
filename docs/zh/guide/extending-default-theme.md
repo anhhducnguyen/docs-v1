@@ -1,11 +1,11 @@
 ---
 outline: deep
-description: 通过自定义 CSS、组件、布局和插槽来定制和扩展 VitePress 默认主题。
+description: 通过自定义 CSS、组件、布局和插槽来定制和扩展  默认主题。
 ---
 
 # 扩展默认主题 {#extending-the-default-theme}
 
-VitePress 默认的主题已经针对文档进行了优化，并且可以进行自定义。请参考[默认主题配置概览](../reference/default-theme-config)获取完整的选项列表。
+ 默认的主题已经针对文档进行了优化，并且可以进行自定义。请参考[默认主题配置概览](../reference/default-theme-config)获取完整的选项列表。
 
 但是有一些情况仅靠配置是不够的。例如：
 
@@ -42,7 +42,7 @@ export default DefaultTheme
 
 ## 使用自定义字体 {#using-different-fonts}
 
-VitePress 使用 [Inter](https://rsms.me/inter/) 作为默认字体，并且将其包含在生成的输出中。该字体在生产环境中也会自动预加载。但是如果要使用不同的字体，这可能不是很好。
+ 使用 [Inter](https://rsms.me/inter/) 作为默认字体，并且将其包含在生成的输出中。该字体在生产环境中也会自动预加载。但是如果要使用不同的字体，这可能不是很好。
 
 为了避免在生成后的输出中包含 Inter 字体，请从 `vitepress/theme-without-fonts` 中导入主题：
 

@@ -1,11 +1,11 @@
 ---
 outline: deep
-description: VitePressのテーマコンポーネントやカスタムコードをサーバーサイドレンダリング（SSR）に対応させる方法。
+description: のテーマコンポーネントやカスタムコードをサーバーサイドレンダリング（SSR）に対応させる方法。
 ---
 
 # SSR 互換性 {#ssr-compatibility}
 
-VitePress は本番ビルド時に、Node.js 上で Vue のサーバーサイドレンダリング（SSR）機能を使ってアプリを事前レンダリングします。つまり、テーマコンポーネント内のすべてのカスタムコードは SSR 互換性の対象になります。
+ は本番ビルド時に、Node.js 上で Vue のサーバーサイドレンダリング（SSR）機能を使ってアプリを事前レンダリングします。つまり、テーマコンポーネント内のすべてのカスタムコードは SSR 互換性の対象になります。
 
 [公式 Vue ドキュメントの SSR セクション](https://vuejs.org/guide/scaling-up/ssr.html)では、SSR とは何か、SSR と SSG の関係、そして SSR に優しいコードを書く際の一般的な注意点が解説されています。経験則としては、**ブラウザ / DOM API へのアクセスは Vue コンポーネントの `beforeMount` または `mounted` フック内に限定** するのが安全です。
 
@@ -82,7 +82,7 @@ export default {
 
 ### `defineClientComponent`
 
-VitePress は、**インポート時に Browser API にアクセスする Vue コンポーネント** を読み込むためのユーティリティを提供します。
+ は、**インポート時に Browser API にアクセスする Vue コンポーネント** を読み込むためのユーティリティを提供します。
 
 ```vue
 <script setup>

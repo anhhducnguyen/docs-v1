@@ -1,17 +1,17 @@
 ---
 outline: deep
-description: Complete reference of VitePress site configuration options including app-level settings, theming, and build options.
+description: Complete reference of  site configuration options including app-level settings, theming, and build options.
 ---
 
 # Site Config
 
-Site config is where you can define the global settings of the site. App config options define settings that apply to every VitePress site, regardless of what theme it is using. For example, the base directory or the title of the site.
+Site config is where you can define the global settings of the site. App config options define settings that apply to every  site, regardless of what theme it is using. For example, the base directory or the title of the site.
 
 ## Overview
 
 ### Config Resolution
 
-The config file is always resolved from `<root>/.vitepress/config.[ext]`, where `<root>` is your VitePress [project root](../guide/routing#root-and-source-directory), and `[ext]` is one of the supported file extensions. TypeScript is supported out of the box. Supported extensions include `.js`, `.ts`, `.mjs`, and `.mts`.
+The config file is always resolved from `<root>/.vitepress/config.[ext]`, where `<root>` is your  [project root](../guide/routing#root-and-source-directory), and `[ext]` is one of the supported file extensions. TypeScript is supported out of the box. Supported extensions include `.js`, `.ts`, `.mjs`, and `.mts`.
 
 It is recommended to use ES modules syntax in config files. The config file should default export an object:
 
@@ -19,7 +19,7 @@ It is recommended to use ES modules syntax in config files. The config file shou
 export default {
   // app level config options
   lang: 'en-US',
-  title: 'VitePress',
+  title: '',
   description: 'Vite & Vue powered static site generator.',
   ...
 }
@@ -38,7 +38,7 @@ export default async () => {
   return defineConfig({
     // app level config options
     lang: 'en-US',
-    title: 'VitePress',
+    title: '',
     description: 'Vite & Vue powered static site generator.',
 
     // theme level config options
@@ -64,7 +64,7 @@ const posts = await (await fetch('https://my-cms.com/blog-posts')).json()
 export default defineConfig({
   // app level config options
   lang: 'en-US',
-  title: 'VitePress',
+  title: '',
   description: 'Vite & Vue powered static site generator.',
 
   // theme level config options
@@ -124,22 +124,22 @@ export default defineConfigWithTheme<ThemeConfig>({
 
 - **Vite**
 
-  You can configure the underlying Vite instance using the [vite](#vite) option in your VitePress config. No need to create a separate Vite config file.
+  You can configure the underlying Vite instance using the [vite](#vite) option in your  config. No need to create a separate Vite config file.
 
 - **Vue**
 
-  VitePress already includes the official Vue plugin for Vite ([@vitejs/plugin-vue](https://github.com/vitejs/vite-plugin-vue)). You can configure its options using the [vue](#vue) option in your VitePress config.
+   already includes the official Vue plugin for Vite ([@vitejs/plugin-vue](https://github.com/vitejs/vite-plugin-vue)). You can configure its options using the [vue](#vue) option in your  config.
 
 - **Markdown**
 
-  You can configure the underlying [Markdown-It](https://github.com/markdown-it/markdown-it) instance using the [markdown](#markdown) option in your VitePress config.
+  You can configure the underlying [Markdown-It](https://github.com/markdown-it/markdown-it) instance using the [markdown](#markdown) option in your  config.
 
 ## Site Metadata
 
 ### title
 
 - Type: `string`
-- Default: `VitePress`
+- Default: ``
 - Can be overridden per page via [frontmatter](./frontmatter-config#title)
 
 Title for the site. When using the default theme, this will be displayed in the nav bar.
@@ -193,14 +193,14 @@ The option can be set to `false` to disable title suffixes.
 ### description
 
 - Type: `string`
-- Default: `A VitePress site`
+- Default: `A  site`
 - Can be overridden per page via [frontmatter](./frontmatter-config#description)
 
 Description for the site. This will render as a `<meta>` tag in the page HTML.
 
 ```ts
 export default {
-  description: 'A VitePress site'
+  description: 'A  site'
 }
 ```
 
@@ -210,7 +210,7 @@ export default {
 - Default: `[]`
 - Can be appended per page via [frontmatter](./frontmatter-config#head)
 
-Additional elements to render in the `<head>` tag in the page HTML. The user-added tags are rendered before the closing `head` tag, after VitePress tags.
+Additional elements to render in the `<head>` tag in the page HTML. The user-added tags are rendered before the closing `head` tag, after  tags.
 
 ```ts
 type HeadConfig =
@@ -351,7 +351,7 @@ export default {
 - Type: `boolean`
 - Default: `false`
 
-When set to `true`, VitePress will remove the trailing `.html` from URLs. Also see [Generating Clean URLs](../guide/routing#generating-clean-urls).
+When set to `true`,  will remove the trailing `.html` from URLs. Also see [Generating Clean URLs](../guide/routing#generating-clean-urls).
 
 ::: warning Server Support Required
 Enabling this may require additional configuration on your hosting platform. For it to work, your server must be able to serve `/foo.html` when visiting `/foo` **without a redirect**.
@@ -443,7 +443,7 @@ export default {
 - Type: `boolean | 'localhostLinks' | (string | RegExp | ((link: string, source: string) => boolean))[]`
 - Default: `false`
 
-When set to `true`, VitePress will not fail builds due to dead links.
+When set to `true`,  will not fail builds due to dead links.
 
 When set to `'localhostLinks'`, the build will fail on dead links, but won't check `localhost` links.
 
@@ -520,7 +520,7 @@ When using the default theme, enabling this option will display each page's last
 
 - Type: `MarkdownOption`
 
-Configure Markdown parser options. VitePress uses [Markdown-it](https://github.com/markdown-it/markdown-it) as the parser, and [Shiki](https://github.com/shikijs/shiki) to highlight language syntax. Inside this option, you may pass various Markdown related options to fit your needs.
+Configure Markdown parser options.  uses [Markdown-it](https://github.com/markdown-it/markdown-it) as the parser, and [Shiki](https://github.com/shikijs/shiki) to highlight language syntax. Inside this option, you may pass various Markdown related options to fit your needs.
 
 ```js
 export default {
@@ -560,7 +560,7 @@ export default {
 
 ## Build Hooks
 
-VitePress build hooks allow you to add new functionality and behaviors to your website:
+ build hooks allow you to add new functionality and behaviors to your website:
 
 - Sitemap
 - Search Indexing
@@ -571,7 +571,7 @@ VitePress build hooks allow you to add new functionality and behaviors to your w
 
 - Type: `(siteConfig: SiteConfig) => Awaitable<void>`
 
-`buildEnd` is a build CLI hook, it will run after build (SSG) finish but before VitePress CLI process exits.
+`buildEnd` is a build CLI hook, it will run after build (SSG) finish but before  CLI process exits.
 
 ```ts
 export default {
@@ -607,7 +607,7 @@ interface SSGContext {
 
 - Type: `(context: TransformContext) => Awaitable<HeadConfig[]>`
 
-`transformHead` is a build hook to transform the head before generating each page. It will allow you to add head entries that cannot be statically added to your VitePress config. You only need to return extra entries, they will be merged automatically with the existing ones.
+`transformHead` is a build hook to transform the head before generating each page. It will allow you to add head entries that cannot be statically added to your  config. You only need to return extra entries, they will be merged automatically with the existing ones.
 
 ::: warning
 Don't mutate anything inside the `context`.
@@ -647,8 +647,8 @@ export default {
         name: 'og:title',
         content:
           pageData.frontmatter.layout === 'home'
-            ? `VitePress`
-            : `${pageData.title} | VitePress`
+            ? ``
+            : `${pageData.title} | `
       }
     ])
   }

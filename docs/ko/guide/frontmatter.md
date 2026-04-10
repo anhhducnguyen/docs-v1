@@ -1,16 +1,16 @@
 ---
-description: VitePress 마크다운 파일에서 YAML 전문(frontmatter)을 사용하여 페이지 수준의 메타데이터와 동작을 제어하는 방법을 알아보세요.
+description:  마크다운 파일에서 YAML 전문(frontmatter)을 사용하여 페이지 수준의 메타데이터와 동작을 제어하는 방법을 알아보세요.
 ---
 
 # 전문 {#frontmatter}
 
 ## 사용법 {#usage}
 
-VitePress는 모든 마크다운 파일에서 YAML 전문(frontmatter)을 지원하며, [gray-matter](https://github.com/jonschlinkert/gray-matter)로 이를 파싱합니다. 전문은 마크다운 파일의 맨 위에 있어야 하며(모든 엘리먼트 포함 `<script>` 태그 이전), 세 개의 대시 라인 사이에 유효한 YAML 형태로 작성되어야 합니다. 예:
+는 모든 마크다운 파일에서 YAML 전문(frontmatter)을 지원하며, [gray-matter](https://github.com/jonschlinkert/gray-matter)로 이를 파싱합니다. 전문은 마크다운 파일의 맨 위에 있어야 하며(모든 엘리먼트 포함 `<script>` 태그 이전), 세 개의 대시 라인 사이에 유효한 YAML 형태로 작성되어야 합니다. 예:
 
 ```md
 ---
-title: VitePress로 문서 작성하기
+title: 로 문서 작성하기
 editLink: true
 ---
 ```
@@ -27,7 +27,7 @@ editLink: true
 
 ```md
 ---
-title: VitePress로 문서 작성하기
+title: 로 문서 작성하기
 editLink: true
 ---
 
@@ -40,7 +40,7 @@ editLink: true
 
 ## 기타 전문 형식 {#alternative-frontmatter-formats}
 
-VitePress는 중괄호로 시작하고 끝나는 JSON 전문 문법도 지원합니다:
+는 중괄호로 시작하고 끝나는 JSON 전문 문법도 지원합니다:
 
 ```json
 ---

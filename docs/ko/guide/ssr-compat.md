@@ -1,11 +1,11 @@
 ---
 outline: deep
-description: VitePress 테마 컴포넌트와 커스텀 코드가 서버 사이드 렌더링과 호환되도록 하세요.
+description:  테마 컴포넌트와 커스텀 코드가 서버 사이드 렌더링과 호환되도록 하세요.
 ---
 
 # SSR 호환성 {#ssr-compatibility}
 
-VitePress는 Vue의 서버 사이드 렌더링(SSR) 기능을 사용하여 프로덕션 빌드 중에 Node.js에서 애플리케이션을 사전 렌더링합니다. 이는 테마 컴포넌트의 모든 커스텀 코드가 SSR 호환성을 준수해야 함을 의미합니다.
+는 Vue의 서버 사이드 렌더링(SSR) 기능을 사용하여 프로덕션 빌드 중에 Node.js에서 애플리케이션을 사전 렌더링합니다. 이는 테마 컴포넌트의 모든 커스텀 코드가 SSR 호환성을 준수해야 함을 의미합니다.
 
 공식 Vue 문서의 [SSR 섹션](https://vuejs.org/guide/scaling-up/ssr.html)은 SSR이 무엇인지, SSR / SSG 간의 관계, 그리고 SSR 친화적인 코드를 작성할 때의 일반적인 주의 사항에 대해 더 많은 정보를 제공합니다. 핵심 원칙은 Vue 컴포넌트의 `beforeMount` 또는 `mounted` 훅에서만 브라우저 / DOM API에 접근하는 것입니다.
 
@@ -81,7 +81,7 @@ export default {
 
 ### `defineClientComponent`
 
-VitePress는 "import" 시 브라우저 API에 접근하는 Vue 컴포넌트를 "import" 할 수 있는 편리한 헬퍼를 제공합니다.
+는 "import" 시 브라우저 API에 접근하는 Vue 컴포넌트를 "import" 할 수 있는 편리한 헬퍼를 제공합니다.
 
 ```vue
 <script setup>

@@ -1,13 +1,13 @@
 ---
 outline: deep
-description: Conecte o VitePress a um CMS headless usando rotas dinâmicas e carregadores de dados.
+description: Conecte o  a um CMS headless usando rotas dinâmicas e carregadores de dados.
 ---
 
 # Conectando a um CMS {#connecting-to-a-cms}
 
 ## Fluxo de Trabalho Geral {#general-workflow}
 
-Conectar VitePress a um CMS orbitará majoritariamente sobre [Rotas Dinâmicas](./routing#dynamic-routes). Certifique-se de entender como funcionam antes de proceder.
+Conectar  a um CMS orbitará majoritariamente sobre [Rotas Dinâmicas](./routing#dynamic-routes). Certifique-se de entender como funcionam antes de proceder.
 
 Como cada CMS funcionará de forma diferente, aqui podemos fornecer apenas um fluxo de trabalho genérico que precisará ser adaptado para cada cenário específico.
 
@@ -54,4 +54,4 @@ Como cada CMS funcionará de forma diferente, aqui podemos fornecer apenas um fl
 
 ## Guias de Integração {#integration-guides}
 
-Se você tiver escrito um guia sobre como integrar VitePress com um CMS específico, por favor use o link "Edite esta página" abaixo para enviá-lo para cá!
+Se você tiver escrito um guia sobre como integrar  com um CMS específico, por favor use o link "Edite esta página" abaixo para enviá-lo para cá!

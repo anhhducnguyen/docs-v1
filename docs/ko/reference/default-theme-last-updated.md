@@ -1,5 +1,5 @@
 ---
-description: Git 커밋 기록을 기반으로 VitePress 페이지에 마지막 업데이트 타임스탬프를 표시하세요.
+description: Git 커밋 기록을 기반으로  페이지에 마지막 업데이트 타임스탬프를 표시하세요.
 ---
 
 # 마지막 업데이트 날짜 {#last-updated}

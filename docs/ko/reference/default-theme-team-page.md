@@ -1,5 +1,5 @@
 ---
-description: VitePress 내장 팀 컴포넌트를 사용하여 멤버 프로필이 있는 팀 페이지를 만드세요.
+description:  내장 팀 컴포넌트를 사용하여 멤버 프로필이 있는 팀 페이지를 만드세요.
 ---
 
 <script setup>
@@ -107,7 +107,7 @@ const members = [
       Our Team
     </template>
     <template #lead>
-      The development of VitePress is guided by an international
+      The development of  is guided by an international
       team, some of whom have chosen to be featured below.
     </template>
   </VPTeamPageTitle>
@@ -235,7 +235,7 @@ interface TeamMember {
       Our Team
     </template>
     <template #lead>
-      The development of VitePress is guided by an international
+      The development of  is guided by an international
       team, some of whom have chosen to be featured below.
     </template>
   </VPTeamPageTitle>

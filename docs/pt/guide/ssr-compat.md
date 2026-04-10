@@ -1,11 +1,11 @@
 ---
 outline: deep
-description: Garanta que os componentes do tema e o código personalizado do VitePress sejam compatíveis com renderização no lado do servidor.
+description: Garanta que os componentes do tema e o código personalizado do  sejam compatíveis com renderização no lado do servidor.
 ---
 
 # Compatibilidade SSR {#ssr-compatibility}
 
-VitePress pré-interpreta a aplicação no Node.js durante a compilação de produção, utilizando as capacidades de Interpretação do Lado do Servidor (SSR) do Vue. Isso significa que todo o código personalizado nos componentes do tema está sujeito à Compatibilidade SSR.
+ pré-interpreta a aplicação no Node.js durante a compilação de produção, utilizando as capacidades de Interpretação do Lado do Servidor (SSR) do Vue. Isso significa que todo o código personalizado nos componentes do tema está sujeito à Compatibilidade SSR.
 
 A [seção SSR na documentação Vue oficial](https://vuejs.org/guide/scaling-up/ssr.html) fornece mais contexto sobre o que é SSR, a relação entre SSR / SSG e notas comuns sobre escrever código amigável a SSR. A regra geral é acessar apenas APIs do navegador / DOM nos gatilhos `beforeMount` ou `mounted` dos componentes Vue.
 
@@ -81,7 +81,7 @@ export default {
 
 ### `defineClientComponent`
 
-VitePress fornece um auxiliar de conveniência para importar componentes Vue que acessam APIs do navegador na importação.
+ fornece um auxiliar de conveniência para importar componentes Vue que acessam APIs do navegador na importação.
 
 ```vue
 <script setup>

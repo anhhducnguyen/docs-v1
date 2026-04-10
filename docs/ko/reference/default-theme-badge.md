@@ -1,5 +1,5 @@
 ---
-description: VitePress 문서의 헤더에 상태 레이블을 추가하기 위해 Badge 컴포넌트를 사용하세요.
+description:  문서의 헤더에 상태 레이블을 추가하기 위해 Badge 컴포넌트를 사용하세요.
 ---
 
 # 배지 {#badge}

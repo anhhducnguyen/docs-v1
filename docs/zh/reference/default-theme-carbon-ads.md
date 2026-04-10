@@ -1,10 +1,10 @@
 ---
-description: 使用默认主题的内置支持将 Carbon Ads 集成到 VitePress 站点中。
+description: 使用默认主题的内置支持将 Carbon Ads 集成到  站点中。
 ---
 
 # Carbon Ads {#carbon-ads}
 
-VitePress 内置了对 [Carbon Ads](https://www.carbonads.net/) 的原生支持。通过在配置中定义 Carbon Ads 凭据，VitePress 将在页面上显示广告。
+ 内置了对 [Carbon Ads](https://www.carbonads.net/) 的原生支持。通过在配置中定义 Carbon Ads 凭据， 将在页面上显示广告。
 
 ```js
 export default {

@@ -1,5 +1,5 @@
 ---
-description: 配置 VitePress 默认主题的侧边栏导航，包括分组、可折叠部分和多侧边栏。
+description: 配置  默认主题的侧边栏导航，包括分组、可折叠部分和多侧边栏。
 ---
 
 # 侧边栏 {#sidebar}

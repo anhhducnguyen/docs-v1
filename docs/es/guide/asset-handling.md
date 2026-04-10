@@ -1,5 +1,5 @@
 ---
-description: Aprende cómo referenciar y manejar recursos estáticos como imágenes, medios y fuentes en VitePress.
+description: Aprende cómo referenciar y manejar recursos estáticos como imágenes, medios y fuentes en .
 ---
 
 # Manejo de Assets {#asset-handling}
@@ -48,7 +48,7 @@ Sin embargo, se estuviera creando un componente de tema que vincula assets diná
 <img :src="theme.logoPath" />
 ```
 
-En este caso, es recomendable complementar el path con el [`auxiliar withBase`](../reference/runtime-api#withbase) proporcionado por VitePress:
+En este caso, es recomendable complementar el path con el [`auxiliar withBase`](../reference/runtime-api#withbase) proporcionado por :
 
 ```vue
 <script setup>

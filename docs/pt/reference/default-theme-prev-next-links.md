@@ -1,5 +1,5 @@
 ---
-description: Personalize os links de página anterior e próxima exibidos no rodapé das páginas de documentação do VitePress.
+description: Personalize os links de página anterior e próxima exibidos no rodapé das páginas de documentação do .
 ---
 
 # Links Anterior e Próximo {#prev-next-links}

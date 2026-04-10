@@ -1,5 +1,5 @@
 ---
-description: Configure a barra lateral de navegação no tema padrão do VitePress com grupos, seções recolhíveis e múltiplas barras.
+description: Configure a barra lateral de navegação no tema padrão do  com grupos, seções recolhíveis e múltiplas barras.
 ---
 
 # Barra Lateral {#sidebar}

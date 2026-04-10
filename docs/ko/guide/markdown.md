@@ -1,10 +1,10 @@
 ---
-description: 커스텀 컨테이너, 구문 강조 코드 블록, 라인 하이라이팅, 코드 그룹 등 VitePress 내장 마크다운 확장 기능을 소개합니다.
+description: 커스텀 컨테이너, 구문 강조 코드 블록, 라인 하이라이팅, 코드 그룹 등  내장 마크다운 확장 기능을 소개합니다.
 ---
 
 # 마크다운 확장 기능 {#markdown-extensions}
 
-VitePress는 내장된 마크다운 확장 기능을 제공합니다.
+는 내장된 마크다운 확장 기능을 제공합니다.
 
 ## 헤더 앵커 {#header-anchors}
 
@@ -63,7 +63,7 @@ VitePress는 내장된 마크다운 확장 기능을 제공합니다.
 외부 링크는 자동으로 `target="_blank" rel="noreferrer"`를 갖습니다.
 
 - [vuejs.org](https://vuejs.org)
-- [VitePress on GitHub](https://github.com/vuejs/vitepress)
+- [ on GitHub](https://github.com/vuejs/vitepress)
 
 ## 전문 {#frontmatter}
 
@@ -193,7 +193,7 @@ lang: en-US
 
 ::: details 코드를 보려면 클릭하세요
 ```js
-console.log('Hello, VitePress!')
+console.log('Hello, !')
 ```
 :::
 ````
@@ -206,7 +206,7 @@ console.log('Hello, VitePress!')
 
 ::: details 코드를 보려면 클릭하세요
 ```js
-console.log('Hello, VitePress!')
+console.log('Hello, !')
 ```
 :::
 
@@ -231,7 +231,7 @@ export default defineConfig({
 
 ### `raw`
 
-이것은 VitePress와 스타일 및 라우터 충돌을 방지하기 위해 사용할 수 있는 특별한 컨테이너입니다. 컴포넌트 라이브러리를 문서화할 때 특히 유용합니다. 더 나은 분리를 위해 [whyframe](https://whyframe.dev/docs/integrations/vitepress)을 참고해 볼 수 있습니다.
+이것은 와 스타일 및 라우터 충돌을 방지하기 위해 사용할 수 있는 특별한 컨테이너입니다. 컴포넌트 라이브러리를 문서화할 때 특히 유용합니다. 더 나은 분리를 위해 [whyframe](https://whyframe.dev/docs/integrations/vitepress)을 참고해 볼 수 있습니다.
 
 **문법**
 
@@ -269,7 +269,7 @@ export default defineConfig({
 
 ## GitHub 스타일 알림 {#github-flavored-alerts}
 
-VitePress는 [GitHub 스타일 알림](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts)을 콜아웃으로 렌더링하는 것을 지원합니다. 이것은 [커스텀 컨테이너](#custom-containers)와 같은 방식으로 렌더링됩니다.
+는 [GitHub 스타일 알림](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts)을 콜아웃으로 렌더링하는 것을 지원합니다. 이것은 [커스텀 컨테이너](#custom-containers)와 같은 방식으로 렌더링됩니다.
 
 ```md
 > [!NOTE]
@@ -305,7 +305,7 @@ VitePress는 [GitHub 스타일 알림](https://docs.github.com/en/get-started/wr
 
 ## 코드 블록 내 구문 강조 {#syntax-highlighting-in-code-blocks}
 
-VitePress는 마크다운 코드 블록 내 언어 문법을 색상이 있는 텍스트로 강조하기 위해 [Shiki](https://github.com/shikijs/shiki)를 사용합니다. Shiki는 다양한 프로그래밍 언어를 지원합니다. 코드 블록의 시작 백틱에 유효한 언어 별칭을 추가하기만 하면 됩니다:
+는 마크다운 코드 블록 내 언어 문법을 색상이 있는 텍스트로 강조하기 위해 [Shiki](https://github.com/shikijs/shiki)를 사용합니다. Shiki는 다양한 프로그래밍 언어를 지원합니다. 코드 블록의 시작 백틱에 유효한 언어 별칭을 추가하기만 하면 됩니다:
 
 **입력**
 
@@ -393,7 +393,7 @@ export default { // 강조됨
       msg: `강조됨!
       이 줄은 강조되지 않습니다,
       하지만 이 줄과 다음 2줄은 강조됩니다.`,
-      motd: 'VitePress는 멋져요',
+      motd: '는 멋져요',
       lorem: 'ipsum'
     }
   }
@@ -410,7 +410,7 @@ export default { // 강조됨
       msg: `강조됨!
       이 줄은 강조되지 않습니다,
       하지만 이 줄과 다음 2줄은 강조됩니다.`,
-      motd: 'VitePress는 멋져요',
+      motd: '는 멋져요',
       lorem: 'ipsum',
     }
   }
@@ -630,7 +630,7 @@ const line4 = 'This is line 4'
 <<< @/snippets/snippet.js{2}
 
 ::: tip
-`@`의 값은 소스 루트에 해당합니다. 기본값은 VitePress 프로젝트 루트이지만, `srcDir`이 구성되어 있을 경우에는 다릅니다. 상대 경로에서도 가져올 수도 있습니다:
+`@`의 값은 소스 루트에 해당합니다. 기본값은  프로젝트 루트이지만, `srcDir`이 구성되어 있을 경우에는 다릅니다. 상대 경로에서도 가져올 수도 있습니다:
 
 ```md
 <<< ../snippets/snippet.js
@@ -763,7 +763,7 @@ export default config
 마크다운 파일을 다른 마크다운 파일에 포함시킬 수 있으며, 중첩도 가능합니다.
 
 ::: tip
-마크다운 경로 앞에 `@`를 붙일 수도 있으며, 이는 소스 루트로 작동합니다. 기본적으로 이는 VitePress 프로젝트 루트이며, `srcDir`이 구성되지 않은 경우입니다.
+마크다운 경로 앞에 `@`를 붙일 수도 있으며, 이는 소스 루트로 작동합니다. 기본적으로 이는  프로젝트 루트이며, `srcDir`이 구성되지 않은 경우입니다.
 :::
 
 다음과 같이 상대적인 마크다운 파일을 포함시킬 수 있습니다:
@@ -940,7 +940,7 @@ export default {
 
 ## 고급 설정 {#advanced-configuration}
 
-VitePress는 마크다운 렌더러로 [markdown-it](https://github.com/markdown-it/markdown-it)을 사용합니다. 위의 많은 확장 기능은 커스텀 플러그인을 통해 구현됩니다. `.vitepress/config.js`의 `markdown` 옵션을 사용하여 `markdown-it` 인스턴스를 추가로 커스터마이즈할 수 있습니다:
+는 마크다운 렌더러로 [markdown-it](https://github.com/markdown-it/markdown-it)을 사용합니다. 위의 많은 확장 기능은 커스텀 플러그인을 통해 구현됩니다. `.vitepress/config.js`의 `markdown` 옵션을 사용하여 `markdown-it` 인스턴스를 추가로 커스터마이즈할 수 있습니다:
 
 ```js
 import { defineConfig } from 'vitepress'

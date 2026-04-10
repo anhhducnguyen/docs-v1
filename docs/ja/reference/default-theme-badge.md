@@ -1,5 +1,5 @@
 ---
-description: VitePressドキュメントの見出しにステータスラベルを追加するBadgeコンポーネントの使い方。
+description: ドキュメントの見出しにステータスラベルを追加するBadgeコンポーネントの使い方。
 ---
 
 # バッジ {#badge}

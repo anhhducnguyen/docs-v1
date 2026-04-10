@@ -1,10 +1,10 @@
 ---
-description: Configura el pie de página global que se muestra en la parte inferior de las páginas de VitePress.
+description: Configura el pie de página global que se muestra en la parte inferior de las páginas de .
 ---
 
 # Pie de página {#footer}
 
-VitePress mostrará un pie de página global en la parte inferior de la página cuando `themeConfig.footer` está presente.
+ mostrará un pie de página global en la parte inferior de la página cuando `themeConfig.footer` está presente.
 
 ```ts
 export default {

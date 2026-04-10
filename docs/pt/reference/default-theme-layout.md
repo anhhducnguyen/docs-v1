@@ -1,5 +1,5 @@
 ---
-description: Escolha entre os layouts doc, page e home no tema padrão do VitePress.
+description: Escolha entre os layouts doc, page e home no tema padrão do .
 ---
 
 # Layout {#layout}
@@ -29,7 +29,7 @@ Ele também fornece recursos específicos de documentação listados abaixo. Ess
 
 A opção `page` é tratada como "página em branco". O Markdown ainda será processado e todas as [Extensões Markdown](../guide/markdown) funcionarão da mesma forma que o layout `doc`, mas este não receberá nenhum estilo padrão.
 
-O layout da página permitirá que você estilize tudo sem que o tema VitePress afete a marcação. Isso é útil quando você deseja criar sua própria página personalizada.
+O layout da página permitirá que você estilize tudo sem que o tema  afete a marcação. Isso é útil quando você deseja criar sua própria página personalizada.
 
 Observe que mesmo neste layout, a barra lateral ainda aparecerá se a página tiver uma configuração de barra lateral correspondente.
 

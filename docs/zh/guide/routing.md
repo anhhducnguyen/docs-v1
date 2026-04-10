@@ -1,13 +1,13 @@
 ---
 outline: deep
-description: 了解 VitePress 基于文件的路由系统、动态路由、简洁 URL 和路径重写。
+description: 了解  基于文件的路由系统、动态路由、简洁 URL 和路径重写。
 ---
 
 # 路由 {#routing}
 
 ## 基于文件的路由 {#file-based-routing}
 
-VitePress 使用基于文件的路由，这意味着生成的 HTML 页面是从源 Markdown 文件的目录结构映射而来的。例如，给定以下目录结构：
+ 使用基于文件的路由，这意味着生成的 HTML 页面是从源 Markdown 文件的目录结构映射而来的。例如，给定以下目录结构：
 
 ```
 .
@@ -31,13 +31,13 @@ guide/getting-started.md  -->  /guide/getting-started.html
 
 ## 根目录和源目录 {#root-and-source-directory}
 
-VitePress 项目的文件结构中有两个重要的概念：项目根目录 (**project root**) 和源目录 (**source directory**)。
+ 项目的文件结构中有两个重要的概念：项目根目录 (**project root**) 和源目录 (**source directory**)。
 
 ### 项目根目录 {#project-root}
 
-项目根目录是 VitePress 将尝试寻找 `.vitepress` 特殊目录的地方。`.vitepress` 目录是 VitePress 配置文件、开发服务器缓存、构建输出和可选主题自定义代码的预留位置。
+项目根目录是  将尝试寻找 `.vitepress` 特殊目录的地方。`.vitepress` 目录是  配置文件、开发服务器缓存、构建输出和可选主题自定义代码的预留位置。
 
-当从命令行运行 `vitepress dev` 或 `vitepress build` 时，VitePress 将使用当前工作目录作为项目根目录。要将子目录指定为根目录，需要将相对路径传递给命令。例如，如果 VitePress 项目位于 `./docs`，应该运行 `vitepress dev docs`：
+当从命令行运行 `vitepress dev` 或 `vitepress build` 时， 将使用当前工作目录作为项目根目录。要将子目录指定为根目录，需要将相对路径传递给命令。例如，如果  项目位于 `./docs`，应该运行 `vitepress dev docs`：
 
 ```
 .
@@ -82,7 +82,7 @@ src/getting-started.md  -->  /getting-started.html
 
 ## 链接页面 {#linking-between-pages}
 
-在页面之间链接时，可以使用绝对路径和相对路径。请注意，虽然 `.md` 和 `.html` 扩展名都可以使用，但最佳做法是省略文件扩展名，以便 VitePress 可以根据配置生成最终的 URL。
+在页面之间链接时，可以使用绝对路径和相对路径。请注意，虽然 `.md` 和 `.html` 扩展名都可以使用，但最佳做法是省略文件扩展名，以便  可以根据配置生成最终的 URL。
 
 ```md
 <!-- Do -->
@@ -96,9 +96,9 @@ src/getting-started.md  -->  /getting-started.html
 
 在[资源处理](./asset-handling)中了解有关链接到资源（例如图像）的更多信息。
 
-### 链接到非 VitePress 页面 {#linking-to-non-vitepress-pages}
+### 链接到非  页面 {#linking-to-non-vitepress-pages}
 
-如果想链接到站点中不是由 VitePress 生成的页面，需要使用完整的 URL（在新选项卡中打开）或明确指定 target：
+如果想链接到站点中不是由  生成的页面，需要使用完整的 URL（在新选项卡中打开）或明确指定 target：
 
 **输入**
 
@@ -125,17 +125,17 @@ src/getting-started.md  -->  /getting-started.html
 ## 生成简洁的 URL {#generating-clean-urls}
 
 ::: warning 需要服务器支持
-要使 VitePress 提供简洁 URL，需要服务器端支持。
+要使  提供简洁 URL，需要服务器端支持。
 :::
 
-默认情况下，VitePress 将入站链接解析为以 `.html` 结尾的 URL。但是，一些用户可能更喜欢没有 .html 扩展名的“简洁 URL”——例如，`example.com/path` 而不是 `example.com/path.html`。
+默认情况下， 将入站链接解析为以 `.html` 结尾的 URL。但是，一些用户可能更喜欢没有 .html 扩展名的“简洁 URL”——例如，`example.com/path` 而不是 `example.com/path.html`。
 
 某些服务器或托管平台 (例如 Netlify、Vercel 或 GitHub Pages) 提供将 `/foo` 之类的 URL 映射到 `/foo.html` (如果存在) 的功能，而无需重定向：
 
 - Netlify 和 GitHub Pages 是默认支持的。
 - Vercel 需要在 [vercel.json 中启用 cleanUrls 选项](https://vercel.com/docs/concepts/projects/project-configuration#cleanurls)。
 
-如果可以使用此功能，还可以启用 VitePress 自己的 [`cleanUrls`](../reference/site-config#cleanurls) 配置选项，以便：
+如果可以使用此功能，还可以启用  自己的 [`cleanUrls`](../reference/site-config#cleanurls) 配置选项，以便：
 
 - 页面之间的入站链接是在没有 `.html` 扩展名的情况下生成的。
 - 如果当前路径以 `.html` 结尾，路由器将执行客户端重定向到无扩展路径。
@@ -168,7 +168,7 @@ src/getting-started.md  -->  /getting-started.html
 │         └─ pkg-b-docs.md
 ```
 
-希望像这样生成 VitePress 页面：
+希望像这样生成  页面：
 
 ```
 packages/pkg-a/src/pkg-a-docs.md  -->  /pkg-a/index.html
@@ -213,7 +213,7 @@ export default {
 
 ### 路径加载文件 {#paths-loader-file}
 
-由于 VitePress 是静态站点生成器，因此**必须**在构建时确定可能的页面路径。因此，动态路由页面必须伴随**路径加载文件**。对于 `packages/[pkg].md`，我们需要 `packages/[pkg].paths.js` (也支持 `.ts`)：
+由于  是静态站点生成器，因此**必须**在构建时确定可能的页面路径。因此，动态路由页面必须伴随**路径加载文件**。对于 `packages/[pkg].md`，我们需要 `packages/[pkg].paths.js` (也支持 `.ts`)：
 
 ```
 .

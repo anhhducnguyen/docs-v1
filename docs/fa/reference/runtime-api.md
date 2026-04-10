@@ -15,7 +15,7 @@ description: مرجع APIهای زمان اجرا ویت‌پرس شامل compo
 داده‌های خاص به صفحه را برمی‌گرداند. شیء برگشتی این نوع را دارد:
 
 ```ts
-interface VitePressData<T = any> {
+interface Data<T = any> {
   /**
    * Metadata سطح سایت
    */

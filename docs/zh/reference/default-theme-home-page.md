@@ -1,10 +1,10 @@
 ---
-description: 配置 VitePress 默认主题的主页布局，包括 hero 区域、功能特性和自定义内容。
+description: 配置  默认主题的主页布局，包括 hero 区域、功能特性和自定义内容。
 ---
 
 # 主页 {#home-page}
 
-VitePress 默认主题提供了一个首页布局，也可以在[此站点首页](../)看到。可以通过 [frontmatter](./frontmatter-config) 指定 `layout: home` 在任何页面上使用它
+ 默认主题提供了一个首页布局，也可以在[此站点首页](../)看到。可以通过 [frontmatter](./frontmatter-config) 指定 `layout: home` 在任何页面上使用它
 
 ```yaml
 ---
@@ -23,12 +23,12 @@ Hero 部分位于主页顶部。以下是配置 Hero 的方法。
 layout: home
 
 hero:
-  name: VitePress
+  name: 
   text: Vite & Vue powered static site generator.
   tagline: Lorem ipsum...
   image:
     src: /logo.png
-    alt: VitePress
+    alt: 
   actions:
     - theme: brand
       text: Get Started
@@ -84,7 +84,7 @@ interface HeroAction {
 
 ### 自定义 name 的颜色 {#customizing-the-name-color}
 
-VitePress 通过 (`--vp-c-brand-1`) 设置 `name` 的颜色。但是，可以通过覆盖 `--vp-home-hero-name-color` 变量来自定义此颜色。
+ 通过 (`--vp-c-brand-1`) 设置 `name` 的颜色。但是，可以通过覆盖 `--vp-home-hero-name-color` 变量来自定义此颜色。
 
 ```css
 :root {
@@ -180,13 +180,13 @@ type FeatureIcon =
 layout: home
 
 hero:
-  name: VitePress
+  name: 
   text: Vite & Vue powered static site generator.
 ---
 
 ## Getting Started
 
-You can get started using VitePress right away using `npx`!
+You can get started using  right away using `npx`!
 
 ```sh
 npm init
@@ -195,5 +195,5 @@ npx vitepress init
 ````
 
 ::: info
-VitePress 并不总是为 `layout: home` 页面里额外的内容自动添加样式。要回到以前的行为，可以在 frontmatter 中添加 `markdownStyles: false`。
+ 并不总是为 `layout: home` 页面里额外的内容自动添加样式。要回到以前的行为，可以在 frontmatter 中添加 `markdownStyles: false`。
 :::

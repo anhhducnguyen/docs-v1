@@ -1,12 +1,12 @@
 ---
-description: VitePressのMarkdownファイル内でVueコンポーネントや動的テンプレート機能を直接使用する方法。
+description: のMarkdownファイル内でVueコンポーネントや動的テンプレート機能を直接使用する方法。
 ---
 
 # MarkdownでVueを使う {#using-vue-in-markdown}
 
-VitePress では、各 Markdown ファイルはまず HTML にコンパイルされ、その後 [Vue の単一ファイルコンポーネント（SFC）](https://vuejs.org/guide/scaling-up/sfc.html) として処理されます。つまり、Markdown 内で Vue のあらゆる機能が使えます。動的テンプレート、Vue コンポーネントの利用、`<script>` タグを追加してページ内ロジックを書くことも可能です。
+ では、各 Markdown ファイルはまず HTML にコンパイルされ、その後 [Vue の単一ファイルコンポーネント（SFC）](https://vuejs.org/guide/scaling-up/sfc.html) として処理されます。つまり、Markdown 内で Vue のあらゆる機能が使えます。動的テンプレート、Vue コンポーネントの利用、`<script>` タグを追加してページ内ロジックを書くことも可能です。
 
-なお、VitePress は Vue のコンパイラを利用して、Markdown コンテンツの**純粋に静的な部分**を自動検出・最適化します。静的コンテンツは単一のプレースホルダノードに最適化され、初回訪問時の JavaScript ペイロードから除外されます。クライアント側のハイドレーションでもスキップされます。要するに、そのページで**動的な部分に対してだけ**コストを支払うことになります。
+なお、 は Vue のコンパイラを利用して、Markdown コンテンツの**純粋に静的な部分**を自動検出・最適化します。静的コンテンツは単一のプレースホルダノードに最適化され、初回訪問時の JavaScript ペイロードから除外されます。クライアント側のハイドレーションでもスキップされます。要するに、そのページで**動的な部分に対してだけ**コストを支払うことになります。
 
 ::: tip SSR 互換性
 Vue の使用は SSR 互換である必要があります。詳細と一般的な回避策は [SSR 互換性](./ssr-compat) を参照してください。
@@ -75,7 +75,7 @@ const count = ref(0)
 Markdown で `<style scoped>` を使うと、そのページ内のすべての要素に特殊な属性を付与する必要があり、ページサイズが大きく膨らみます。ページ単位でローカルスコープが必要な場合は `<style module>` を推奨します。
 :::
 
-VitePress のランタイム API（例：現在ページのメタデータにアクセスできる [`useData` ヘルパー](../reference/runtime-api#usedata)）も利用できます。
+ のランタイム API（例：現在ページのメタデータにアクセスできる [`useData` ヘルパー](../reference/runtime-api#usedata)）も利用できます。
 
 **入力**
 
@@ -144,7 +144,7 @@ import CustomComponent from '../components/CustomComponent.vue'
 `<code>` に包まれた HTML はそのまま表示されます。包まれて**いない** HTML だけが Vue によってパースされます。
 
 ::: tip
-出力 HTML の生成は [Markdown-it](https://github.com/Markdown-it/Markdown-it) が担当し、見出しの解析は VitePress が担当します（サイドバーやドキュメントタイトルに利用）。
+出力 HTML の生成は [Markdown-it](https://github.com/Markdown-it/Markdown-it) が担当し、見出しの解析は  が担当します（サイドバーやドキュメントタイトルに利用）。
 :::
 
 ## エスケープ {#escaping}
@@ -203,7 +203,7 @@ Hello {{ 1 + 1 }}
 
 ## CSS プリプロセッサの利用 {#using-css-pre-processors}
 
-VitePress は CSS プリプロセッサ（`.scss`、`.sass`、`.less`、`.styl`、`.stylus`）を[標準サポート](https://vitejs.dev/guide/features.html#css-pre-processors)しています。Vite 固有のプラグインは不要ですが、各プリプロセッサ本体のインストールは必要です。
+ は CSS プリプロセッサ（`.scss`、`.sass`、`.less`、`.styl`、`.stylus`）を[標準サポート](https://vitejs.dev/guide/features.html#css-pre-processors)しています。Vite 固有のプラグインは不要ですが、各プリプロセッサ本体のインストールは必要です。
 
 ```
 # .scss / .sass
@@ -227,7 +227,7 @@ npm install -D stylus
 
 ## Teleport の利用 {#using-teleports}
 
-現時点で VitePress は、SSG における Teleport を **body** へのみサポートしています。その他のターゲットへ Teleport したい場合は、組み込みの `<ClientOnly>` でラップするか、[`postRender` フック](../reference/site-config#postrender)で最終ページ HTML の適切な位置に Teleport のマークアップを注入してください。
+現時点で  は、SSG における Teleport を **body** へのみサポートしています。その他のターゲットへ Teleport したい場合は、組み込みの `<ClientOnly>` でラップするか、[`postRender` フック](../reference/site-config#postrender)で最終ページ HTML の適切な位置に Teleport のマークアップを注入してください。
 
 <ModalDemo />
 

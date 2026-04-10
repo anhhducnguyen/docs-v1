@@ -1,6 +1,6 @@
-# Migration from VitePress 0.x {#migration-from-vitepress-0-x}
+# Migration from  0.x {#migration-from-vitepress-0-x}
 
-If you're coming from VitePress 0.x version, there're several breaking changes due to new features and enhancement. Please follow this guide to see how to migrate your app over to the latest VitePress.
+If you're coming from  0.x version, there're several breaking changes due to new features and enhancement. Please follow this guide to see how to migrate your app over to the latest .
 
 ## App Config {#app-config}
 

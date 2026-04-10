@@ -1,10 +1,10 @@
 ---
-description: Configura el diseño de la página de inicio del tema predeterminado de VitePress con secciones hero, características y contenido personalizado.
+description: Configura el diseño de la página de inicio del tema predeterminado de  con secciones hero, características y contenido personalizado.
 ---
 
 # Página Inicial {#home-page}
 
-El tema predeterminado de VitePress proporciona un diseño de página de inicio, que también puedes ver en uso [en la página de inicio de este sitio web](../). Puedes usarlo en cualquiera de sus páginas especificando `layout: home` en [frontmatter](./frontmatter-config).
+El tema predeterminado de  proporciona un diseño de página de inicio, que también puedes ver en uso [en la página de inicio de este sitio web](../). Puedes usarlo en cualquiera de sus páginas especificando `layout: home` en [frontmatter](./frontmatter-config).
 
 ```yaml
 ---
@@ -23,12 +23,12 @@ La sección _Hero_ queda en la parte superior de la página de inicio. Asi es co
 layout: home
 
 hero:
-  name: VitePress
+  name: 
   text: Generador de sitios web estáticos con Vite & Vue.
   tagline: Lorem ipsum...
   image:
     src: /logo.png
-    alt: VitePress
+    alt: 
   actions:
     - theme: brand
       text: Iniciar
@@ -84,7 +84,7 @@ interface HeroAction {
 
 ### Personalizando el color del nombre {#customizing-the-name-color}
 
-VitePress usa el color de la marca (`--vp-c-brand-1`) para `name`. Sin embargo, puedes personalizar este color anulando la variable `--vp-home-hero-name-color`.
+ usa el color de la marca (`--vp-c-brand-1`) para `name`. Sin embargo, puedes personalizar este color anulando la variable `--vp-home-hero-name-color`.
 
 ```css
 :root {

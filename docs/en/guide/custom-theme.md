@@ -1,5 +1,5 @@
 ---
-description: Create and use a custom theme in VitePress to fully control the look and feel of your site.
+description: Create and use a custom theme in  to fully control the look and feel of your site.
 ---
 
 # Using a Custom Theme
@@ -19,11 +19,11 @@ You can enable a custom theme by creating a `.vitepress/theme/index.js` or `.vit
 └─ package.json
 ```
 
-VitePress will always use the custom theme instead of the default theme when it detects presence of a theme entry file. You can, however, [extend the default theme](./extending-default-theme) to perform advanced customizations on top of it.
+ will always use the custom theme instead of the default theme when it detects presence of a theme entry file. You can, however, [extend the default theme](./extending-default-theme) to perform advanced customizations on top of it.
 
 ## Theme Interface
 
-A VitePress custom theme is defined as an object with the following interface:
+A  custom theme is defined as an object with the following interface:
 
 ```ts
 interface Theme {
@@ -46,7 +46,7 @@ interface Theme {
 
 interface EnhanceAppContext {
   app: App // Vue app instance
-  router: Router // VitePress router instance
+  router: Router //  router instance
   siteData: Ref<SiteData> // Site-level metadata
 }
 ```
@@ -56,7 +56,7 @@ The theme entry file should export the theme as its default export:
 ```js [.vitepress/theme/index.js]
 
 // You can directly import Vue files in the theme entry
-// VitePress is pre-configured with @vitejs/plugin-vue.
+//  is pre-configured with @vitejs/plugin-vue.
 import Layout from './Layout.vue'
 
 export default {
@@ -67,7 +67,7 @@ export default {
 }
 ```
 
-The default export is the only contract for a custom theme, and only the `Layout` property is required. So technically, a VitePress theme can be as simple as a single Vue component.
+The default export is the only contract for a custom theme, and only the `Layout` property is required. So technically, a  theme can be as simple as a single Vue component.
 
 Inside your layout component, it works just like a normal Vite + Vue 3 application. Do note the theme also needs to be [SSR-compatible](./ssr-compat).
 
@@ -164,7 +164,7 @@ If you wish to distribute the theme as an npm package, follow these steps:
 
 2. If applicable, export your theme config type definition as `ThemeConfig`.
 
-3. If your theme requires adjusting the VitePress config, export that config under a package sub-path (e.g. `my-theme/config`) so the user can extend it.
+3. If your theme requires adjusting the  config, export that config under a package sub-path (e.g. `my-theme/config`) so the user can extend it.
 
 4. Document the theme config options (both via config file and frontmatter).
 
@@ -193,7 +193,7 @@ export default {
 }
 ```
 
-If the theme requires special VitePress config, you will need to also extend it in your own config:
+If the theme requires special  config, you will need to also extend it in your own config:
 
 ```ts [.vitepress/config.ts]
 import baseConfig from 'awesome-vitepress-theme/config'

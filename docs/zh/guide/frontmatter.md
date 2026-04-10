@@ -1,16 +1,16 @@
 ---
-description: 了解如何在 VitePress Markdown 文件中使用 YAML frontmatter 来控制页面级别的元数据和行为。
+description: 了解如何在  Markdown 文件中使用 YAML frontmatter 来控制页面级别的元数据和行为。
 ---
 
 # frontmatter
 
 ## 用法 {#usage}
 
-VitePress 支持在所有 Markdown 文件中使用 YAML frontmatter，并使用 [gray-matter](https://github.com/jonschlinkert/gray-matter) 解析。frontmatter 必须位于 Markdown 文件的顶部 (在任何元素之前，包括 `<script>` 标签)，并且需要在三条虚线之间采用有效的 YAML 格式。例如：
+ 支持在所有 Markdown 文件中使用 YAML frontmatter，并使用 [gray-matter](https://github.com/jonschlinkert/gray-matter) 解析。frontmatter 必须位于 Markdown 文件的顶部 (在任何元素之前，包括 `<script>` 标签)，并且需要在三条虚线之间采用有效的 YAML 格式。例如：
 
 ```md
 ---
-title: Docs with VitePress
+title: Docs with 
 editLink: true
 ---
 ```
@@ -27,7 +27,7 @@ frontmatter 数据可以通过特殊的 `$frontmatter` 全局变量来访问：
 
 ```md
 ---
-title: Docs with VitePress
+title: Docs with 
 editLink: true
 ---
 
@@ -40,7 +40,7 @@ Guide content
 
 ## 其他 frontmatter 格式 {#alternative-frontmatter-formats}
 
-VitePress 也支持 JSON 格式的 frontmatter，以花括号开始和结束：
+ 也支持 JSON 格式的 frontmatter，以花括号开始和结束：
 
 ```json
 ---

@@ -1,11 +1,11 @@
 ---
 outline: deep
-description: 커스텀 CSS, 컴포넌트, 레이아웃 및 슬롯을 사용하여 VitePress 기본 테마를 커스터마이징하고 확장하세요.
+description: 커스텀 CSS, 컴포넌트, 레이아웃 및 슬롯을 사용하여  기본 테마를 커스터마이징하고 확장하세요.
 ---
 
 # 기본 테마 확장하기 {#extending-the-default-theme}
 
-VitePress의 기본 테마는 문서화에 최적화되어 있으며, 커스텀할 수 있습니다. 포괄적인 옵션 목록은 [기본 테마 구성](../reference/default-theme-config)을 참고하세요.
+의 기본 테마는 문서화에 최적화되어 있으며, 커스텀할 수 있습니다. 포괄적인 옵션 목록은 [기본 테마 구성](../reference/default-theme-config)을 참고하세요.
 
 그러나 구성만으로는 충분하지 않을 수 있습니다. 예를 들어:
 
@@ -42,7 +42,7 @@ export default DefaultTheme
 
 ## 다른 폰트 사용하기 {#using-different-fonts}
 
-VitePress는 기본 폰트로 [Inter](https://rsms.me/inter/)를 사용하며, 빌드 결과물에 폰트를 포함시킵니다. 폰트는 프로덕션 환경에서 자동으로 미리 로드되지만, 다른 메인 폰트를 사용하고자 할 경우 이는 바람직하지 않을 수 있습니다.
+는 기본 폰트로 [Inter](https://rsms.me/inter/)를 사용하며, 빌드 결과물에 폰트를 포함시킵니다. 폰트는 프로덕션 환경에서 자동으로 미리 로드되지만, 다른 메인 폰트를 사용하고자 할 경우 이는 바람직하지 않을 수 있습니다.
 
 빌드 결과물에 Inter를 포함시키지 않으려면, `vitepress/theme-without-fonts`에서 테마를 "import" 합니다:
 

@@ -5,7 +5,7 @@ import { contentUpdatedCallbacks } from '../utils'
 const runCbs = () => contentUpdatedCallbacks.forEach((fn) => fn())
 
 export const Content = defineComponent({
-  name: 'VitePressContent',
+  name: 'Content',
   props: {
     as: { type: [Object, String], default: 'div' }
   },
@@ -20,10 +20,10 @@ export const Content = defineComponent({
         [
           route.component
             ? h(route.component, {
-                onVnodeMounted: runCbs,
-                onVnodeUpdated: runCbs,
-                onVnodeUnmounted: runCbs
-              })
+              onVnodeMounted: runCbs,
+              onVnodeUpdated: runCbs,
+              onVnodeUnmounted: runCbs
+            })
             : '404 Page Not Found'
         ]
       )

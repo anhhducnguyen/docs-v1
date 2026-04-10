@@ -1,12 +1,12 @@
 ---
-description: Reference of VitePress CLI commands including dev, build, preview, and init.
+description: Reference of  CLI commands including dev, build, preview, and init.
 ---
 
 # Command Line Interface
 
 ## `vitepress dev`
 
-Start VitePress dev server using designated directory as root. Defaults to current directory. The `dev` command can also be omitted when running in current directory.
+Start  dev server using designated directory as root. Defaults to current directory. The `dev` command can also be omitted when running in current directory.
 
 ### Usage
 
@@ -31,7 +31,7 @@ vitepress dev [root]
 
 ## `vitepress build`
 
-Build the VitePress site for production.
+Build the  site for production.
 
 ### Usage
 

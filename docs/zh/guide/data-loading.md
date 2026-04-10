@@ -1,10 +1,10 @@
 ---
-description: 使用 VitePress 数据加载器在构建时加载任意数据，并在页面或组件中导入使用。
+description: 使用  数据加载器在构建时加载任意数据，并在页面或组件中导入使用。
 ---
 
 # 构建时数据加载 {#build-time-data-loading}
 
-VitePress 提供了**数据加载**的功能，它允许加载任意数据并从页面或组件中导入它。数据加载**只在构建时**执行：最终的数据将被序列化为 JavaScript 包中的 JSON。
+ 提供了**数据加载**的功能，它允许加载任意数据并从页面或组件中导入它。数据加载**只在构建时**执行：最终的数据将被序列化为 JavaScript 包中的 JSON。
 
 数据加载可以被用于获取远程数据，也可以基于本地文件生成元数据。例如，可以使用数据加载来解析所有本地 API 页面并自动生成所有 API 入口的索引。
 
@@ -42,7 +42,7 @@ import { data } from './example.data.js'
 }
 ```
 
-你会注意到 data loader 本身并没有导出 `data`。这是因为 VitePress 在后台调用了 `load()` 方法，并通过名为 `data` 的具名导出隐式地暴露了结果。
+你会注意到 data loader 本身并没有导出 `data`。这是因为  在后台调用了 `load()` 方法，并通过名为 `data` 的具名导出隐式地暴露了结果。
 
 即使它是异步的，这也是有效的：
 
@@ -85,7 +85,7 @@ export default {
 
 ## `createContentLoader`
 
-当构建一个内容为主的站点时，我们经常需要创建一个“归档”或“索引”页面：一个我们可以列出内容中的所有可用条目的页面，例如博客文章或 API 页面。我们**可以**直接使用数据加载 API 实现这一点，但由于这会经常使用，VitePress 还提供了一个 `createContentLoader` 辅助函数来简化这个过程：
+当构建一个内容为主的站点时，我们经常需要创建一个“归档”或“索引”页面：一个我们可以列出内容中的所有可用条目的页面，例如博客文章或 API 页面。我们**可以**直接使用数据加载 API 实现这一点，但由于这会经常使用， 还提供了一个 `createContentLoader` 辅助函数来简化这个过程：
 
 ```js [posts.data.js]
 import { createContentLoader } from 'vitepress'

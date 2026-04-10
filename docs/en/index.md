@@ -1,14 +1,14 @@
 ---
-description: VitePress is a Vite & Vue powered static site generator that lets you create beautiful documentation sites from Markdown.
+description:  is a Vite & Vue powered static site generator that lets you create beautiful documentation sites from Markdown.
 layout: home
 
 hero:
-  name: VitePress
+  name: 
   text: Vite & Vue Powered Static Site Generator
   tagline: Markdown to beautiful docs in minutes
   actions:
     - theme: brand
-      text: What is VitePress?
+      text: What is ?
       link: ./guide/what-is-vitepress
     - theme: alt
       text: Quickstart
@@ -18,7 +18,7 @@ hero:
       link: https://github.com/vuejs/vitepress
   image:
     src: /vitepress-logo-large.svg
-    alt: VitePress
+    alt: 
 
 features:
   - icon: 📝

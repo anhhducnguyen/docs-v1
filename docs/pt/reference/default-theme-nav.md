@@ -1,5 +1,5 @@
 ---
-description: Configure a barra de navegação no tema padrão do VitePress, incluindo título do site, logo e links de menu.
+description: Configure a barra de navegação no tema padrão do , incluindo título do site, logo e links de menu.
 ---
 
 # Navegação {#nav}
@@ -146,7 +146,7 @@ export default {
 
 ### Personalizar os atributos "target" e "rel" de links {#customize-link-s-target-and-rel-attributes}
 
-Por padrão, VitePress determina automaticamente os atributos `target` e `rel` baseado em um link externo ou não. Mas se você quiser, também pode personalizá-los.
+Por padrão,  determina automaticamente os atributos `target` e `rel` baseado em um link externo ou não. Mas se você quiser, também pode personalizá-los.
 
 ```js
 export default {

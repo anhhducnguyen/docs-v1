@@ -1,10 +1,10 @@
 ---
-description: Carregue dados arbitrários em tempo de compilação com os carregadores de dados do VitePress e importe-os em páginas ou componentes.
+description: Carregue dados arbitrários em tempo de compilação com os carregadores de dados do  e importe-os em páginas ou componentes.
 ---
 
 # Carregamento de Dados em Tempo de Compilação {#build-time-data-loading}
 
-VitePress fornece um recurso chamado **carregadores de dado** que permite carregar dados arbitrários e importá-los de páginas ou de componentes. O carregamento de dados é executado **apenas no tempo da construção**: os dados resultantes serão serializados como JSON no pacote JavaScript final.
+ fornece um recurso chamado **carregadores de dado** que permite carregar dados arbitrários e importá-los de páginas ou de componentes. O carregamento de dados é executado **apenas no tempo da construção**: os dados resultantes serão serializados como JSON no pacote JavaScript final.
 
 Os carregadores de dados podem ser usados para buscar dados remotos ou gerar metadados com base em arquivos locais. Por exemplo, você pode usar carregadores de dados para processar todas as suas páginas API locais e gerar automaticamente um índice de todas as entradas da API.
 
@@ -42,7 +42,7 @@ Saída:
 }
 ```
 
-Você notará que o próprio carregador de dados não exporta o `data`. É o VitePress chamando o método `load()` nos bastidores e expondo implicitamente o resultado por meio da exportação nomeada `data`.
+Você notará que o próprio carregador de dados não exporta o `data`. É o  chamando o método `load()` nos bastidores e expondo implicitamente o resultado por meio da exportação nomeada `data`.
 
 Isso funciona mesmo se o carregador for assíncrono:
 
@@ -85,7 +85,7 @@ export default {
 
 ## `createContentLoader`
 
-Ao construir um site focado em conteúdo, frequentemente precisamos criar uma página de "arquivo" ou "índice": uma página onde listamos todas as entradas disponíveis em nossa coleção de conteúdo, por exemplo, artigos de blog ou páginas de API. Nós **podemos** implementar isso diretamente com a API de carregador de dados, mas como este é um caso de uso tão comum, VitePress também fornece um auxiliar `createContentLoader` para simplificar isso:
+Ao construir um site focado em conteúdo, frequentemente precisamos criar uma página de "arquivo" ou "índice": uma página onde listamos todas as entradas disponíveis em nossa coleção de conteúdo, por exemplo, artigos de blog ou páginas de API. Nós **podemos** implementar isso diretamente com a API de carregador de dados, mas como este é um caso de uso tão comum,  também fornece um auxiliar `createContentLoader` para simplificar isso:
 
 ```js [posts.data.js]
 import { createContentLoader } from 'vitepress'

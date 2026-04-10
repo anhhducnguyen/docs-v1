@@ -1,16 +1,16 @@
 ---
-description: Aprenda a usar frontmatter YAML em arquivos Markdown do VitePress para controlar metadados e comportamento da página.
+description: Aprenda a usar frontmatter YAML em arquivos Markdown do  para controlar metadados e comportamento da página.
 ---
 
 # Frontmatter
 
 ## Utilização {#usage}
 
-VitePress suporta frontmatter YAML em todos os arquivos Markdown, processando-os com [gray-matter](https://github.com/jonschlinkert/gray-matter). O frontmatter deve estar no topo do arquivo Markdown (antes de qualquer elemento, incluindo tags `<script>`), e deve ter a forma de um YAML válido entre linhas com traços triplos. Exemplo:
+ suporta frontmatter YAML em todos os arquivos Markdown, processando-os com [gray-matter](https://github.com/jonschlinkert/gray-matter). O frontmatter deve estar no topo do arquivo Markdown (antes de qualquer elemento, incluindo tags `<script>`), e deve ter a forma de um YAML válido entre linhas com traços triplos. Exemplo:
 
 ```md
 ---
-title: Documentação com VitePress
+title: Documentação com 
 editLink: true
 ---
 ```
@@ -27,7 +27,7 @@ Aqui está um exemplo de como você poderia usá-lo em seu arquivo Markdown:
 
 ```md
 ---
-title: Documentação com VitePress
+title: Documentação com 
 editLink: true
 ---
 
@@ -40,7 +40,7 @@ Você também pode acessar os dados do frontmatter da página atual em `<script 
 
 ## Formatos Alternativos do Frontmatter {#alternative-frontmatter-formats}
 
-VitePress também suporta a sintaxe frontmatter JSON, começando e terminando com chaves:
+ também suporta a sintaxe frontmatter JSON, começando e terminando com chaves:
 
 ```json
 ---

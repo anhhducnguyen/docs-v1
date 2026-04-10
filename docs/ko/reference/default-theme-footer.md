@@ -1,10 +1,10 @@
 ---
-description: VitePress 페이지 하단에 표시되는 전역 푸터를 구성하세요.
+description:  페이지 하단에 표시되는 전역 푸터를 구성하세요.
 ---
 
 # 푸터 {#footer}
 
-`themeConfig.footer`가 존재하면 VitePress는 페이지 하단에 전역 푸터를 표시합니다.
+`themeConfig.footer`가 존재하면 는 페이지 하단에 전역 푸터를 표시합니다.
 
 ```ts
 export default {

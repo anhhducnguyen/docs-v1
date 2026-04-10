@@ -1,15 +1,15 @@
 ---
 outline: deep
-description: Netlify, Vercel, GitHub Pages 등 인기 있는 플랫폼에 VitePress 사이트를 배포하세요.
+description: Netlify, Vercel, GitHub Pages 등 인기 있는 플랫폼에  사이트를 배포하세요.
 ---
 
-# VitePress 사이트 배포하기 {#deploy-your-vitepress-site}
+#  사이트 배포하기 {#deploy-your-vitepress-site}
 
 다음 가이드는 몇 가지 공통된 가정을 기반으로 합니다:
 
-- VitePress 사이트는 프로젝트의 `docs` 디렉토리 안에 있다.
+-  사이트는 프로젝트의 `docs` 디렉토리 안에 있다.
 - 기본 빌드 출력 디렉토리(`.vitepress/dist`)를 사용하고 있다.
-- VitePress는 프로젝트의 로컬 종속성으로 설치되어 있으며, `package.json`에 다음 스크립트가 설정되어 있다:
+- 는 프로젝트의 로컬 종속성으로 설치되어 있으며, `package.json`에 다음 스크립트가 설정되어 있다:
 
   ```json [package.json]
   {
@@ -50,7 +50,7 @@ description: Netlify, Vercel, GitHub Pages 등 인기 있는 플랫폼에 VitePr
 
 ## public 기본 경로 설정하기 {#setting-a-public-base-path}
 
-기본적으로 사이트가 도메인의 루트 경로(`/`)에 배포된다고 가정합니다. 예를 들어 사이트가 `https://mywebsite.com/blog/` 와 같은 서브 경로에서 제공될 경우, VitePress 구성에서 [`base`](../reference/site-config#base) 옵션을 `'/blog/'`로 설정해야 합니다.
+기본적으로 사이트가 도메인의 루트 경로(`/`)에 배포된다고 가정합니다. 예를 들어 사이트가 `https://mywebsite.com/blog/` 와 같은 서브 경로에서 제공될 경우,  구성에서 [`base`](../reference/site-config#base) 옵션을 `'/blog/'`로 설정해야 합니다.
 
 **예**: Github(또는 GitLab) Pages를 사용하여 `user.github.io/repo/`에 배포하는 경우, `base`를 `/repo/`로 설정하세요.
 
@@ -123,9 +123,9 @@ HTML 코드에 대해 _Auto Minify_ 옵션을 활성화하지 마세요. 이는 
 1. 프로젝트의 `.github/workflows` 디렉토리 안에 `deploy.yml`이라는 파일을 만들고 다음과 같은 내용을 추가하세요:
 
    ```yaml [.github/workflows/deploy.yml]
-   # VitePress 사이트를 GitHub Pages에 빌드하고 배포하는 샘플 워크플로우
+   #  사이트를 GitHub Pages에 빌드하고 배포하는 샘플 워크플로우
    #
-   name: VitePress 사이트를 Pages에 배포
+   name:  사이트를 Pages에 배포
 
    on:
      # `main` 브랜치를 대상으로 하는 푸시에서 실행됩니다. 기본 브랜치로 `master`를 사용하는 경우 여기를 `master`로 변경하세요.
@@ -169,7 +169,7 @@ HTML 코드에 대해 _Auto Minify_ 옵션을 활성화하지 마세요. 이는 
            uses: actions/configure-pages@v4
          - name: Install dependencies
            run: npm ci # 또는 pnpm install / yarn install / bun install
-         - name: Build with VitePress
+         - name: Build with 
            run: npm run docs:build # 또는 pnpm docs:build / yarn docs:build / bun run docs:build
          - name: Upload artifact
            uses: actions/upload-pages-artifact@v3
@@ -191,7 +191,7 @@ HTML 코드에 대해 _Auto Minify_ 옵션을 활성화하지 마세요. 이는 
    ```
 
    ::: warning
-   VitePress의 `base` 옵션이 제대로 구성되어 있는지 확인하세요. 자세한 내용은 [public 기본 경로 설정하기](#setting-a-public-base-path)를 참고하세요.
+   의 `base` 옵션이 제대로 구성되어 있는지 확인하세요. 자세한 내용은 [public 기본 경로 설정하기](#setting-a-public-base-path)를 참고하세요.
    :::
 
 2. 리포지토리 설정의 "Pages" 메뉴 항목에서 "Build and deployment > Source"에서 "GitHub Actions"를 선택하세요.
@@ -200,7 +200,7 @@ HTML 코드에 대해 _Auto Minify_ 옵션을 활성화하지 마세요. 이는 
 
 ### GitLab Pages
 
-1. VitePress 구성에서 `outDir`을 `../public`으로 설정하세요. `https://<username>.gitlab.io/<repository>/`에 배포하려면 `base` 옵션을 `'/<repository>/'`로 구성하세요. 커스텀 도메인, 유저 또는 그룹 페이지에 배포하거나 GitLab에서 "Use unique domain" 설정이 활성화된 경우에는 `base`가 필요하지 않습니다.
+1.  구성에서 `outDir`을 `../public`으로 설정하세요. `https://<username>.gitlab.io/<repository>/`에 배포하려면 `base` 옵션을 `'/<repository>/'`로 구성하세요. 커스텀 도메인, 유저 또는 그룹 페이지에 배포하거나 GitLab에서 "Use unique domain" 설정이 활성화된 경우에는 `base`가 필요하지 않습니다.
 
 2. 변경 사항을 적용할 때마다 사이트를 빌드하고 배포하도록 하기 위해 프로젝트의 루트에 다음 내용을 가진 `.gitlab-ci.yml` 파일을 생성하세요:
 
@@ -233,7 +233,7 @@ HTML 코드에 대해 _Auto Minify_ 옵션을 활성화하지 마세요. 이는 
 
 ### CloudRay
 
-[CloudRay](https://cloudray.io/)로 VitePress 프로젝트를 배포하려면 이 [지침](https://cloudray.io/articles/how-to-deploy-vitepress-site)을 따르세요.
+[CloudRay](https://cloudray.io/)로  프로젝트를 배포하려면 이 [지침](https://cloudray.io/articles/how-to-deploy-vitepress-site)을 따르세요.
 
 ### Firebase
 
@@ -280,15 +280,15 @@ HTML 코드에 대해 _Auto Minify_ 옵션을 활성화하지 마세요. 이는 
 
 ### Hostinger
 
-[Hostinger](https://www.hostinger.com/web-apps-hosting)로 VitePress 프로젝트를 배포하려면 이 [지침](https://www.hostinger.com/support/how-to-deploy-a-nodejs-website-in-hostinger/)을 따르세요. 빌드 설정을 구성할 때 프레임워크로 VitePress를 선택하고 루트 디렉터리를 `./docs`로 조정하세요.
+[Hostinger](https://www.hostinger.com/web-apps-hosting)로  프로젝트를 배포하려면 이 [지침](https://www.hostinger.com/support/how-to-deploy-a-nodejs-website-in-hostinger/)을 따르세요. 빌드 설정을 구성할 때 프레임워크로 를 선택하고 루트 디렉터리를 `./docs`로 조정하세요.
 
 ### Kinsta
 
-[VitePress](https://kinsta.com/static-site-hosting/) 웹사이트를 [Kinsta](https://kinsta.com/static-site-hosting/)에 배포하려면 이 [지침](https://kinsta.com/docs/vitepress-static-site-example/)을 따르세요.
+[](https://kinsta.com/static-site-hosting/) 웹사이트를 [Kinsta](https://kinsta.com/static-site-hosting/)에 배포하려면 이 [지침](https://kinsta.com/docs/vitepress-static-site-example/)을 따르세요.
 
 ### Stormkit
 
-[VitePress](https://stormkit.io) 프로젝트를 [Stormkit](https://www.stormkit.io)에 배포하려면 이 [지침](https://stormkit.io/blog/how-to-deploy-vitepress)을 따르세요.
+[](https://stormkit.io) 프로젝트를 [Stormkit](https://www.stormkit.io)에 배포하려면 이 [지침](https://stormkit.io/blog/how-to-deploy-vitepress)을 따르세요.
 
 ### Surge
 
@@ -300,7 +300,7 @@ HTML 코드에 대해 _Auto Minify_ 옵션을 활성화하지 마세요. 이는 
 
 ### Nginx
 
-다음은 Nginx 서버 블록 구성의 예입니다. 이 설정은 일반적인 텍스트 기반 에셋에 대한 gzip 압축, VitePress 사이트의 정적 파일을 적절한 캐싱 헤더와 함께 제공하는 규칙 및 `cleanUrls: true`를 처리하는 규칙을 포함합니다.
+다음은 Nginx 서버 블록 구성의 예입니다. 이 설정은 일반적인 텍스트 기반 에셋에 대한 gzip 압축,  사이트의 정적 파일을 적절한 캐싱 헤더와 함께 제공하는 규칙 및 `cleanUrls: true`를 처리하는 규칙을 포함합니다.
 
 ```nginx
 server {
@@ -334,7 +334,7 @@ server {
 }
 ```
 
-이 구성은 빌드된 VitePress 사이트가 서버의 `/app` 디렉토리에 위치한다고 가정합니다. 사이트 파일이 다른 곳에 위치한 경우 `root` 지시문을 적절하게 조정하세요.
+이 구성은 빌드된  사이트가 서버의 `/app` 디렉토리에 위치한다고 가정합니다. 사이트 파일이 다른 곳에 위치한 경우 `root` 지시문을 적절하게 조정하세요.
 
 ::: warning index.html을 기본값으로 설정하지 마세요.
 try_files는 다른 Vue 애플리케이션처럼 index.html을 기본값으로 할 수 없습니다. 이는 페이지 상태가 유효하지 않게 만듭니다.

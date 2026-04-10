@@ -67,7 +67,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       text: '導入',
       collapsed: false,
       items: [
-        { text: 'VitePress とは？', link: 'what-is-vitepress' },
+        { text: ' とは？', link: 'what-is-vitepress' },
         { text: 'はじめに', link: 'getting-started' },
         { text: 'ルーティング', link: 'routing' },
         { text: 'デプロイ', link: 'deploy' }

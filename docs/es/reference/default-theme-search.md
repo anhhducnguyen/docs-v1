@@ -1,5 +1,5 @@
 ---
-description: Configura la búsqueda local o con Algolia para tu sitio VitePress.
+description: Configura la búsqueda local o con Algolia para tu sitio .
 outline: deep
 ---
 
@@ -7,7 +7,7 @@ outline: deep
 
 ## Busqueda local {#local-search}
 
-VitePress admite la búsqueda de texto completo utilizando un índice en el navegador gracias a [minisearch](https://github.com/lucaong/minisearch/). Para habilitar esta función, simplemente configure la opción `themeConfig.search.provider` como `'local'` en el archivo `.vitepress/config.ts`:
+ admite la búsqueda de texto completo utilizando un índice en el navegador gracias a [minisearch](https://github.com/lucaong/minisearch/). Para habilitar esta función, simplemente configure la opción `themeConfig.search.provider` como `'local'` en el archivo `.vitepress/config.ts`:
 
 ```ts
 import { defineConfig } from 'vitepress'
@@ -186,7 +186,7 @@ export default defineConfig({
 
 ## Busqueda de Algolia {#algolia-search}
 
-VitePress admite la búsqueda en su sitio de documentación utilizando [Algolia DocSearch](https://docsearch.algolia.com/docs/what-is-docsearch). Consulte su guía de introducción. en tu archivo `.vitepress/config.ts`, Deberá proporcionar al menos lo siguiente para que funcione:
+ admite la búsqueda en su sitio de documentación utilizando [Algolia DocSearch](https://docsearch.algolia.com/docs/what-is-docsearch). Consulte su guía de introducción. en tu archivo `.vitepress/config.ts`, Deberá proporcionar al menos lo siguiente para que funcione:
 
 ```ts
 import { defineConfig } from 'vitepress'
@@ -316,7 +316,7 @@ export default defineConfig({
 
 #### Modo (auto / sidePanel / hybrid / modal) {#ask-ai-mode}
 
-Puedes controlar opcionalmente cómo VitePress integra la búsqueda por palabra clave y Ask AI:
+Puedes controlar opcionalmente cómo  integra la búsqueda por palabra clave y Ask AI:
 
 - `mode: 'auto'` (por defecto): infiere `hybrid` cuando la búsqueda por palabra clave está configurada, de lo contrario `sidePanel` cuando el panel lateral de Ask AI está configurado.
 - `mode: 'sidePanel'`: fuerza solo el panel lateral (oculta el botón de búsqueda por palabra clave).

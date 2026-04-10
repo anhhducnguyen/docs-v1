@@ -1,13 +1,13 @@
 ---
 outline: deep
-description: 동적 라우트와 데이터 로더를 사용하여 VitePress를 헤드리스 CMS에 연결하세요.
+description: 동적 라우트와 데이터 로더를 사용하여 를 헤드리스 CMS에 연결하세요.
 ---
 
 # CMS에 연결하기 {#connecting-to-a-cms}
 
 ## 일반적인 워크플로우 {#general-workflow}
 
-VitePress를 CMS에 연결하는 것은 주로 [동적 라우트](./routing#dynamic-routes)를 중심으로 이루어질 것입니다. 진행하기 전에 작동 방식을 이해해야 합니다.
+를 CMS에 연결하는 것은 주로 [동적 라우트](./routing#dynamic-routes)를 중심으로 이루어질 것입니다. 진행하기 전에 작동 방식을 이해해야 합니다.
 
 각 CMS가 다르게 작동하므로, 여기서는 특정 상황에 맞게 조정해야 하는 일반적인 워크플로우만 제공할 수 있습니다.
 
@@ -54,4 +54,4 @@ VitePress를 CMS에 연결하는 것은 주로 [동적 라우트](./routing#dyna
 
 ## 통합 가이드 {#integration-guides}
 
-VitePress를 특정 CMS와 통합하는 방법에 대한 가이드를 작성한 경우 아래의 "이 페이지 편집 제안하기" 링크를 클릭하여 여기에 제출하세요!
+를 특정 CMS와 통합하는 방법에 대한 가이드를 작성한 경우 아래의 "이 페이지 편집 제안하기" 링크를 클릭하여 여기에 제출하세요!

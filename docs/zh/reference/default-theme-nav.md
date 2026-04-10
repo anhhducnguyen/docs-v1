@@ -1,5 +1,5 @@
 ---
-description: 配置 VitePress 默认主题的导航栏，包括站点标题、图标和菜单链接。
+description: 配置  默认主题的导航栏，包括站点标题、图标和菜单链接。
 ---
 
 # 导航栏 {#nav}
@@ -145,7 +145,7 @@ export default {
 
 ### 自定义链接的“target”和“rel”属性 {#customize-link-s-target-and-rel-attributes}
 
-默认情况下，VitePress 会根据链接是否为外部链接自动判断 `target` 和 `rel` 属性。但如果愿意，也可以自定义它们。
+默认情况下， 会根据链接是否为外部链接自动判断 `target` 和 `rel` 属性。但如果愿意，也可以自定义它们。
 
 ```js
 export default {
@@ -212,7 +212,7 @@ export default {
 }
 ```
 
-你的组件将在导航栏中渲染。 VitePress 会向组件提供以下额外的 props：
+你的组件将在导航栏中渲染。  会向组件提供以下额外的 props：
 
 - `screenMenu`：一个可选的布尔值，指示组件是否在移动导航菜单内
 

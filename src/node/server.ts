@@ -1,6 +1,6 @@
 import { createServer as createViteServer, type ServerOptions } from 'vite'
 import { resolveConfig, type SiteConfig } from './config'
-import { createVitePressPlugin } from './plugin'
+import { createPlugin } from './plugin'
 
 export async function createServer(
   root: string = process.cwd(), // for backwards compatibility
@@ -17,7 +17,7 @@ export async function createServer(
     root: config.srcDir,
     base: config.site.base,
     cacheDir: config.cacheDir,
-    plugins: await createVitePressPlugin(config, false, {}, {}, restartServer),
+    plugins: await createPlugin(config, false, {}, {}, restartServer),
     server,
     customLogger: config.logger,
     configFile: config.vite?.configFile

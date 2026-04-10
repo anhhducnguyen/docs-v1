@@ -1,12 +1,12 @@
 ---
-description: Use Vue components and dynamic templating features directly inside Markdown files in VitePress.
+description: Use Vue components and dynamic templating features directly inside Markdown files in .
 ---
 
 # Using Vue in Markdown
 
-In VitePress, each Markdown file is compiled into HTML and then processed as a [Vue Single-File Component](https://vuejs.org/guide/scaling-up/sfc.html). This means you can use any Vue features inside the Markdown, including dynamic templating, using Vue components, or arbitrary in-page Vue component logic by adding a `<script>` tag.
+In , each Markdown file is compiled into HTML and then processed as a [Vue Single-File Component](https://vuejs.org/guide/scaling-up/sfc.html). This means you can use any Vue features inside the Markdown, including dynamic templating, using Vue components, or arbitrary in-page Vue component logic by adding a `<script>` tag.
 
-It's worth noting that VitePress leverages Vue's compiler to automatically detect and optimize the purely static parts of the Markdown content. Static contents are optimized into single placeholder nodes and eliminated from the page's JavaScript payload for initial visits. They are also skipped during client-side hydration. In short, you only pay for the dynamic parts on any given page.
+It's worth noting that  leverages Vue's compiler to automatically detect and optimize the purely static parts of the Markdown content. Static contents are optimized into single placeholder nodes and eliminated from the page's JavaScript payload for initial visits. They are also skipped during client-side hydration. In short, you only pay for the dynamic parts on any given page.
 
 ::: tip SSR Compatibility
 All Vue usage needs to be SSR-compatible. See [SSR Compatibility](./ssr-compat) for details and common workarounds.
@@ -75,7 +75,7 @@ The count is: {{ count }}
 When used in Markdown, `<style scoped>` requires adding special attributes to every element on the current page, which will significantly bloat the page size. `<style module>` is preferred when locally-scoped styling is needed in a page.
 :::
 
-You also have access to VitePress' runtime APIs such as the [`useData` helper](../reference/runtime-api#usedata), which provides access to current page's metadata:
+You also have access to ' runtime APIs such as the [`useData` helper](../reference/runtime-api#usedata), which provides access to current page's metadata:
 
 **Input**
 
@@ -144,7 +144,7 @@ You can use Vue components in the headers, but note the difference between the f
 The HTML wrapped by `<code>` will be displayed as-is; only the HTML that is **not** wrapped will be parsed by Vue.
 
 ::: tip
-The output HTML is accomplished by [Markdown-it](https://github.com/Markdown-it/Markdown-it), while the parsed headers are handled by VitePress (and used for both the sidebar and document title).
+The output HTML is accomplished by [Markdown-it](https://github.com/Markdown-it/Markdown-it), while the parsed headers are handled by  (and used for both the sidebar and document title).
 :::
 
 
@@ -204,7 +204,7 @@ Note that this might prevent certain tokens from being syntax highlighted proper
 
 ## Using CSS Pre-processors
 
-VitePress has [built-in support](https://vitejs.dev/guide/features.html#css-pre-processors) for CSS pre-processors: `.scss`, `.sass`, `.less`, `.styl` and `.stylus` files. There is no need to install Vite-specific plugins for them, but the corresponding pre-processor itself must be installed:
+ has [built-in support](https://vitejs.dev/guide/features.html#css-pre-processors) for CSS pre-processors: `.scss`, `.sass`, `.less`, `.styl` and `.stylus` files. There is no need to install Vite-specific plugins for them, but the corresponding pre-processor itself must be installed:
 
 ```
 # .scss and .sass
@@ -228,7 +228,7 @@ Then you can use the following in Markdown and theme components:
 
 ## Using Teleports
 
-VitePress currently has SSG support for teleports to body only. For other targets, you can wrap them inside the built-in `<ClientOnly>` component or inject the teleport markup into the correct location in your final page HTML through [`postRender` hook](../reference/site-config#postrender).
+ currently has SSG support for teleports to body only. For other targets, you can wrap them inside the built-in `<ClientOnly>` component or inject the teleport markup into the correct location in your final page HTML through [`postRender` hook](../reference/site-config#postrender).
 
 <ModalDemo />
 

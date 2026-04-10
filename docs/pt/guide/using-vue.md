@@ -1,12 +1,12 @@
 ---
-description: Use componentes Vue e recursos de template dinâmico diretamente em arquivos Markdown no VitePress.
+description: Use componentes Vue e recursos de template dinâmico diretamente em arquivos Markdown no .
 ---
 
 # Usando Vue em Markdown {#using-vue-in-markdown}
 
-Em VitePress, cada arquivo Markdown é compilado para HTML e então processado como um [Componente de Arquivo Único Vue](https://vuejs.org/guide/scaling-up/sfc.html). Isso significa que você pode usar qualquer funcionalidade Vue dentro do Markdown, incluindo a interpolação dinâmica, usar componentes Vue ou lógica arbitrária de componentes Vue dentro da página adicionando uma tag `<script>`.
+Em , cada arquivo Markdown é compilado para HTML e então processado como um [Componente de Arquivo Único Vue](https://vuejs.org/guide/scaling-up/sfc.html). Isso significa que você pode usar qualquer funcionalidade Vue dentro do Markdown, incluindo a interpolação dinâmica, usar componentes Vue ou lógica arbitrária de componentes Vue dentro da página adicionando uma tag `<script>`.
 
-Vale ressaltar que VitePress aproveita o compilador Vue para detectar e otimizar automaticamente as partes puramente estáticas do conteúdo Markdown. Os conteúdos estáticos são otimizados em nós de espaço reservado únicos e eliminados da carga JavaScript da página para visitas iniciais. Eles também são ignorados durante a hidratação no lado do cliente. Em resumo, você só paga pelas partes dinâmicas em qualquer página específica.
+Vale ressaltar que  aproveita o compilador Vue para detectar e otimizar automaticamente as partes puramente estáticas do conteúdo Markdown. Os conteúdos estáticos são otimizados em nós de espaço reservado únicos e eliminados da carga JavaScript da página para visitas iniciais. Eles também são ignorados durante a hidratação no lado do cliente. Em resumo, você só paga pelas partes dinâmicas em qualquer página específica.
 
 ::: tip Compatibilidade SSR
 Todo uso do Vue precisa ser compatível com SSR. Consulte [Compatibilidade SSR](./ssr-compat) para detalhes e soluções comuns.
@@ -75,7 +75,7 @@ A contagem é: {{ count }}
 Quando usado no Markdown, `<style scoped>` exige a adição de atributos especiais a cada elemento na página atual, o que aumentará significativamente o tamanho da página. `<style module>` é preferido quando é necessária uma estilização localizada em uma página.
 :::
 
-Você também tem acesso às APIs de tempo de execução VitePress, como o [auxiliar `useData`](../reference/runtime-api#usedata), que fornece acesso aos metadados da página atual:
+Você também tem acesso às APIs de tempo de execução , como o [auxiliar `useData`](../reference/runtime-api#usedata), que fornece acesso aos metadados da página atual:
 
 **Entrada**
 
@@ -144,7 +144,7 @@ Você pode usar componentes Vue nos cabeçalhos, mas observe a diferença entre 
 O HTML envolvido por `<code>` será exibido como é; somente o HTML que **não** estiver envolvido será analisado pelo Vue.
 
 ::: tip
-O HTML de saída é realizado por [Markdown-it](https://github.com/Markdown-it/Markdown-it), enquanto os cabeçalhos processados são manipulados pelo VitePress (e usados tanto na barra lateral quanto no título do documento).
+O HTML de saída é realizado por [Markdown-it](https://github.com/Markdown-it/Markdown-it), enquanto os cabeçalhos processados são manipulados pelo  (e usados tanto na barra lateral quanto no título do documento).
 :::
 
 ## Escapes {#escaping}
@@ -203,7 +203,7 @@ Observe que isso pode impedir que certos tokens sejam realçados corretamente.
 
 ## Usando Pré-processadores CSS {#using-css-pre-processors}
 
-O VitePress possui [suporte embutido](https://vitejs.dev/guide/features.html#css-pre-processors) para pré-processadores CSS: arquivos `.scss`, `.sass`, `.less`, `.styl` e `.stylus`. Não é necessário instalar plugins específicos do Vite para eles, mas o próprio pré-processador correspondente deve ser instalado:
+O  possui [suporte embutido](https://vitejs.dev/guide/features.html#css-pre-processors) para pré-processadores CSS: arquivos `.scss`, `.sass`, `.less`, `.styl` e `.stylus`. Não é necessário instalar plugins específicos do Vite para eles, mas o próprio pré-processador correspondente deve ser instalado:
 
 ```
 # .scss e .sass
@@ -227,7 +227,7 @@ Então você pode usar o seguinte em Markdown e nos componentes do tema:
 
 ## Usando _Teleports_ {#using-teleports}
 
-VitePress atualmente oferece suporte a SSG para _teleports_ apenas para o corpo. Para outros alvos, você pode envolvê-los dentro do componente embutido `<ClientOnly>` ou injetar a marcação de _teleport_ na localização correta em sua página final HTML por meio do [gancho `postRender`](../reference/site-config#postrender).
+ atualmente oferece suporte a SSG para _teleports_ apenas para o corpo. Para outros alvos, você pode envolvê-los dentro do componente embutido `<ClientOnly>` ou injetar a marcação de _teleport_ na localização correta em sua página final HTML por meio do [gancho `postRender`](../reference/site-config#postrender).
 
 <ModalDemo />
 

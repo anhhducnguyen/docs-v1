@@ -153,7 +153,7 @@ const sidebar: DefaultTheme.Config['sidebar'] = {
 
 export default defineConfig({
   title: 'Example',
-  description: 'An example app using VitePress.',
+  description: 'An example app using .',
   markdown: {
     image: {
       lazyLoading: true

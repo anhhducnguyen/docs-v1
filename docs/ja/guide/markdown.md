@@ -1,10 +1,10 @@
 ---
-description: VitePress組み込みのMarkdown拡張機能。カスタムコンテナ、コードブロックのシンタックスハイライト、行ハイライト、コードグループなど。
+description: 組み込みのMarkdown拡張機能。カスタムコンテナ、コードブロックのシンタックスハイライト、行ハイライト、コードグループなど。
 ---
 
 # Markdown 拡張 {#markdown-extensions}
 
-VitePress には組み込みの Markdown 拡張機能が用意されています。
+ には組み込みの Markdown 拡張機能が用意されています。
 
 ## 見出しアンカー {#header-anchors}
 
@@ -63,7 +63,7 @@ VitePress には組み込みの Markdown 拡張機能が用意されています
 外部リンクには自動的に `target="_blank" rel="noreferrer"` が付与されます。
 
 - [vuejs.org](https://vuejs.org)
-- [VitePress on GitHub](https://github.com/vuejs/vitepress)
+- [ on GitHub](https://github.com/vuejs/vitepress)
 
 ## フロントマター {#frontmatter}
 
@@ -191,7 +191,7 @@ TOC のレンダリングは `markdown.toc` オプションで設定できます
 
 ::: details クリックしてコードを表示/非表示
 ```js
-console.log('こんにちは、VitePress!')
+console.log('こんにちは、!')
 ```
 :::
 ````
@@ -204,7 +204,7 @@ console.log('こんにちは、VitePress!')
 
 ::: details クリックしてコードを表示/非表示
 ```js
-console.log('こんにちは、VitePress!')
+console.log('こんにちは、!')
 ```
 :::
 
@@ -236,7 +236,7 @@ export default defineConfig({
 ````md
 ::: details クリックしてコードを表示/非表示 {open}
 ```js
-console.log('こんにちは、VitePress!')
+console.log('こんにちは、!')
 ```
 :::
 ````
@@ -245,13 +245,13 @@ console.log('こんにちは、VitePress!')
 
 ::: details クリックしてコードを表示/非表示 {open}
 ```js
-console.log('こんにちは、VitePress!')
+console.log('こんにちは、!')
 ```
 :::
 
 ### `raw`
 
-これは、VitePress でのスタイルやルーターの衝突を防ぐための特別なコンテナです。コンポーネントライブラリのドキュメント化に特に有用です。より強力な分離が必要であれば、[whyframe](https://whyframe.dev/docs/integrations/vitepress) も検討してください。
+これは、 でのスタイルやルーターの衝突を防ぐための特別なコンテナです。コンポーネントライブラリのドキュメント化に特に有用です。より強力な分離が必要であれば、[whyframe](https://whyframe.dev/docs/integrations/vitepress) も検討してください。
 
 **構文**
 
@@ -289,7 +289,7 @@ Wraps in a `<div class="vp-raw">`
 
 ## GitHub 形式のアラート {#github-flavored-alerts}
 
-VitePress は [GitHub 形式のアラート](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts) をコールアウトとしてレンダリングできます。表示は [カスタムコンテナ](#custom-containers) と同様です。
+ は [GitHub 形式のアラート](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts) をコールアウトとしてレンダリングできます。表示は [カスタムコンテナ](#custom-containers) と同様です。
 
 **入力**
 
@@ -329,7 +329,7 @@ VitePress は [GitHub 形式のアラート](https://docs.github.com/en/get-star
 
 ## コードブロックのシンタックスハイライト {#syntax-highlighting-in-code-blocks}
 
-VitePress は [Shiki](https://github.com/shikijs/shiki) を使って、Markdown のコードブロックに色付きのシンタックスハイライトを適用します。Shiki は多くのプログラミング言語をサポートしています。コードブロックの先頭のバッククォートに有効な言語エイリアスを付けるだけで利用できます。
+ は [Shiki](https://github.com/shikijs/shiki) を使って、Markdown のコードブロックに色付きのシンタックスハイライトを適用します。Shiki は多くのプログラミング言語をサポートしています。コードブロックの先頭のバッククォートに有効な言語エイリアスを付けるだけで利用できます。
 
 **入力**
 
@@ -417,7 +417,7 @@ export default { // Highlighted
       msg: `Highlighted!
       This line isn't highlighted,
       but this and the next 2 are.`,
-      motd: 'VitePress is awesome',
+      motd: ' is awesome',
       lorem: 'ipsum'
     }
   }
@@ -434,7 +434,7 @@ export default { // Highlighted
       msg: `Highlighted!
       This line isn't highlighted,
       but this and the next 2 are.`,
-      motd: 'VitePress is awesome',
+      motd: ' is awesome',
       lorem: 'ipsum'
     }
   }
@@ -654,7 +654,7 @@ const line4 = 'This is line 4'
 <<< @/snippets/snippet.js{2}
 
 ::: tip
-`@` の値はソースルートを表します。既定では VitePress プロジェクトのルートですが、`srcDir` を設定している場合はその値になります。代替として、相対パスからのインポートも可能です：
+`@` の値はソースルートを表します。既定では  プロジェクトのルートですが、`srcDir` を設定している場合はその値になります。代替として、相対パスからのインポートも可能です：
 
 ```md
 <<< ../snippets/snippet.js
@@ -786,7 +786,7 @@ export default config
 ある Markdown ファイルの中に、別の Markdown ファイルを取り込めます（入れ子も可能）。
 
 ::: tip
-Markdown パスの先頭に `@` を付けることもでき、その場合はソースルートとして扱われます。既定では VitePress プロジェクトのルートですが、`srcDir` を設定している場合はその値になります。
+Markdown パスの先頭に `@` を付けることもでき、その場合はソースルートとして扱われます。既定では  プロジェクトのルートですが、`srcDir` を設定している場合はその値になります。
 :::
 
 例えば、相対パスの Markdown ファイルを次のように取り込めます。
@@ -1011,7 +1011,7 @@ export default {
 
 ## 高度な設定 {#advanced-configuration}
 
-VitePress は Markdown レンダラーとして [markdown-it](https://github.com/markdown-it/markdown-it) を使用しています。上記の多くの拡張はカスタムプラグインとして実装されています。`.vitepress/config.js` の `markdown` オプションを使って、`markdown-it` のインスタンスをさらにカスタマイズできます。
+ は Markdown レンダラーとして [markdown-it](https://github.com/markdown-it/markdown-it) を使用しています。上記の多くの拡張はカスタムプラグインとして実装されています。`.vitepress/config.js` の `markdown` オプションを使って、`markdown-it` のインスタンスをさらにカスタマイズできます。
 
 ```js
 import { defineConfig } from 'vitepress'

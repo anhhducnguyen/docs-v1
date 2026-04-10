@@ -1,13 +1,13 @@
 ---
 outline: deep
-description: Set up local or Algolia-powered search for your VitePress site.
+description: Set up local or Algolia-powered search for your  site.
 ---
 
 # Search
 
 ## Local Search
 
-VitePress supports fuzzy full-text search using an in-browser index thanks to [minisearch](https://github.com/lucaong/minisearch/). To enable this feature, simply set the `themeConfig.search.provider` option to `'local'` in your `.vitepress/config.ts` file:
+ supports fuzzy full-text search using an in-browser index thanks to [minisearch](https://github.com/lucaong/minisearch/). To enable this feature, simply set the `themeConfig.search.provider` option to `'local'` in your `.vitepress/config.ts` file:
 
 ```ts
 import { defineConfig } from 'vitepress'
@@ -191,7 +191,7 @@ export default defineConfig({
 
 ## Algolia Search
 
-VitePress supports searching your docs site using [Algolia DocSearch](https://docsearch.algolia.com/docs/what-is-docsearch). Refer to their getting started guide. In your `.vitepress/config.ts` you'll need to provide at least the following to make it work:
+ supports searching your docs site using [Algolia DocSearch](https://docsearch.algolia.com/docs/what-is-docsearch). Refer to their getting started guide. In your `.vitepress/config.ts` you'll need to provide at least the following to make it work:
 
 ```ts
 import { defineConfig } from 'vitepress'
@@ -320,7 +320,7 @@ export default defineConfig({
 
 #### Mode (auto / sidePanel / hybrid / modal) {#ask-ai-mode}
 
-You can optionally control how VitePress integrates keyword search and Ask AI:
+You can optionally control how  integrates keyword search and Ask AI:
 
 - `mode: 'auto'` (default): infer `hybrid` when keyword search is configured, otherwise `sidePanel` when Ask AI side panel is configured.
 - `mode: 'sidePanel'`: force side panel only (hides the keyword search button).

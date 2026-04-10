@@ -1,5 +1,5 @@
 ---
-description: VitePress 默认主题所有可用配置选项的参考。
+description:  默认主题所有可用配置选项的参考。
 ---
 
 # 默认主题配置 {#default-theme-config}
@@ -9,7 +9,7 @@ description: VitePress 默认主题所有可用配置选项的参考。
 ```ts
 export default {
   lang: 'en-US',
-  title: 'VitePress',
+  title: '',
   description: 'Vite & Vue powered static site generator.',
 
   // 主题相关配置

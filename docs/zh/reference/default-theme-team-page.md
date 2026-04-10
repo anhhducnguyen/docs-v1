@@ -1,5 +1,5 @@
 ---
-description: 使用 VitePress 内置的团队组件创建包含成员资料的团队页面。
+description: 使用  内置的团队组件创建包含成员资料的团队页面。
 ---
 
 <script setup>
@@ -107,7 +107,7 @@ const members = [
       Our Team
     </template>
     <template #lead>
-      The development of VitePress is guided by an international
+      The development of  is guided by an international
       team, some of whom have chosen to be featured below.
     </template>
   </VPTeamPageTitle>
@@ -234,7 +234,7 @@ interface TeamMember {
       Our Team
     </template>
     <template #lead>
-      The development of VitePress is guided by an international
+      The development of  is guided by an international
       team, some of whom have chosen to be featured below.
     </template>
   </VPTeamPageTitle>

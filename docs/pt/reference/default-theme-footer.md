@@ -1,10 +1,10 @@
 ---
-description: Configure o rodapé global exibido na parte inferior das páginas do VitePress.
+description: Configure o rodapé global exibido na parte inferior das páginas do .
 ---
 
 # Rodapé {#footer}
 
-VitePress irá mostrar o rodapé global na parte inferior da página quando `themeConfig.footer` está presente.
+ irá mostrar o rodapé global na parte inferior da página quando `themeConfig.footer` está presente.
 
 ```ts
 export default {

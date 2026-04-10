@@ -1,15 +1,15 @@
 ---
 outline: deep
-description: Netlify、Vercel、GitHub Pagesなどの主要プラットフォームにVitePressサイトをデプロイする方法。
+description: Netlify、Vercel、GitHub Pagesなどの主要プラットフォームにサイトをデプロイする方法。
 ---
 
-# VitePress サイトをデプロイする {#deploy-your-vitepress-site}
+#  サイトをデプロイする {#deploy-your-vitepress-site}
 
 以下のガイドは、次の前提に基づいています。
 
-- VitePress のサイトはプロジェクトの `docs` ディレクトリ内にある。
+-  のサイトはプロジェクトの `docs` ディレクトリ内にある。
 - デフォルトのビルド出力ディレクトリ（`.vitepress/dist`）を使用している。
-- VitePress はプロジェクトのローカル依存としてインストールされており、`package.json` に次のスクリプトが設定されている。
+-  はプロジェクトのローカル依存としてインストールされており、`package.json` に次のスクリプトが設定されている。
 
 ```json [package.json]
 {
@@ -50,7 +50,7 @@ description: Netlify、Vercel、GitHub Pagesなどの主要プラットフォー
 
 ## 公開ベースパスの設定 {#setting-a-public-base-path}
 
-デフォルトでは、サイトはドメインのルートパス（`/`）にデプロイされることを想定しています。サイトをサブパス、例：`https://mywebsite.com/blog/` で配信する場合は、VitePress の設定で [`base`](../reference/site-config#base) オプションを `'/blog/'` に設定してください。
+デフォルトでは、サイトはドメインのルートパス（`/`）にデプロイされることを想定しています。サイトをサブパス、例：`https://mywebsite.com/blog/` で配信する場合は、 の設定で [`base`](../reference/site-config#base) オプションを `'/blog/'` に設定してください。
 
 **例:** GitHub（または GitLab）Pages に `user.github.io/repo/` としてデプロイするなら、`base` を `/repo/` に設定します。
 
@@ -123,9 +123,9 @@ HTML の _Auto Minify_ のようなオプションを有効にしないでくだ
 1. プロジェクトの `.github/workflows` ディレクトリに `deploy.yml` を作成し、以下の内容を記述します。
 
    ```yaml [.github/workflows/deploy.yml]
-   # Sample workflow for building and deploying a VitePress site to GitHub Pages
+   # Sample workflow for building and deploying a  site to GitHub Pages
    #
-   name: Deploy VitePress site to Pages
+   name: Deploy  site to Pages
 
    on:
      # Runs on pushes targeting the `main` branch. Change this to `master` if you're
@@ -170,7 +170,7 @@ HTML の _Auto Minify_ のようなオプションを有効にしないでくだ
            uses: actions/configure-pages@v4
          - name: Install dependencies
            run: npm ci # or pnpm install / yarn install / bun install
-         - name: Build with VitePress
+         - name: Build with 
            run: npm run docs:build # or pnpm docs:build / yarn docs:build / bun run docs:build
          - name: Upload artifact
            uses: actions/upload-pages-artifact@v3
@@ -192,7 +192,7 @@ HTML の _Auto Minify_ のようなオプションを有効にしないでくだ
    ```
 
    ::: warning
-   VitePress の `base` オプションが正しく設定されていることを確認してください。詳細は [公開ベースパスの設定](#公開ベースパスの設定) を参照してください。
+    の `base` オプションが正しく設定されていることを確認してください。詳細は [公開ベースパスの設定](#公開ベースパスの設定) を参照してください。
    :::
 
 2. リポジトリ設定の「Pages」メニューで、「Build and deployment > Source」を「GitHub Actions」に設定します。
@@ -201,7 +201,7 @@ HTML の _Auto Minify_ のようなオプションを有効にしないでくだ
 
 ### GitLab Pages
 
-1. VitePress の設定で `outDir` を `../public` に設定します。`https://<username>.gitlab.io/<repository>/` にデプロイする場合は `base` を `'/<repository>/'` に設定します。カスタムドメイン、ユーザー／グループページ、または GitLab の「Use unique domain」を有効にしている場合は `base` は不要です。
+1.  の設定で `outDir` を `../public` に設定します。`https://<username>.gitlab.io/<repository>/` にデプロイする場合は `base` を `'/<repository>/'` に設定します。カスタムドメイン、ユーザー／グループページ、または GitLab の「Use unique domain」を有効にしている場合は `base` は不要です。
 
 2. プロジェクトのルートに `.gitlab-ci.yml` を作成して、以下を追加します。これにより、コンテンツを更新するたびにサイトがビルド・デプロイされます。
 
@@ -280,15 +280,15 @@ HTML の _Auto Minify_ のようなオプションを有効にしないでくだ
 
 ### Hostinger
 
-[Hostinger](https://www.hostinger.com/web-apps-hosting) を使用して VitePress プロジェクトをデプロイするには、こちらの [手順](https://www.hostinger.com/support/how-to-deploy-a-nodejs-website-in-hostinger/) に従ってください。ビルド設定の構成では、フレームワークに VitePress を選択し、ルートディレクトリを `./docs` に調整してください。
+[Hostinger](https://www.hostinger.com/web-apps-hosting) を使用して  プロジェクトをデプロイするには、こちらの [手順](https://www.hostinger.com/support/how-to-deploy-a-nodejs-website-in-hostinger/) に従ってください。ビルド設定の構成では、フレームワークに  を選択し、ルートディレクトリを `./docs` に調整してください。
 
 ### Kinsta
 
-[VitePress](https://kinsta.com/static-site-hosting/) を [こちらの手順](https://kinsta.com/docs/vitepress-static-site-example/) に従ってデプロイできます。
+[](https://kinsta.com/static-site-hosting/) を [こちらの手順](https://kinsta.com/docs/vitepress-static-site-example/) に従ってデプロイできます。
 
 ### Stormkit
 
-[VitePress プロジェクトを Stormkit にデプロイ](https://stormkit.io/blog/how-to-deploy-vitepress) する手順を参照してください。
+[ プロジェクトを Stormkit にデプロイ](https://stormkit.io/blog/how-to-deploy-vitepress) する手順を参照してください。
 
 ### Surge
 
@@ -300,7 +300,7 @@ HTML の _Auto Minify_ のようなオプションを有効にしないでくだ
 
 ### Nginx
 
-以下は Nginx サーバーブロックの設定例です。一般的なテキスト系アセットの gzip 圧縮、VitePress サイトの静的ファイル配信における適切なキャッシュヘッダー、そして `cleanUrls: true` のハンドリングを含みます。
+以下は Nginx サーバーブロックの設定例です。一般的なテキスト系アセットの gzip 圧縮、 サイトの静的ファイル配信における適切なキャッシュヘッダー、そして `cleanUrls: true` のハンドリングを含みます。
 
 ```nginx
 server {
@@ -334,7 +334,7 @@ server {
 }
 ```
 
-この設定は、ビルド済みの VitePress サイトがサーバー上の `/app` ディレクトリに配置されていることを想定しています。サイトのファイルが別の場所にある場合は、`root` ディレクティブを適宜変更してください。
+この設定は、ビルド済みの  サイトがサーバー上の `/app` ディレクトリに配置されていることを想定しています。サイトのファイルが別の場所にある場合は、`root` ディレクティブを適宜変更してください。
 
 ::: warning index.html をデフォルトにしない
 `try_files` の解決先を、他の Vue アプリのように index.html にフォールバックさせないでください。不正なページ状態になります。

@@ -1,10 +1,10 @@
 ---
-description: 히어로 섹션, 기능 및 커스텀 콘텐츠로 VitePress 기본 테마 홈 페이지 레이아웃을 구성하세요.
+description: 히어로 섹션, 기능 및 커스텀 콘텐츠로  기본 테마 홈 페이지 레이아웃을 구성하세요.
 ---
 
 # 홈 페이지 {#home-page}
 
-VitePress 기본 테마는 홈 페이지 레이아웃을 제공합니다. 이것은 이 사이트의 [홈 페이지](../)에도 사용되었습니다. `layout: home`을 [전문](./frontmatter-config)에 지정하여 어느 페이지에서도 이를 사용할 수 있습니다.
+ 기본 테마는 홈 페이지 레이아웃을 제공합니다. 이것은 이 사이트의 [홈 페이지](../)에도 사용되었습니다. `layout: home`을 [전문](./frontmatter-config)에 지정하여 어느 페이지에서도 이를 사용할 수 있습니다.
 
 ```yaml
 ---
@@ -23,15 +23,15 @@ Hero 섹션은 홈 페이지의 상단에 위치합니다. Hero 섹션을 구성
 layout: home
 
 hero:
-  name: VitePress
+  name: 
   text: Vite & Vue 기반 정적 사이트 생성기
   tagline: 단 몇 분 만에 마크다운을 우아한 문서로 변환
   image:
     src: /logo.png
-    alt: VitePress
+    alt: 
   actions:
     - theme: brand
-      text: VitePress란 무엇인가?
+      text: 란 무엇인가?
       link: /guide/what-is-vitepress
     - theme: alt
       text: GitHub
@@ -84,7 +84,7 @@ interface HeroAction {
 
 ### `name` 색상 커스터마이징 {#customizing-the-name-color}
 
-VitePress는 `name`에 브랜드 색상(`--vp-c-brand-1`)을 사용합니다. 하지만 `--vp-home-hero-name-color` 변수를 재정의하여 이 색상을 커스텀 할 수 있습니다.
+는 `name`에 브랜드 색상(`--vp-c-brand-1`)을 사용합니다. 하지만 `--vp-home-hero-name-color` 변수를 재정의하여 이 색상을 커스텀 할 수 있습니다.
 
 ```css
 :root {
@@ -180,13 +180,13 @@ type FeatureIcon =
 layout: home
 
 hero:
-  name: VitePress
+  name: 
   text: Vite & Vue 기반 정적 사이트 생성기
 ---
 
 ## 시작하기
 
-`npx`를 사용하여 VitePress를 바로 시작할 수 있습니다!
+`npx`를 사용하여 를 바로 시작할 수 있습니다!
 
 ```sh
 npm init

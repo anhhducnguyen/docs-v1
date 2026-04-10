@@ -1,13 +1,13 @@
 ---
 outline: deep
-description: Connect VitePress to a headless CMS using dynamic routes and data loaders.
+description: Connect  to a headless CMS using dynamic routes and data loaders.
 ---
 
 # Connecting to a CMS
 
 ## General Workflow
 
-Connecting VitePress to a CMS will largely revolve around [Dynamic Routes](./routing#dynamic-routes). Make sure to understand how it works before proceeding.
+Connecting  to a CMS will largely revolve around [Dynamic Routes](./routing#dynamic-routes). Make sure to understand how it works before proceeding.
 
 Since each CMS will work differently, here we can only provide a generic workflow that you will need to adapt to your specific scenario.
 
@@ -54,4 +54,4 @@ Since each CMS will work differently, here we can only provide a generic workflo
 
 ## Integration Guides
 
-If you have written a guide on integrating VitePress with a specific CMS, please use the "Edit this page" link below to submit it here!
+If you have written a guide on integrating  with a specific CMS, please use the "Edit this page" link below to submit it here!

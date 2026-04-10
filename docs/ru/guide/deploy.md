@@ -1,15 +1,15 @@
 ---
-description: Разверните свой сайт VitePress на популярных платформах, таких как Netlify, Vercel, GitHub Pages и других.
+description: Разверните свой сайт  на популярных платформах, таких как Netlify, Vercel, GitHub Pages и других.
 outline: deep
 ---
 
-# Развёртывание вашего сайта VitePress {#deploy-your-vitepress-site}
+# Развёртывание вашего сайта  {#deploy-your-vitepress-site}
 
 Следующие инструкции основаны на некоторых общих предположениях:
 
-- Сайт VitePress находится в директории `docs` вашего проекта.
+- Сайт  находится в директории `docs` вашего проекта.
 - Вы используете выходной каталог сборки по умолчанию (`.vitepress/dist`).
-- VitePress установлен как локальная зависимость в вашем проекте, и вы установили следующие скрипты в вашем `package.json`:
+-  установлен как локальная зависимость в вашем проекте, и вы установили следующие скрипты в вашем `package.json`:
 
   ```json [package.json]
   {
@@ -50,7 +50,7 @@ outline: deep
 
 ## Установка публичного базового пути {#setting-a-public-base-path}
 
-По умолчанию предполагается, что сайт будет развёрнут по корневому пути домена (`/`). Если ваш сайт будет обслуживаться по подпути, например, `https://mywebsite.com/blog/`, то в конфигурации VitePress необходимо установить для опции [`base`](../reference/site-config#base) значение `'/blog/'`.
+По умолчанию предполагается, что сайт будет развёрнут по корневому пути домена (`/`). Если ваш сайт будет обслуживаться по подпути, например, `https://mywebsite.com/blog/`, то в конфигурации  необходимо установить для опции [`base`](../reference/site-config#base) значение `'/blog/'`.
 
 **Пример:** Если вы используете Github (или GitLab) Pages и развёртываете на `user.github.io/repo/`, то установите `base` на `/repo/`.
 
@@ -123,9 +123,9 @@ Cache-Control: max-age=31536000,immutable
 1. Создайте файл с именем `deploy.yml` в директории `.github/workflows` вашего проекта с примерно таким содержанием:
 
    ```yaml [.github/workflows/deploy.yml]
-   # Пример рабочего процесса для создания и развёртывания сайта VitePress на GitHub Pages
+   # Пример рабочего процесса для создания и развёртывания сайта  на GitHub Pages
    #
-   name: Deploy VitePress site to Pages
+   name: Deploy  site to Pages
 
    on:
      # Выполняется при пушах, направленных в ветку `main`. Измените это значение на `master`, если вы
@@ -170,7 +170,7 @@ Cache-Control: max-age=31536000,immutable
            uses: actions/configure-pages@v4
          - name: Install dependencies
            run: npm ci # или pnpm install / yarn install / bun install
-         - name: Build with VitePress
+         - name: Build with 
            run: npm run docs:build # или pnpm docs:build / yarn docs:build / bun run docs:build
          - name: Upload artifact
            uses: actions/upload-pages-artifact@v3
@@ -192,7 +192,7 @@ Cache-Control: max-age=31536000,immutable
    ```
 
    ::: warning ПРЕДУПРЕЖДЕНИЕ
-   Убедитесь, что опция `base` в вашем VitePress настроена правильно. Дополнительные сведения см. в секции [Установка публичного базового пути](#setting-a-public-base-path).
+   Убедитесь, что опция `base` в вашем  настроена правильно. Дополнительные сведения см. в секции [Установка публичного базового пути](#setting-a-public-base-path).
    :::
 
 2. В настройках вашего репозитория в разделе «Pages» выберите пункт меню «GitHub Actions» в секции «Build and deployment > Source».
@@ -201,7 +201,7 @@ Cache-Control: max-age=31536000,immutable
 
 ### GitLab Pages
 
-1. Установите значение `../public` для параметра `outDir` в конфигурации VitePress. Настройте опцию `base` на `'/<репозиторий>/'`, если вы хотите развернуть ваш проект по адресу `https://<имя пользователя>.gitlab.io/<репозиторий>/`. Вам не нужна опция `base`, если вы выполняете развёртывание на личном домене, страницах пользователя или группы, или если в GitLab включен параметр «Использовать уникальный домен».
+1. Установите значение `../public` для параметра `outDir` в конфигурации . Настройте опцию `base` на `'/<репозиторий>/'`, если вы хотите развернуть ваш проект по адресу `https://<имя пользователя>.gitlab.io/<репозиторий>/`. Вам не нужна опция `base`, если вы выполняете развёртывание на личном домене, страницах пользователя или группы, или если в GitLab включен параметр «Использовать уникальный домен».
 
 2. Создайте файл с именем `.gitlab-ci.yml` в корне вашего проекта с приведённым ниже содержимым. Это позволит создавать и развёртывать ваш сайт каждый раз, когда вы вносите изменения в его содержимое:
 
@@ -234,7 +234,7 @@ Cache-Control: max-age=31536000,immutable
 
 ### CloudRay
 
-Вы можете развернуть свой проект VitePress с [CloudRay](https://cloudray.io/), следуя этим [инструкциям](https://cloudray.io/articles/how-to-deploy-vitepress-site).
+Вы можете развернуть свой проект  с [CloudRay](https://cloudray.io/), следуя этим [инструкциям](https://cloudray.io/articles/how-to-deploy-vitepress-site).
 
 ### Firebase
 
@@ -281,15 +281,15 @@ Cache-Control: max-age=31536000,immutable
 
 ### Hostinger
 
-Вы можете развернуть свой проект VitePress на [Hostinger](https://www.hostinger.com/web-apps-hosting), следуя этим [инструкциям](https://www.hostinger.com/support/how-to-deploy-a-nodejs-website-in-hostinger/). При настройке параметров сборки выберите VitePress в качестве фреймворка и укажите корневой каталог `./docs`.
+Вы можете развернуть свой проект  на [Hostinger](https://www.hostinger.com/web-apps-hosting), следуя этим [инструкциям](https://www.hostinger.com/support/how-to-deploy-a-nodejs-website-in-hostinger/). При настройке параметров сборки выберите  в качестве фреймворка и укажите корневой каталог `./docs`.
 
 ### Kinsta
 
-Вы можете развернуть свой сайт VitePress на [Kinsta](https://kinsta.com/static-site-hosting/), следуя этим [инструкциям](https://kinsta.com/docs/vitepress-static-site-example/).
+Вы можете развернуть свой сайт  на [Kinsta](https://kinsta.com/static-site-hosting/), следуя этим [инструкциям](https://kinsta.com/docs/vitepress-static-site-example/).
 
 ### Stormkit
 
-Вы можете развернуть свой проект VitePress на [Stormkit](https://www.stormkit.io), следуя следующим [инструкциям](https://stormkit.io/blog/how-to-deploy-vitepress).
+Вы можете развернуть свой проект  на [Stormkit](https://www.stormkit.io), следуя следующим [инструкциям](https://stormkit.io/blog/how-to-deploy-vitepress).
 
 ### Surge
 
@@ -301,7 +301,7 @@ Cache-Control: max-age=31536000,immutable
 
 ### Nginx
 
-Вот пример конфигурации блока сервера Nginx. Эта настройка включает сжатие gzip для общих текстовых ресурсов, правила обслуживания статических файлов вашего сайта VitePress с правильными заголовками кэширования и обработку параметра `cleanUrls: true`.
+Вот пример конфигурации блока сервера Nginx. Эта настройка включает сжатие gzip для общих текстовых ресурсов, правила обслуживания статических файлов вашего сайта  с правильными заголовками кэширования и обработку параметра `cleanUrls: true`.
 
 ```nginx
 server {
@@ -335,7 +335,7 @@ server {
 }
 ```
 
-Эта конфигурация предполагает, что ваш собранный сайт VitePress находится в директории `/app`. При необходимости измените директиву `root`, если файлы вашего сайта расположены в другом месте.
+Эта конфигурация предполагает, что ваш собранный сайт  находится в директории `/app`. При необходимости измените директиву `root`, если файлы вашего сайта расположены в другом месте.
 
 ::: warning Не используйте index.html по умолчанию
 Разрешение try_files не должно использовать index.html, как это делается в других приложениях Vue. Это может привести к недопустимому состоянию страницы.

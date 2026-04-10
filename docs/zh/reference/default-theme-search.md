@@ -1,13 +1,13 @@
 ---
 outline: deep
-description: 为 VitePress 站点设置本地搜索或 Algolia 搜索功能。
+description: 为  站点设置本地搜索或 Algolia 搜索功能。
 ---
 
 # 搜索 {#search}
 
 ## 本地搜索 {#local-search}
 
-得益于 [minisearch](https://github.com/lucaong/minisearch/)，VitePress 支持使用浏览器内索引进行模糊全文搜索。要启用此功能，只需在 `.vitepress/config.ts` 文件中将 `themeConfig.search.provider` 选项设置为 `'local'` 即可：
+得益于 [minisearch](https://github.com/lucaong/minisearch/)， 支持使用浏览器内索引进行模糊全文搜索。要启用此功能，只需在 `.vitepress/config.ts` 文件中将 `themeConfig.search.provider` 选项设置为 `'local'` 即可：
 
 ```ts
 import { defineConfig } from 'vitepress'
@@ -186,7 +186,7 @@ export default defineConfig({
 
 ## Algolia Search {#algolia-search}
 
-VitePress 支持使用 [Algolia DocSearch](https://docsearch.algolia.com/docs/what-is-docsearch) 搜索文档站点。请参阅他们的入门指南。在你的 `.vitepress/config.ts` 中，你至少需要提供以下内容才能使其正常工作：
+ 支持使用 [Algolia DocSearch](https://docsearch.algolia.com/docs/what-is-docsearch) 搜索文档站点。请参阅他们的入门指南。在你的 `.vitepress/config.ts` 中，你至少需要提供以下内容才能使其正常工作：
 
 ```ts
 import { defineConfig } from 'vitepress'
@@ -316,7 +316,7 @@ export default defineConfig({
 
 #### 模式 (auto / sidePanel / hybrid / modal) {#ask-ai-mode}
 
-你可以选择性地控制 VitePress 如何集成关键词搜索和 Ask AI：
+你可以选择性地控制  如何集成关键词搜索和 Ask AI：
 
 - `mode: 'auto'`（默认）：当配置了关键词搜索时推断为 `hybrid`，否则当配置了 Ask AI 侧边栏时推断为 `sidePanel`。
 - `mode: 'sidePanel'`：强制仅使用侧边栏（隐藏关键词搜索按钮）。

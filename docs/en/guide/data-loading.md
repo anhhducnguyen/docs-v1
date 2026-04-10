@@ -1,10 +1,10 @@
 ---
-description: Load arbitrary data at build time using VitePress data loaders and import it from pages or components.
+description: Load arbitrary data at build time using  data loaders and import it from pages or components.
 ---
 
 # Build-Time Data Loading
 
-VitePress provides a feature called **data loaders** that allows you to load arbitrary data and import it from pages or components. The data loading is executed **only at build time**: the resulting data will be serialized as JSON in the final JavaScript bundle.
+ provides a feature called **data loaders** that allows you to load arbitrary data and import it from pages or components. The data loading is executed **only at build time**: the resulting data will be serialized as JSON in the final JavaScript bundle.
 
 Data loaders can be used to fetch remote data, or generate metadata based on local files. For example, you can use data loaders to parse all your local API pages and automatically generate an index of all API entries.
 
@@ -42,7 +42,7 @@ Output:
 }
 ```
 
-You'll notice the data loader itself does not export the `data`. It is VitePress calling the `load()` method behind the scenes and implicitly exposing the result via the `data` named export.
+You'll notice the data loader itself does not export the `data`. It is  calling the `load()` method behind the scenes and implicitly exposing the result via the `data` named export.
 
 This works even if the loader is async:
 
@@ -85,7 +85,7 @@ export default {
 
 ## `createContentLoader`
 
-When building a content focused site, we often need to create an "archive" or "index" page: a page where we list all available entries in our content collection, for example blog posts or API pages. We **can** implement this directly with the data loader API, but since this is such a common use case, VitePress also provides a `createContentLoader` helper to simplify this:
+When building a content focused site, we often need to create an "archive" or "index" page: a page where we list all available entries in our content collection, for example blog posts or API pages. We **can** implement this directly with the data loader API, but since this is such a common use case,  also provides a `createContentLoader` helper to simplify this:
 
 ```js [posts.data.js]
 import { createContentLoader } from 'vitepress'

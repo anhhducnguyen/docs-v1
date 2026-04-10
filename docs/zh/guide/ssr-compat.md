@@ -1,11 +1,11 @@
 ---
 outline: deep
-description: 确保 VitePress 主题组件和自定义代码兼容服务端渲染 (SSR)。
+description: 确保  主题组件和自定义代码兼容服务端渲染 (SSR)。
 ---
 
 # SSR 兼容性 {#ssr-compatibility}
 
-通过使用 Vue 的服务器端渲染 (SSR) 功能，VitePress 能够在生产构建期间在 Node.js 中预渲染应用程序。这意味着主题组件中的所有自定义代码都需要考虑 SSR 兼容性。
+通过使用 Vue 的服务器端渲染 (SSR) 功能， 能够在生产构建期间在 Node.js 中预渲染应用程序。这意味着主题组件中的所有自定义代码都需要考虑 SSR 兼容性。
 
 [Vue 官方文档的 SSR 部分](https://cn.vuejs.org/guide/scaling-up/ssr.html)提供了更多有关 SSR 是什么，SSR / SSG 之间的关系以及编写 SSR 友好的代码的常见注意事项等信息。原则上只在 Vue 组件的 `beforeMount` 或 `mounted` 钩子中访问浏览器或 DOM API。
 
@@ -81,7 +81,7 @@ export default {
 
 ### `defineClientComponent`
 
-VitePress 为导入 Vue 组件提供了一个方便的辅助函数，该组件可以在导入时访问浏览器 API。
+ 为导入 Vue 组件提供了一个方便的辅助函数，该组件可以在导入时访问浏览器 API。
 
 ```vue
 <script setup>

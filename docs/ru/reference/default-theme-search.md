@@ -1,5 +1,5 @@
 ---
-description: Настройте локальный поиск или поиск на базе Algolia для вашего сайта VitePress.
+description: Настройте локальный поиск или поиск на базе Algolia для вашего сайта .
 outline: deep
 ---
 
@@ -7,7 +7,7 @@ outline: deep
 
 ## Локальный поиск {#local-search}
 
-VitePress поддерживает нечёткий полнотекстовый поиск с использованием внутрибраузерного индекса благодаря [MiniSearch](https://github.com/lucaong/minisearch/). Чтобы включить эту функцию, просто установите значение `'local'` для опции `themeConfig.search.provider` в файле `.vitepress/config.ts`:
+ поддерживает нечёткий полнотекстовый поиск с использованием внутрибраузерного индекса благодаря [MiniSearch](https://github.com/lucaong/minisearch/). Чтобы включить эту функцию, просто установите значение `'local'` для опции `themeConfig.search.provider` в файле `.vitepress/config.ts`:
 
 ```ts
 import { defineConfig } from 'vitepress'
@@ -191,7 +191,7 @@ export default defineConfig({
 
 ## Поиск Algolia {#algolia-search}
 
-VitePress поддерживает поиск в вашей документации с помощью [Algolia DocSearch](https://docsearch.algolia.com/docs/what-is-docsearch). Обратитесь к руководству по началу работы. В файле `.vitepress/config.ts` вам нужно будет указать, по крайней мере, следующее, чтобы всё работало:
+ поддерживает поиск в вашей документации с помощью [Algolia DocSearch](https://docsearch.algolia.com/docs/what-is-docsearch). Обратитесь к руководству по началу работы. В файле `.vitepress/config.ts` вам нужно будет указать, по крайней мере, следующее, чтобы всё работало:
 
 ```ts
 import { defineConfig } from 'vitepress'
@@ -321,7 +321,7 @@ export default defineConfig({
 
 #### Режим (auto / sidePanel / hybrid / modal) {#ask-ai-mode}
 
-Вы можете опционально контролировать, как VitePress интегрирует поиск по ключевым словам и Ask AI:
+Вы можете опционально контролировать, как  интегрирует поиск по ключевым словам и Ask AI:
 
 - `mode: 'auto'` (по умолчанию): выводит `hybrid`, когда настроен поиск по ключевым словам, иначе `sidePanel`, когда настроена боковая панель Ask AI.
 - `mode: 'sidePanel'`: принудительно использовать только боковую панель (скрывает кнопку поиска по ключевым словам).

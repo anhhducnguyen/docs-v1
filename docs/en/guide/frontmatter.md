@@ -1,16 +1,16 @@
 ---
-description: Learn how to use YAML frontmatter in VitePress Markdown files to control page-level metadata and behavior.
+description: Learn how to use YAML frontmatter in  Markdown files to control page-level metadata and behavior.
 ---
 
 # Frontmatter
 
 ## Usage
 
-VitePress supports YAML frontmatter in all Markdown files, parsing them with [gray-matter](https://github.com/jonschlinkert/gray-matter). The frontmatter must be at the top of the Markdown file (before any elements including `<script>` tags), and must take the form of valid YAML set between triple-dashed lines. Example:
+ supports YAML frontmatter in all Markdown files, parsing them with [gray-matter](https://github.com/jonschlinkert/gray-matter). The frontmatter must be at the top of the Markdown file (before any elements including `<script>` tags), and must take the form of valid YAML set between triple-dashed lines. Example:
 
 ```md
 ---
-title: Docs with VitePress
+title: Docs with 
 editLink: true
 ---
 ```
@@ -27,7 +27,7 @@ Here's an example of how you could use it in your Markdown file:
 
 ```md
 ---
-title: Docs with VitePress
+title: Docs with 
 editLink: true
 ---
 
@@ -40,7 +40,7 @@ You can also access current page's frontmatter data in `<script setup>` with the
 
 ## Alternative Frontmatter Formats
 
-VitePress also supports JSON frontmatter syntax, starting and ending in curly braces:
+ also supports JSON frontmatter syntax, starting and ending in curly braces:
 
 ```json
 ---

@@ -1,5 +1,5 @@
 ---
-description: Use the Badge component to add status labels to headers in VitePress documentation.
+description: Use the Badge component to add status labels to headers in  documentation.
 ---
 
 # Badge

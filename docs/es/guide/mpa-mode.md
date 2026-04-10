@@ -1,5 +1,5 @@
 ---
-description: Habilita el modo MPA (Aplicación de Múltiples Páginas) en VitePress para páginas sin JavaScript con mejor rendimiento inicial.
+description: Habilita el modo MPA (Aplicación de Múltiples Páginas) en  para páginas sin JavaScript con mejor rendimiento inicial.
 ---
 
 # Modo MPA <Badge type="warning" text="experimental" /> {#mpa-mode}
@@ -22,6 +22,6 @@ document.querySelector('h1').addEventListener('click', () => {
 # Hola
 ```
 
-`<script client>` es una funcionalidad exclusiva VitePress, no una funcionalidad Vue. Funciona tanto en archivos `.md` como en archivos `.vue`, pero solo en el modo MPA. Scripts de cliente en todos los componentes del tema serán empaquetados juntos, mientras el script del cliente para una página específica será dividido solo para esa página.
+`<script client>` es una funcionalidad exclusiva , no una funcionalidad Vue. Funciona tanto en archivos `.md` como en archivos `.vue`, pero solo en el modo MPA. Scripts de cliente en todos los componentes del tema serán empaquetados juntos, mientras el script del cliente para una página específica será dividido solo para esa página.
 
 Note que `<script client>` **no es calificado como código de componente Vue**: es procesado como un simple módulo JavaScript. Por esta razón, el modo MPA debe ser usado apenas si su sitio exige el mínimo absoluto de interactividad del lado del cliente.

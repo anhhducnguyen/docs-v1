@@ -1,10 +1,10 @@
 ---
-description: Integre o Carbon Ads ao seu site VitePress usando o suporte embutido do tema padrão.
+description: Integre o Carbon Ads ao seu site  usando o suporte embutido do tema padrão.
 ---
 
 # Carbon Ads {#carbon-ads}
 
-VitePress tem suporte embutido para [Carbon Ads](https://www.carbonads.net/). Ao definir as credenciais Carbon Ads na configuração, VitePress mostrará anúncios na página.
+ tem suporte embutido para [Carbon Ads](https://www.carbonads.net/). Ao definir as credenciais Carbon Ads na configuração,  mostrará anúncios na página.
 
 ```js
 export default {

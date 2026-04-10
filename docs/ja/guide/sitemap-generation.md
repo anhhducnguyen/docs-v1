@@ -1,10 +1,10 @@
 ---
-description: VitePressサイトのsitemap.xmlを生成し、検索エンジンからの発見性を向上させる方法。
+description: サイトのsitemap.xmlを生成し、検索エンジンからの発見性を向上させる方法。
 ---
 
 # サイトマップ生成 {#sitemap-generation}
 
-VitePress には、サイト用の `sitemap.xml` を生成する機能が標準で用意されています。有効化するには、`.vitepress/config.js` に次を追加します。
+ には、サイト用の `sitemap.xml` を生成する機能が標準で用意されています。有効化するには、`.vitepress/config.js` に次を追加します。
 
 ```ts
 export default {

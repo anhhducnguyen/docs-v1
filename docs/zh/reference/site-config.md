@@ -1,17 +1,17 @@
 ---
 outline: deep
-description: VitePress 站点配置选项的完整参考，包括应用级设置、主题和构建选项。
+description:  站点配置选项的完整参考，包括应用级设置、主题和构建选项。
 ---
 
 # 站点配置 {#site-config}
 
-站点配置可以定义站点的全局设置。应用配置选项适用于每个 VitePress 站点，无论它使用什么主题。例如根目录或站点的标题。
+站点配置可以定义站点的全局设置。应用配置选项适用于每个  站点，无论它使用什么主题。例如根目录或站点的标题。
 
 ## 概览 {#overview}
 
 ### 配置解析 {#config-resolution}
 
-配置文件总是从 `<root>/.vitepress/config.[ext]` 解析，其中 `<root>` 是 VitePress [项目根目录](../guide/routing#root-and-source-directory)，`[ext]` 是支持的文件扩展名之一。开箱即用地支持 TypeScript。支持的扩展名包括 `.js`、`.ts`、`.mjs` 和 `.mts`。
+配置文件总是从 `<root>/.vitepress/config.[ext]` 解析，其中 `<root>` 是  [项目根目录](../guide/routing#root-and-source-directory)，`[ext]` 是支持的文件扩展名之一。开箱即用地支持 TypeScript。支持的扩展名包括 `.js`、`.ts`、`.mjs` 和 `.mts`。
 
 建议在配置文件中使用 ES 模块语法。配置文件应该默认导出一个对象：
 
@@ -19,7 +19,7 @@ description: VitePress 站点配置选项的完整参考，包括应用级设置
 export default {
   // 应用级配置选项
   lang: 'en-US',
-  title: 'VitePress',
+  title: '',
   description: 'Vite & Vue powered static site generator.',
   ...
 }
@@ -38,7 +38,7 @@ export default async () => {
   return defineConfig({
     // 应用级配置选项
     lang: 'en-US',
-    title: 'VitePress',
+    title: '',
     description: 'Vite & Vue powered static site generator.',
 
     // 主题级配置选项
@@ -64,7 +64,7 @@ const posts = await (await fetch('https://my-cms.com/blog-posts')).json()
 export default defineConfig({
   // 应用级配置选项
   lang: 'en-US',
-  title: 'VitePress',
+  title: '',
   description: 'Vite & Vue powered static site generator.',
 
   // 主题级别配置选项
@@ -124,22 +124,22 @@ export default defineConfigWithTheme<ThemeConfig>({
 
 - **Vite**
 
-  可以使用 VitePress 配置中的 [vite](#vite) 选项配置底层 Vite 实例。无需创建单独的 Vite 配置文件。
+  可以使用  配置中的 [vite](#vite) 选项配置底层 Vite 实例。无需创建单独的 Vite 配置文件。
 
 - **Vue**
 
-  VitePress 已经包含 Vite 的官方 Vue 插件 ([@vitejs/plugin-vue](https://github.com/vitejs/vite-plugin-vue))，所以我们可以配置 VitePress 中的 [vue](#vue) 选项。
+   已经包含 Vite 的官方 Vue 插件 ([@vitejs/plugin-vue](https://github.com/vitejs/vite-plugin-vue))，所以我们可以配置  中的 [vue](#vue) 选项。
 
 - **Markdown**
 
-  可以使用 VitePress 配置中的 [markdown](#markdown) 选项配置底层的 [Markdown-It](https://github.com/markdown-it/markdown-it) 实例。
+  可以使用  配置中的 [markdown](#markdown) 选项配置底层的 [Markdown-It](https://github.com/markdown-it/markdown-it) 实例。
 
 ## 站点元数据 {#site-metadata}
 
 ### title
 
 - 类型：`string`
-- 默认值： `VitePress`
+- 默认值： ``
 - 每个页面可以通过 [frontmatter](./frontmatter-config#title) 覆盖
 
 站点的标题。使用默认主题时，这将显示在导航栏中。
@@ -193,14 +193,14 @@ export default {
 ### description
 
 - 类型：`string`
-- 默认值： `A VitePress site`
+- 默认值： `A  site`
 - 每个页面可以通过 [frontmatter](./frontmatter-config#description) 覆盖
 
 站点的描述。这将呈现为页面 HTML 中的 `<meta>` 标签。
 
 ```ts
 export default {
-  description: 'A VitePress site'
+  description: 'A  site'
 }
 ```
 
@@ -210,7 +210,7 @@ export default {
 - 默认值： `[]`
 - 可以通过 [frontmatter](./frontmatter-config#head) 为每个页面追加
 
-要在页面 HTML 的 `<head>` 标签中呈现的其他元素。用户添加的标签在结束 `head` 标签之前呈现，在 VitePress 标签之后。
+要在页面 HTML 的 `<head>` 标签中呈现的其他元素。用户添加的标签在结束 `head` 标签之前呈现，在  标签之后。
 
 ```ts
 type HeadConfig =
@@ -351,7 +351,7 @@ export default {
 - 类型：`boolean`
 - 默认值： `false`
 
-当设置为 `true` 时，VitePress 将从 URL 中删除 `.html` 后缀。另请参阅[生成简洁的 URL](../guide/routing#generating-clean-urls)。
+当设置为 `true` 时， 将从 URL 中删除 `.html` 后缀。另请参阅[生成简洁的 URL](../guide/routing#generating-clean-urls)。
 
 ::: warning 需要服务器支持
 要启用此功能，可能需要在托管平台上进行额外配置。要使其正常工作，服务器必须能够在**不重定向的情况下**访问 `/foo` 时提供 `/foo.html`。
@@ -443,7 +443,7 @@ export default {
 - 类型：`boolean | 'localhostLinks' | (string | RegExp | ((link: string, source: string) => boolean))[]`
 - 默认值： `false`
 
-当设置为 `true` 时，VitePress 不会因为死链而导致构建失败。
+当设置为 `true` 时， 不会因为死链而导致构建失败。
 
 当设置为 `'localhostLinks'` ，出现死链时构建将失败，但不会检查 `localhost` 链接。
 
@@ -518,7 +518,7 @@ export default {
 
 - 类型：`MarkdownOption`
 
-配置 Markdown 解析器选项。VitePress 使用 [Markdown-it](https://github.com/markdown-it/markdown-it) 作为解析器，使用 [Shiki](https://github.com/shikijs/shiki) 来高亮不同语言语法。在此选项中，可以传递各种 Markdown 相关选项以满足你的需要。
+配置 Markdown 解析器选项。 使用 [Markdown-it](https://github.com/markdown-it/markdown-it) 作为解析器，使用 [Shiki](https://github.com/shikijs/shiki) 来高亮不同语言语法。在此选项中，可以传递各种 Markdown 相关选项以满足你的需要。
 
 ```js
 export default {
@@ -558,7 +558,7 @@ export default {
 
 ## 构建钩子 {#build-hooks}
 
-VitePress 构建钩子允许向站点添加新功能和行为：
+ 构建钩子允许向站点添加新功能和行为：
 
 - Sitemap
 - Search Indexing
@@ -569,7 +569,7 @@ VitePress 构建钩子允许向站点添加新功能和行为：
 
 - 类型：`(siteConfig: SiteConfig) => Awaitable<void>`
 
-`buildEnd` 是一个构建 CLI 钩子，它将在构建 SSG 完成后但在 VitePress CLI 进程退出之前运行。
+`buildEnd` 是一个构建 CLI 钩子，它将在构建 SSG 完成后但在  CLI 进程退出之前运行。
 
 ```ts
 export default {
@@ -605,7 +605,7 @@ interface SSGContext {
 
 - 类型：`(context: TransformContext) => Awaitable<HeadConfig[]>`
 
-`transformHead` 是一个构建钩子，用于在生成每个页面之前转换 head。它将允许添加无法静态添加到 VitePress 配置中的 head entries。只需要返回额外的 entries，它们将自动与现有 entries 合并。
+`transformHead` 是一个构建钩子，用于在生成每个页面之前转换 head。它将允许添加无法静态添加到  配置中的 head entries。只需要返回额外的 entries，它们将自动与现有 entries 合并。
 
 ::: warning
 不要改变 `context` 中的任何东西。
@@ -645,8 +645,8 @@ export default {
         name: 'og:title',
         content:
           pageData.frontmatter.layout === 'home'
-            ? `VitePress`
-            : `${pageData.title} | VitePress`
+            ? ``
+            : `${pageData.title} | `
       }
     ])
   }

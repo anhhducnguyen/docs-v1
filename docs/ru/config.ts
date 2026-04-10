@@ -94,7 +94,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       text: 'Введение',
       collapsed: false,
       items: [
-        { text: 'Что такое VitePress?', link: 'what-is-vitepress' },
+        { text: 'Что такое ?', link: 'what-is-vitepress' },
         { text: 'Первые шаги', link: 'getting-started' },
         { text: 'Маршрутизация', link: 'routing' },
         { text: 'Развёртывание', link: 'deploy' }

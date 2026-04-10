@@ -1,17 +1,17 @@
 ---
 outline: deep
-description: 앱 수준 설정, 테마 및 빌드 옵션을 포함한 VitePress 사이트 구성 옵션의 전체 레퍼런스입니다.
+description: 앱 수준 설정, 테마 및 빌드 옵션을 포함한  사이트 구성 옵션의 전체 레퍼런스입니다.
 ---
 
 # 사이트 구성 {#site-config}
 
-사이트 구성(config)은 사이트의 전역 설정을 정의할 수 있는 곳입니다. 애플리케이션 구성 옵션은 사용 중인 테마와 상관없이 모든 VitePress 사이트에 적용되는 설정을 정의합니다. 예를 들어 기본 디렉터리나 사이트의 제목 등이 있습니다.
+사이트 구성(config)은 사이트의 전역 설정을 정의할 수 있는 곳입니다. 애플리케이션 구성 옵션은 사용 중인 테마와 상관없이 모든  사이트에 적용되는 설정을 정의합니다. 예를 들어 기본 디렉터리나 사이트의 제목 등이 있습니다.
 
 ## 개요 {#overview}
 
 ### 구성 분석 {#config-resolution}
 
-구성 파일은 항상 `<root>/.vitepress/config.[ext]`에서 처리됩니다. 여기서 `<root>`는 VitePress [프로젝트 루트](../guide/routing#root-and-source-directory)를 의미하며, `[ext]`는 지원되는 파일 확장자 중 하나입니다. TypeScript는 기본적으로 지원됩니다. 지원되는 확장자에는 `.js`, `.ts`, `.mjs`, `.mts`가 포함됩니다.
+구성 파일은 항상 `<root>/.vitepress/config.[ext]`에서 처리됩니다. 여기서 `<root>`는  [프로젝트 루트](../guide/routing#root-and-source-directory)를 의미하며, `[ext]`는 지원되는 파일 확장자 중 하나입니다. TypeScript는 기본적으로 지원됩니다. 지원되는 확장자에는 `.js`, `.ts`, `.mjs`, `.mts`가 포함됩니다.
 
 구성 파일에서는 ES 모듈 구문을 사용하는 것이 권장됩니다. 구성 파일은 객체를 "default export"해야 합니다:
 
@@ -19,7 +19,7 @@ description: 앱 수준 설정, 테마 및 빌드 옵션을 포함한 VitePress 
 export default {
   // 애플리케이션 레벨의 구성 옵션
   lang: 'en-US',
-  title: 'VitePress',
+  title: '',
   description: 'Vite & Vue powered static site generator.',
   ...
 }
@@ -38,7 +38,7 @@ export default async () => {
   return defineConfig({
     // 애플리케이션 레벨의 구성 옵션
     lang: 'en-US',
-    title: 'VitePress',
+    title: '',
     description: 'Vite & Vue powered static site generator.',
 
     // 테마 레벨의 구성 옵션
@@ -64,7 +64,7 @@ const posts = await (await fetch('https://my-cms.com/blog-posts')).json()
 export default defineConfig({
   // 앱 레벨 설정 옵션
   lang: 'en-US',
-  title: 'VitePress',
+  title: '',
   description: 'Vite & Vue를 활용한 정적 사이트 생성기.',
 
   // 테마 레벨 설정 옵션
@@ -124,22 +124,22 @@ export default defineConfigWithTheme<ThemeConfig>({
 
 - **Vite**
 
-  VitePress 구성에서 [vite](#vite) 옵션을 사용하여 기본 Vite 인스턴스를 구성할 수 있습니다. 별도의 Vite 구성 파일을 만들 필요는 없습니다.
+   구성에서 [vite](#vite) 옵션을 사용하여 기본 Vite 인스턴스를 구성할 수 있습니다. 별도의 Vite 구성 파일을 만들 필요는 없습니다.
 
 - **Vue**
 
-  VitePress는 이미 Vite의 공식 Vue 플러그인([@vitejs/plugin-vue](https://github.com/vitejs/vite-plugin-vue))을 포함하고 있습니다. VitePress 구성에서 [vue](#vue) 옵션을 사용하여 해당 옵션을 구성할 수 있습니다.
+  는 이미 Vite의 공식 Vue 플러그인([@vitejs/plugin-vue](https://github.com/vitejs/vite-plugin-vue))을 포함하고 있습니다.  구성에서 [vue](#vue) 옵션을 사용하여 해당 옵션을 구성할 수 있습니다.
 
 - **Markdown**
 
-  [Markdown-It](https://github.com/markdown-it/markdown-it) 인스턴스를 VitePress 구성에서 [markdown](#markdown) 옵션을 사용하여 구성할 수 있습니다.
+  [Markdown-It](https://github.com/markdown-it/markdown-it) 인스턴스를  구성에서 [markdown](#markdown) 옵션을 사용하여 구성할 수 있습니다.
 
 ## 사이트 메타데이터 {#site-metadata}
 
 ### title
 
 - 타입: `string`
-- 기본값: `VitePress`
+- 기본값: ``
 - [전문](./frontmatter-config#title)을 통해 페이지별로 재정의 가능
 
 사이트의 제목입니다. 기본 테마를 사용할 경우, 이는 내비게이션 바에 표시됩니다.
@@ -193,14 +193,14 @@ export default {
 ### description
 
 - 타입: `string`
-- 기본값: `A VitePress site`
+- 기본값: `A  site`
 - [전문](./frontmatter-config#description)을 통해 페이지별로 재정의 가능
 
 사이트의 설명입니다. 이는 페이지 HTML의 `<meta>` 태그로 렌더링됩니다.
 
 ```ts
 export default {
-  description: 'A VitePress site'
+  description: 'A  site'
 }
 ```
 
@@ -210,7 +210,7 @@ export default {
 - 기본값: `[]`
 - [전문](./frontmatter-config#head)을 통해 페이지별로 추가 가능
 
-페이지 HTML의 `<head>` 태그에 렌더링할 추가 엘리먼트입니다. 추가한 태그는 VitePress 태그 뒤 ~ 닫는 `head` 태그 앞에 렌더링됩니다.
+페이지 HTML의 `<head>` 태그에 렌더링할 추가 엘리먼트입니다. 추가한 태그는  태그 뒤 ~ 닫는 `head` 태그 앞에 렌더링됩니다.
 
 ```ts
 type HeadConfig =
@@ -351,7 +351,7 @@ export default {
 - 타입: `boolean`
 - 기본값: `false`
 
-`true`로 설정하면 VitePress는 URL에서 `.html`을 제거합니다. [간결한 URL 생성](../guide/routing#generating-clean-urls)을 참고하세요.
+`true`로 설정하면 는 URL에서 `.html`을 제거합니다. [간결한 URL 생성](../guide/routing#generating-clean-urls)을 참고하세요.
 
 ::: warning 서버 지원 필요
 이를 활성화하려면 호스팅 플랫폼에서 추가 구성이 필요할 수 있습니다. 서버가 `/foo`를 방문할 때 **리디렉션 없이** `/foo.html`을 제공할 수 있어야 합니다.
@@ -520,7 +520,7 @@ export default {
 
 - 타입: `MarkdownOption`
 
-마크다운 파서 옵션을 구성합니다. VitePress는 파서로 [Markdown-it](https://github.com/markdown-it/markdown-it)을 사용하고, 언어 구문 강조를 위해 [Shiki](https://github.com/shikijs/shiki)를 사용합니다. 이 옵션 내에서 다양한 마크다운 관련 옵션을 전달하여 필요에 맞게 조정할 수 있습니다.
+마크다운 파서 옵션을 구성합니다. 는 파서로 [Markdown-it](https://github.com/markdown-it/markdown-it)을 사용하고, 언어 구문 강조를 위해 [Shiki](https://github.com/shikijs/shiki)를 사용합니다. 이 옵션 내에서 다양한 마크다운 관련 옵션을 전달하여 필요에 맞게 조정할 수 있습니다.
 
 ```js
 export default {
@@ -560,7 +560,7 @@ export default {
 
 ## 빌드 훅 {#build-hooks}
 
-VitePress 빌드 훅은 웹사이트에 새로운 기능과 동작을 추가할 수 있게 합니다:
+ 빌드 훅은 웹사이트에 새로운 기능과 동작을 추가할 수 있게 합니다:
 
 - 사이트맵
 - 검색 인덱싱
@@ -571,7 +571,7 @@ VitePress 빌드 훅은 웹사이트에 새로운 기능과 동작을 추가할 
 
 - 타입: `(siteConfig: SiteConfig) => Awaitable<void>`
 
-`buildEnd`는 빌드 CLI 훅으로, 빌드(SSG)가 완료된 후 VitePress CLI 프로세스가 종료되기 전에 실행됩니다.
+`buildEnd`는 빌드 CLI 훅으로, 빌드(SSG)가 완료된 후  CLI 프로세스가 종료되기 전에 실행됩니다.
 
 ```ts
 export default {
@@ -607,7 +607,7 @@ interface SSGContext {
 
 - 타입: `(context: TransformContext) => Awaitable<HeadConfig[]>`
 
-`transformHead`는 각 페이지를 생성하기 전에 헤드를 변환하는 빌드 훅입니다. VitePress 구성에 정적으로 추가할 수 없는 헤드 항목을 추가할 수 있습니다. 기존 항목과 자동으로 병합되므로 추가 항목만 반환하면 됩니다.
+`transformHead`는 각 페이지를 생성하기 전에 헤드를 변환하는 빌드 훅입니다.  구성에 정적으로 추가할 수 없는 헤드 항목을 추가할 수 있습니다. 기존 항목과 자동으로 병합되므로 추가 항목만 반환하면 됩니다.
 
 ::: warning
 `context` 내부의 어떤 것도 변경하지 마세요.
@@ -647,8 +647,8 @@ export default {
         name: 'og:title',
         content:
           pageData.frontmatter.layout === 'home'
-            ? `VitePress`
-            : `${pageData.title} | VitePress`
+            ? ``
+            : `${pageData.title} | `
       }
     ])
   }

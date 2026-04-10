@@ -1,5 +1,5 @@
 ---
-description: VitePressページ下部に表示されるグローバルフッターの設定方法。
+description: ページ下部に表示されるグローバルフッターの設定方法。
 ---
 
 # フッター {#footer}

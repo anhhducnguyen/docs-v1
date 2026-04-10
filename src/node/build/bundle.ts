@@ -11,7 +11,7 @@ import {
 } from 'vite'
 import { APP_PATH } from '../alias'
 import type { SiteConfig } from '../config'
-import { createVitePressPlugin } from '../plugin'
+import { createPlugin } from '../plugin'
 import { escapeRegExp, sanitizeFileName, slash } from '../shared'
 import { task } from '../utils/task'
 import { buildMPAClient } from './buildMPAClient'
@@ -34,7 +34,7 @@ const excludedModules = [
   clientDir
 ]
 
-// bundles the VitePress app for both client AND server.
+// bundles the  app for both client AND server.
 export async function bundle(
   config: SiteConfig,
   options: BuildOptions
@@ -74,7 +74,7 @@ export async function bundle(
     cacheDir: config.cacheDir,
     base: config.site.base,
     logLevel: config.vite?.logLevel ?? 'warn',
-    plugins: await createVitePressPlugin(
+    plugins: await createPlugin(
       config,
       ssr,
       pageToHashMap,
@@ -107,64 +107,64 @@ export async function bundle(
           assetFileNames: `${config.assetsDir}/[name].[hash].[ext]`,
           ...(ssr
             ? {
-                entryFileNames: '[name].js',
-                chunkFileNames: '[name].[hash].js'
-              }
+              entryFileNames: '[name].js',
+              chunkFileNames: '[name].[hash].js'
+            }
             : {
-                entryFileNames: `${config.assetsDir}/[name].[hash].js`,
-                chunkFileNames(chunk) {
-                  // avoid ads chunk being intercepted by adblock
-                  return /(?:Carbon|BuySell)Ads/.test(chunk.name)
-                    ? `${config.assetsDir}/chunks/ui-custom.[hash].js`
-                    : `${config.assetsDir}/chunks/[name].[hash].js`
-                },
-                // @ts-ignore skip setting it for rolldown-vite since it doesn't support `manualChunks`
-                ...(vite.rolldownVersion
-                  ? undefined
-                  : {
-                      manualChunks(
-                        id: string,
-                        ctx: Pick<Rollup.PluginContext, 'getModuleInfo'>
-                      ) {
-                        // move known framework code into a stable chunk so that
-                        // custom theme changes do not invalidate hash for all pages
-                        if (
-                          id.startsWith('\0vite') ||
-                          ctx.getModuleInfo(id)?.meta['vite:asset']
-                        ) {
-                          return 'framework'
-                        }
-                        if (id.includes('plugin-vue:export-helper')) {
-                          return 'framework'
-                        }
-                        if (
-                          id.includes(`${clientDir}/app`) &&
-                          id !== `${clientDir}/app/index.js`
-                        ) {
-                          return 'framework'
-                        }
-                        if (
-                          isEagerChunk(id, ctx.getModuleInfo) &&
-                          /@vue\/(runtime|shared|reactivity)/.test(id)
-                        ) {
-                          return 'framework'
-                        }
+              entryFileNames: `${config.assetsDir}/[name].[hash].js`,
+              chunkFileNames(chunk) {
+                // avoid ads chunk being intercepted by adblock
+                return /(?:Carbon|BuySell)Ads/.test(chunk.name)
+                  ? `${config.assetsDir}/chunks/ui-custom.[hash].js`
+                  : `${config.assetsDir}/chunks/[name].[hash].js`
+              },
+              // @ts-ignore skip setting it for rolldown-vite since it doesn't support `manualChunks`
+              ...(vite.rolldownVersion
+                ? undefined
+                : {
+                  manualChunks(
+                    id: string,
+                    ctx: Pick<Rollup.PluginContext, 'getModuleInfo'>
+                  ) {
+                    // move known framework code into a stable chunk so that
+                    // custom theme changes do not invalidate hash for all pages
+                    if (
+                      id.startsWith('\0vite') ||
+                      ctx.getModuleInfo(id)?.meta['vite:asset']
+                    ) {
+                      return 'framework'
+                    }
+                    if (id.includes('plugin-vue:export-helper')) {
+                      return 'framework'
+                    }
+                    if (
+                      id.includes(`${clientDir}/app`) &&
+                      id !== `${clientDir}/app/index.js`
+                    ) {
+                      return 'framework'
+                    }
+                    if (
+                      isEagerChunk(id, ctx.getModuleInfo) &&
+                      /@vue\/(runtime|shared|reactivity)/.test(id)
+                    ) {
+                      return 'framework'
+                    }
 
-                        if (
-                          (id.startsWith(`${clientDir}/theme-default`) ||
-                            !excludedModules.some((i) => id.includes(i))) &&
-                          staticImportedByEntry(
-                            id,
-                            ctx.getModuleInfo,
-                            cacheTheme,
-                            themeEntryRE
-                          )
-                        ) {
-                          return 'theme'
-                        }
-                      }
-                    })
-              })
+                    if (
+                      (id.startsWith(`${clientDir}/theme-default`) ||
+                        !excludedModules.some((i) => id.includes(i))) &&
+                      staticImportedByEntry(
+                        id,
+                        ctx.getModuleInfo,
+                        cacheTheme,
+                        themeEntryRE
+                      )
+                    ) {
+                      return 'theme'
+                    }
+                  }
+                })
+            })
         }
       }
     },

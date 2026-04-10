@@ -10,7 +10,7 @@ The sidebar is no longer automatically populated from frontmatter. You can [read
 
 ### Images
 
-Unlike VuePress, VitePress handles [`base`](./asset-handling#base-url) of your config automatically when you use static image.
+Unlike VuePress,  handles [`base`](./asset-handling#base-url) of your config automatically when you use static image.
 
 Hence, now you can render images without `img` tag.
 

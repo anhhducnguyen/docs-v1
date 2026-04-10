@@ -1,5 +1,5 @@
 ---
-description: VitePress組み込みのチームコンポーネントを使い、メンバープロフィール付きのチームページを作成する方法。
+description: 組み込みのチームコンポーネントを使い、メンバープロフィール付きのチームページを作成する方法。
 ---
 
 <script setup>
@@ -107,7 +107,7 @@ const members = [
       私たちのチーム
     </template>
     <template #lead>
-      VitePress の開発は国際的なチームによって主導されています。
+       の開発は国際的なチームによって主導されています。
       その一部を以下に紹介します。
     </template>
   </VPTeamPageTitle>
@@ -234,7 +234,7 @@ interface TeamMember {
       私たちのチーム
     </template>
     <template #lead>
-      VitePress の開発は国際的なチームによって主導されています。
+       の開発は国際的なチームによって主導されています。
       その一部を以下に紹介します。
     </template>
   </VPTeamPageTitle>

@@ -1,10 +1,10 @@
 ---
-description: Extensões Markdown integradas do VitePress, incluindo containers personalizados, blocos de código com destaque de sintaxe, grupos de código e mais.
+description: Extensões Markdown integradas do , incluindo containers personalizados, blocos de código com destaque de sintaxe, grupos de código e mais.
 ---
 
 # Extensões Markdown {#markdown-extensions}
 
-VitePress vem com Extensões Markdown embutidas.
+ vem com Extensões Markdown embutidas.
 
 ## Âncoras de Cabeçalho {#header-anchors}
 
@@ -63,7 +63,7 @@ Páginas e links internos são gerados com o sufixo `.html` por padrão.
 Links externos recebem automaticamente `target="_blank" rel="noreferrer"`:
 
 - [vuejs.org](https://vuejs.org)
-- [VitePress no GitHub](https://github.com/vuejs/vitepress)
+- [ no GitHub](https://github.com/vuejs/vitepress)
 
 ## Frontmatter {#frontmatter}
 
@@ -193,7 +193,7 @@ Zona de perigo, não prossiga
 
 ::: details Clique para ver o código
 ```js
-console.log('Olá, VitePress!')
+console.log('Olá, !')
 ```
 :::
 ````
@@ -206,7 +206,7 @@ Zona de perigo, não prossiga
 
 ::: details Clique para ver o código
 ```js
-console.log('Olá, VitePress!')
+console.log('Olá, !')
 ```
 :::
 
@@ -231,7 +231,7 @@ export default defineConfig({
 
 ### `raw`
 
-Este é um recipiente especial que pode ser usado para evitar conflitos de estilo e roteador com VitePress. Isso é especialmente útil ao documentar bibliotecas de componentes. Você também pode verificar [whyframe](https://whyframe.dev/docs/integrations/vitepress) para melhor isolamento.
+Este é um recipiente especial que pode ser usado para evitar conflitos de estilo e roteador com . Isso é especialmente útil ao documentar bibliotecas de componentes. Você também pode verificar [whyframe](https://whyframe.dev/docs/integrations/vitepress) para melhor isolamento.
 
 **Sintaxe**
 
@@ -269,7 +269,7 @@ A classe `vp-raw` também pode ser usada diretamente em elementos. O isolamento 
 
 ## Alertas no estilo GitHub {#github-flavored-alerts}
 
-VitePress também suporta [alertas no estilo GitHub](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts) para apresentar como um bloco de chamada. Eles serão apresentados da mesma forma que [elementos personalizados](#custom-containers).
+ também suporta [alertas no estilo GitHub](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts) para apresentar como um bloco de chamada. Eles serão apresentados da mesma forma que [elementos personalizados](#custom-containers).
 
 ```md
 > [!NOTE]
@@ -305,7 +305,7 @@ VitePress também suporta [alertas no estilo GitHub](https://docs.github.com/en/
 
 ## Destaque de Sintaxe em Blocos de Código {#syntax-highlighting-in-code-blocks}
 
-VitePress utiliza [Shiki](https://github.com/shikijs/shiki) para destacar a sintaxe da linguagem em blocos de código Markdown, usando texto colorido. Shiki suporta uma ampla variedade de linguagens de programação. Tudo o que você precisa fazer é adicionar um _alias_ de linguagem válido após os crases iniciais do bloco de código:
+ utiliza [Shiki](https://github.com/shikijs/shiki) para destacar a sintaxe da linguagem em blocos de código Markdown, usando texto colorido. Shiki suporta uma ampla variedade de linguagens de programação. Tudo o que você precisa fazer é adicionar um _alias_ de linguagem válido após os crases iniciais do bloco de código:
 
 **Entrada**
 
@@ -393,7 +393,7 @@ export default { // Destacado
       msg: `Destacado!
       Esta linha não está destacada,
       mas esta e as próximas 2 estão.`,
-      motd: 'VitePress é incrível',
+      motd: ' é incrível',
       lorem: 'ipsum'
     }
   }
@@ -410,7 +410,7 @@ export default { // Destacado
       msg: `Destacado!
       Esta linha não está destacada,
       mas esta e as próximas 2 estão.`,
-      motd: 'VitePress é incrível',
+      motd: ' é incrível',
       lorem: 'ipsum',
     }
   }
@@ -630,7 +630,7 @@ Também suporta [destaque de linha](#line-highlighting-in-code-blocks):
 <<< @/snippets/snippet.js{2}
 
 ::: tip
-O valor de `@` corresponde à raiz do código fonte. Por padrão, é a raiz do projeto VitePress, a menos que `srcDir` seja configurado. Alternativamente, você também pode importar de caminhos relativos:
+O valor de `@` corresponde à raiz do código fonte. Por padrão, é a raiz do projeto , a menos que `srcDir` seja configurado. Alternativamente, você também pode importar de caminhos relativos:
 
 ```md
 <<< ../snippets/snippet.js
@@ -763,7 +763,7 @@ Você também pode [importar _snippets_ de código](#import-code-snippets) em gr
 Você pode incluir um arquivo markdown em outro arquivo markdown, mesmo aninhado.
 
 ::: tip
-Você também pode prefixar o caminho do markdown com `@`, ele atuará como a raiz de origem. Por padrão, é a raiz do projeto VitePress, a menos que `srcDir` seja configurado.
+Você também pode prefixar o caminho do markdown com `@`, ele atuará como a raiz de origem. Por padrão, é a raiz do projeto , a menos que `srcDir` seja configurado.
 :::
 
 Por exemplo, você pode incluir um arquivo markdown relativo usando isto:
@@ -902,7 +902,7 @@ export default {
 
 ## Configuração Avançada {#advanced-configuration}
 
-VitePress usa [markdown-it](https://github.com/markdown-it/markdown-it) como interpretador Markdown. Muitas das extensões acima são implementadas por meio de _plugins_ personalizados. Você pode personalizar ainda mais a instância `markdown-it` usando a opção `markdown` em `.vitepress/config.js`:
+ usa [markdown-it](https://github.com/markdown-it/markdown-it) como interpretador Markdown. Muitas das extensões acima são implementadas por meio de _plugins_ personalizados. Você pode personalizar ainda mais a instância `markdown-it` usando a opção `markdown` em `.vitepress/config.js`:
 
 ```js
 import { defineConfig } from 'vitepress'

@@ -1,13 +1,13 @@
 ---
 outline: deep
-description: VitePressサイトにローカル検索またはAlgolia検索を設定する方法。
+description: サイトにローカル検索またはAlgolia検索を設定する方法。
 ---
 
 # 検索 {#search}
 
 ## ローカル検索 {#local-search}
 
-VitePress は、[minisearch](https://github.com/lucaong/minisearch/) によるブラウザ内インデックスを使った曖昧一致の全文検索をサポートします。有効化するには、`.vitepress/config.ts` で `themeConfig.search.provider` を `'local'` に設定します。
+ は、[minisearch](https://github.com/lucaong/minisearch/) によるブラウザ内インデックスを使った曖昧一致の全文検索をサポートします。有効化するには、`.vitepress/config.ts` で `themeConfig.search.provider` を `'local'` に設定します。
 
 ```ts
 import { defineConfig } from 'vitepress'
@@ -191,7 +191,7 @@ export default defineConfig({
 
 ## Algolia 検索 {#algolia-search}
 
-VitePress は [Algolia DocSearch](https://docsearch.algolia.com/docs/what-is-docsearch) によるサイト検索をサポートします。導入は公式のガイドを参照してください。`.vitepress/config.ts` では最低限次の設定が必要です。
+ は [Algolia DocSearch](https://docsearch.algolia.com/docs/what-is-docsearch) によるサイト検索をサポートします。導入は公式のガイドを参照してください。`.vitepress/config.ts` では最低限次の設定が必要です。
 
 ```ts
 import { defineConfig } from 'vitepress'
@@ -321,7 +321,7 @@ export default defineConfig({
 
 #### モード (auto / sidePanel / hybrid / modal) {#ask-ai-mode}
 
-VitePress がキーワード検索と Ask AI を統合する方法をオプションで制御できます：
+ がキーワード検索と Ask AI を統合する方法をオプションで制御できます：
 
 - `mode: 'auto'`（デフォルト）：キーワード検索が設定されている場合は `hybrid` を推論し、それ以外の場合は Ask AI サイドパネルが設定されている場合は `sidePanel` を推論します。
 - `mode: 'sidePanel'`：サイドパネルのみを強制（キーワード検索ボタンを非表示）。
