@@ -1,5 +1,7 @@
 <img width="1908" height="931" alt="Image" src="https://github.com/user-attachments/assets/ac6bf7b7-0a89-45f3-addb-abdf0c3523e9" />
 
+![An image](./appearance-toggle-transition.webp)
+
 Bước 1: Tạo script thực thi ở mọi nơi
 
 ```
