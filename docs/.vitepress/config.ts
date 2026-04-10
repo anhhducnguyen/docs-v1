@@ -34,7 +34,7 @@ const localeToOgLocaleMap: Record<string, string> = {
 }
 
 export default defineConfig({
-  title: 'VitePress',
+  title: '',
   base,
 
   rewrites: {
@@ -101,8 +101,8 @@ export default defineConfig({
 
   // prettier-ignore
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/vitepress-logo-mini.svg' }],
-    ['link', { rel: 'icon', type: 'image/png', href: '/vitepress-logo-mini.png' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo-phenikaa-uni.png' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/logo-phenikaa-uni.png' }],
     ['meta', { name: 'theme-color', content: '#5f67ee' }],
     ['script', { src: 'https://cdn.usefathom.com/script.js', 'data-site': 'AZBRSFGG', 'data-spa': 'auto', defer: '' }]
   ],
