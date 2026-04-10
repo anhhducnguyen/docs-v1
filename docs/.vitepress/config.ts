@@ -11,7 +11,8 @@ import {
 import llmstxt from 'vitepress-plugin-llms'
 
 const repoUrl = 'https://github.com/anhhducnguyen/docs-v1'
-const base = '/docs-v1/'
+// const base = '/docs-v1/'
+const base = '/'
 const siteUrl = 'https://anhhducnguyen.github.io/docs-v1/'
 const isGitHubPages = !!process.env.GITHUB_ACTIONS
 const isProductionBuild =
