@@ -108,7 +108,7 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    logo: { src: '/vitepress-logo-mini.svg', width: 24, height: 24 },
+    logo: { src: '/logo-phenikaa-uni.png', width: 24, height: 24 },
 
     socialLinks: [{ icon: 'github', link: repoUrl }],
 
@@ -145,7 +145,7 @@ export default defineConfig({
         customIcon: {
           vitepress: localIconLoader(
             import.meta.url,
-            '../public/vitepress-logo-mini.svg'
+            '../public/logo-phenikaa-uni.png'
           ),
           firebase: 'logos:firebase'
         }
@@ -161,7 +161,7 @@ export default defineConfig({
   transformPageData: isProductionBuild ? (pageData, ctx) => {
     const url = new URL(pageData.relativePath.replace(/(?:(^|\/)index)?\.md$/, '$1'), siteUrl).href
     const site = resolveSiteDataByRoute(ctx.siteConfig.site, pageData.relativePath)
-    const title = pageData.title ? `${pageData.title} | VitePress` : site.title
+    const title = pageData.title ? `${pageData.title}` : site.title
     const description = pageData.description || site.description
     const locale = localeToOgLocaleMap[site.localeIndex || 'root']
 
@@ -171,13 +171,13 @@ export default defineConfig({
         ['meta', { property: 'og:description', content: description }],
         ['meta', { property: 'og:type', content: 'website' }],
         ['meta', { property: 'og:locale', content: locale }],
-        ['meta', { property: 'og:site_name', content: 'VitePress' }],
+        ['meta', { property: 'og:site_name', content: '' }],
         ['meta', { property: 'og:image', content: ogImage }],
         ['meta', { property: 'og:image:secure_url', content: ogImage }],
         ['meta', { property: 'og:image:type', content: 'image/jpeg' }],
         ['meta', { property: 'og:image:width', content: '1280' }],
         ['meta', { property: 'og:image:height', content: '640' }],
-        ['meta', { property: 'og:image:alt', content: 'VitePress' }],
+        ['meta', { property: 'og:image:alt', content: '' }],
         ['link', { rel: 'canonical', href: url }]
       )
   } : undefined
