@@ -28,17 +28,21 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v6
         with:
-          node-version: 24
+          node-version: 20 # ⚠️ dùng LTS cho ổn định
           cache: pnpm
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-        env:
-          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
 
+      # ✅ BUILD CHUẨN (bỏ lunaria)
       - name: Build VitePress site
-        run: pnpm docs:build && pnpm docs:lunaria:build
+        run: pnpm docs:build
 
+      # ✅ NGĂN JEKYLL PHÁ (rất quan trọng)
+      - name: Add .nojekyll
+        run: touch docs/.vitepress/dist/.nojekyll
+
+      # ✅ DEPLOY ĐÚNG FOLDER HTML
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
