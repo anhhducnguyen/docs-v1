@@ -62,48 +62,58 @@ function nav(): DefaultTheme.NavItem[] {
 function sidebarGuide(): DefaultTheme.SidebarItem[] {
   return [
     {
-      text: 'Introduction',
+      text: 'Hướng dẫn cài đặt PeerDB',
       collapsed: false,
       items: [
-        { text: 'What is VitePress?', link: 'what-is-vitepress' },
-        { text: 'Getting Started', link: 'getting-started' },
+        { text: 'PeerDB Setup Guide', link: 'peer-db' },
+        { text: 'Getting Started', link: 'test' },
         { text: 'Routing', link: 'routing' },
         { text: 'Deploy', link: 'deploy' }
       ]
     },
-    {
-      text: 'Writing',
-      collapsed: false,
-      items: [
-        { text: 'Markdown Extensions', link: 'markdown' },
-        { text: 'Asset Handling', link: 'asset-handling' },
-        { text: 'Frontmatter', link: 'frontmatter' },
-        { text: 'Using Vue in Markdown', link: 'using-vue' },
-        { text: 'Internationalization', link: 'i18n' }
-      ]
-    },
-    {
-      text: 'Customization',
-      collapsed: false,
-      items: [
-        { text: 'Using a Custom Theme', link: 'custom-theme' },
-        {
-          text: 'Extending the Default Theme',
-          link: 'extending-default-theme'
-        },
-        { text: 'Build-Time Data Loading', link: 'data-loading' },
-        { text: 'SSR Compatibility', link: 'ssr-compat' },
-        { text: 'Connecting to a CMS', link: 'cms' }
-      ]
-    },
-    {
-      text: 'Experimental',
-      collapsed: false,
-      items: [
-        { text: 'MPA Mode', link: 'mpa-mode' },
-        { text: 'Sitemap Generation', link: 'sitemap-generation' }
-      ]
-    },
+    // {
+    //   text: 'Introduction',
+    //   collapsed: false,
+    //   items: [
+    //     { text: 'What is VitePress?', link: 'what-is-vitepress' },
+    //     { text: 'Getting Started', link: 'getting-started' },
+    //     { text: 'Routing', link: 'routing' },
+    //     { text: 'Deploy', link: 'deploy' }
+    //   ]
+    // },
+    // {
+    //   text: 'Writing',
+    //   collapsed: false,
+    //   items: [
+    //     { text: 'Markdown Extensions', link: 'markdown' },
+    //     { text: 'Asset Handling', link: 'asset-handling' },
+    //     { text: 'Frontmatter', link: 'frontmatter' },
+    //     { text: 'Using Vue in Markdown', link: 'using-vue' },
+    //     { text: 'Internationalization', link: 'i18n' }
+    //   ]
+    // },
+    // {
+    //   text: 'Customization',
+    //   collapsed: false,
+    //   items: [
+    //     { text: 'Using a Custom Theme', link: 'custom-theme' },
+    //     {
+    //       text: 'Extending the Default Theme',
+    //       link: 'extending-default-theme'
+    //     },
+    //     { text: 'Build-Time Data Loading', link: 'data-loading' },
+    //     { text: 'SSR Compatibility', link: 'ssr-compat' },
+    //     { text: 'Connecting to a CMS', link: 'cms' }
+    //   ]
+    // },
+    // {
+    //   text: 'Experimental',
+    //   collapsed: false,
+    //   items: [
+    //     { text: 'MPA Mode', link: 'mpa-mode' },
+    //     { text: 'Sitemap Generation', link: 'sitemap-generation' }
+    //   ]
+    // },
     { text: 'Config & API Reference', base: '/reference/', link: 'site-config' }
   ]
 }
