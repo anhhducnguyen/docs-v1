@@ -38,7 +38,7 @@ Before you start, ensure that you have the following prerequisites installed on 
 - MySQL (or any other supported database system)
 
 ## Step-by-Step Installation
-#### **Step 1**: Install Composer and PHP
+#### 1. Install Composer and PHP
 - Ensure PHP and Composer are installed. You can check their versions using the following commands:
   
 ```bash
@@ -50,16 +50,16 @@ composer -v
 ```
 
 
-#### **Step 2**: If using `Xampp`, go to the `php.ini` file and remove the `;`. before the command line `extension=zip`
+#### 2. If using `Xampp`, go to the `php.ini` file and remove the `;`. before the command line `extension=zip`
 
-#### **Step 3**: Once you have installed PHP and Composer, you can download the Travel Easy project:
+#### 3. Once you have installed PHP and Composer, you can download the Travel Easy project:
 
 ```bash
 git clone https://github.com/anhhducnguyen/travelEasyy
 ```
 
 
-#### **Step 4**: Reconfigure the `.env` file according to the following information
+#### 4. Reconfigure the `.env` file according to the following information
 - If you wish to use MySQL, update your `.env` configuration file's DB_* variables like so:
   
     ```php
@@ -93,7 +93,7 @@ git clone https://github.com/anhhducnguyen/travelEasyy
     ```
 
 
-#### **Step 5**: Regenerate autoload files
+#### 5. Regenerate autoload files
 - Navigate to your project directory where the `composer.json` file is located
 - Configure necessary items in `composer.json` here [composer.json]( https://github.com/anhhducnguyen/travelEasyy/blob/main/composer.json)
 - Run Command: Execute the following command
@@ -102,7 +102,7 @@ git clone https://github.com/anhhducnguyen/travelEasyy
     composer dump-autoload
     ```
 
-#### **Step 6**: Databases and Migrations
+#### 6. Databases and Migrations
 - Create the database and run your application's database migrations:
   
     ```bash
@@ -115,7 +115,7 @@ git clone https://github.com/anhhducnguyen/travelEasyy
     php artisan db:seed
     ```
   
-#### **Step 5**: Once the project has been created, start Laravel's local development server using the Laravel Artisan command`serve`
+#### 7. Once the project has been created, start Laravel's local development server using the Laravel Artisan command`serve`
 
 ```bash
 cd travelEasy
@@ -123,7 +123,7 @@ cd travelEasy
 php artisan serve
 ```
 
-#### **Step 6**: Login Credentials for Testing
+#### 8. Login Credentials for Testing
 
 For testing purposes, you can use the following login credentials
 
