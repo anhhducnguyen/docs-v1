@@ -1,7 +1,7 @@
 ---
 layout: home
 
-title: VitePress
+title: Phenikaa
 
 hero:
   name: VitePress
