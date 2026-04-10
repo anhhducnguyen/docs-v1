@@ -108,7 +108,7 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    logo: { src: '/logo-phenikaa-uni.png', width: 24, height: 24 },
+    logo: { src: '/logo-phenikaa-uni.png' },
 
     socialLinks: [{ icon: 'github', link: repoUrl }],
 
