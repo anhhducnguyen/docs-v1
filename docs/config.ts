@@ -68,7 +68,8 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         { text: 'PeerDB Setup Guide', link: 'peer-db' },
         { text: 'Codespaces - V5', link: 'test' },
         { text: 'Travel Easy', link: 'travel-easy' },
-        { text: 'Deploy', link: 'deploy' }
+        { text: 'Deploy', link: 'deploy' },
+        { text: 'Award', link: 'award' }
       ]
     },
     // {
