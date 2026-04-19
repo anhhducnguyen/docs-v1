@@ -1,0 +1,1 @@
+import{D as e,u as t}from"./runtime-core.esm-bundler.DKQjezWN.js";import{t as n}from"./plugin-vue_export-helper.Bz49raAe.js";var r={};function i(n,r){return e(),t(`span`,null,`⚡`)}var a=n(r,[[`render`,i]]);export{a as t};
