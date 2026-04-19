@@ -1,4 +1,4 @@
-![bachelor's-degree](/bachelor's-degree.jpg)
+![bachelors-degree](/bachelors-degree.jpg)
 ![ertificate-of-merit](/certificate-of-merit.jpg)
 ![score-sheet](/score-sheet.jpg)
 ![it-fresher](/it-fresher.jpg)
