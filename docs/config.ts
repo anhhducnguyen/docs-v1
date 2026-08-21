@@ -69,7 +69,8 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         { text: 'Codespaces - V5', link: 'test' },
         { text: 'Travel Easy', link: 'travel-easy' },
         { text: 'Deploy', link: 'deploy' },
-        { text: 'Award', link: 'award' }
+        { text: 'Award', link: 'award' },
+        { text: 'Aws', link: 'aws' }
       ]
     },
     // {
