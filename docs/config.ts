@@ -71,6 +71,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         { text: 'Deploy', link: 'deploy' },
         { text: 'Award', link: 'award' },
         { text: 'Aws', link: 'aws' }
+        // edit
       ]
     },
     // {
