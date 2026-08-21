@@ -12,3 +12,5 @@
 ![coursera-big-data-integration](/coursera-big-data-integration.png)
 ![coursera-big-data-modeling](/coursera-big-data-modeling.png)
 ![coursera-english](/coursera-english.png)
+![aws-academy-1](/aws1.png)
+![aws-academy-2](/aws2.png)
