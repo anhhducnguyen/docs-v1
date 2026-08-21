@@ -3,7 +3,6 @@
 ![score-sheet](/score-sheet.jpg)
 ![it-fresher](/it-fresher.jpg)
 ![ojt-internship](/ojt-internship.jpg)
-![coursera-aws](/coursera-aws.png)
 ![coursera-git-github](/coursera-git-github.png)
 ![coursera-agile](/coursera-agile.png)
 ![coursera-foundations](/coursera-foundations.png)
@@ -12,5 +11,3 @@
 ![coursera-big-data-integration](/coursera-big-data-integration.png)
 ![coursera-big-data-modeling](/coursera-big-data-modeling.png)
 ![coursera-english](/coursera-english.png)
-![aws-academy-1](/aws1.png)
-![aws-academy-2](/aws2.png)
